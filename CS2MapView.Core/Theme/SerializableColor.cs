@@ -109,6 +109,7 @@ namespace CS2MapView.Theme
         /// <summary>
         /// 透過付きのグレー色を作成して返します。
         /// </summary>
+        /// <param name="a"></param>
         /// <param name="g"></param>
         /// <returns></returns>
         public static SerializableColor GrayScale(byte a, byte g) => new() { A = a, R = g, G = g, B = g };

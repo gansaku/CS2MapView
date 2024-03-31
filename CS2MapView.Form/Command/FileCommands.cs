@@ -31,7 +31,11 @@ namespace CS2MapView.Form.Command
             }
             if (ofd.ShowDialog() == DialogResult.OK)
             {
-                await new ExportFileImporter(MainForm).ImportAsync(ofd.FileName);
+                string? msg = await new ExportFileImporter(MainForm).ImportAsync(ofd.FileName);
+                if( msg is not null)
+                {
+                    MessageBox.Show(msg);
+                }
                 MainForm.OnZoomOrViewPositionChanged();
                 MainForm.InvalidateSkia();
                 if(ofd.FileName is not null)

@@ -16,7 +16,7 @@ namespace CS2MapView.Exporter
     /// <summary>
     /// MOD設定
     /// </summary>
-    [FileLocation(nameof(CS2MapView.Exporter))]
+    [FileLocation(Mod.ModPackageName)]
     [SettingsUIGroupOrder(Key_UISectionOutputConfig, Key_UISectionPath, Key_UISectionExecution, Key_UISectionMisc)]
     [SettingsUIShowGroupName]
     public class CS2MapViewModSettings : ModSetting

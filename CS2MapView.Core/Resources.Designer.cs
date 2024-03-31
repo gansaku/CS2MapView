@@ -61,11 +61,30 @@ namespace CS2MapView {
         }
         
         /// <summary>
-        ///   Terrain に類似しているローカライズされた文字列を検索します。
+        ///   File was broken. に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string TerrainLayer {
+        internal static string DataImport_DeserializeError {
             get {
-                return ResourceManager.GetString("TerrainLayer", resourceCulture);
+                return ResourceManager.GetString("DataImport_DeserializeError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Extension({0}) is not supported. に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string DataImport_ExtensionNotSupported {
+            get {
+                return ResourceManager.GetString("DataImport_ExtensionNotSupported", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   The file version is not compatible with the viewer.
+        ///There may be some features broken. に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string DataImport_FileVersionWarning {
+            get {
+                return ResourceManager.GetString("DataImport_FileVersionWarning", resourceCulture);
             }
         }
     }

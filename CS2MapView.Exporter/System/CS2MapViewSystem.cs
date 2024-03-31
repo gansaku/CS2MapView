@@ -108,7 +108,7 @@ namespace CS2MapView.Exporter.System
 
                 var timestamp = addTimestamp ? $"_{DateTime.Now:yyyyMMddHHmmss}" : string.Empty;
 
-                var fileName = Path.Combine(dir, $"{SafeFileName.GetSafeFileName(ex.CityName)}{timestamp}.cs2map.zip");
+                var fileName = Path.Combine(dir, $"{SafeFileName.GetSafeFileName(ex.CityName)}{timestamp}.cs2map");
                 using var fs = new FileStream(fileName, FileMode.Create);
                 using var zipArchive = new ZipArchive(fs, ZipArchiveMode.Create);
 
@@ -124,7 +124,9 @@ namespace CS2MapView.Exporter.System
 
                 var ver = Assembly.GetAssembly(typeof(CS2MainData)).GetName().Version;
                 ex.FileVersion = ver.ToString();
+#if DEBUG
                 ex.TestList = DebugStringList;
+#endif 
                 ZipDataWriter.WriteZipXmlEntry(zipArchive, CS2MapDataZipEntryKeys.MainXml, ex);
 
                 return fileName;

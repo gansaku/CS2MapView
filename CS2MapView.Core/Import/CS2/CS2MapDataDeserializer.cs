@@ -8,6 +8,7 @@ namespace CS2MapView.Import.CS2
 {
     public static class CS2MapDataDeserializer
     {
+        internal static readonly Version SupportedDataVersion = new Version(0, 0, 1, 0);
 
         public static Task<CS2MapDataSet> Deserialize(ZipArchive zip)
         {

@@ -503,7 +503,11 @@ public partial class MainForm : System.Windows.Forms.Form, ICS2MapViewRoot
         {
             return;
         }
-        await new ExportFileImporter(this).ImportAsync(path[0]);
+        string? msg = await new ExportFileImporter(this).ImportAsync(path[0]);
+        if(msg is not null)
+        {
+            MessageBox.Show(msg);
+        }
         OnZoomOrViewPositionChanged();
         InvalidateSkia();
 

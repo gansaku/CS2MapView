@@ -117,7 +117,14 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="TerrainLayer" xml:space="preserve">
-    <value>Terrain</value>
+  <data name="DataImport_DeserializeError" xml:space="preserve">
+    <value>File was broken.</value>
+  </data>
+  <data name="DataImport_ExtensionNotSupported" xml:space="preserve">
+    <value>Extension({0}) is not supported.</value>
+  </data>
+  <data name="DataImport_FileVersionWarning" xml:space="preserve">
+    <value>The file version is not compatible with the viewer.
+There may be some features broken.</value>
   </data>
 </root>

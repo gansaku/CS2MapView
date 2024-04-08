@@ -20,8 +20,10 @@ namespace CS2MapView.Exporter
                 { s.GetOptionDescLocaleID(nameof(SC.HeightMapResolutionRestriction)), "地形・水域情報出力の解像度を落とすことにより、出力ファイルサイズが低下します。" },
                 { s.GetOptionLabelLocaleID(nameof(SC.AddFileNameTimestamp)), "ファイル名のタイムスタンプ" },
                 { s.GetOptionDescLocaleID(nameof(SC.AddFileNameTimestamp)), "ファイル名に日付・時刻を付与します。" },
-                { s.GetOptionLabelLocaleID(nameof(SC.OutputPath)),          "出力先" },
-                { s.GetOptionDescLocaleID(nameof(SC.OutputPath)),           "マップデータの出力先" },
+                { s.GetOptionLabelLocaleID(nameof(SC.OutputPath)),          string.Empty },
+                { s.GetOptionDescLocaleID(nameof(SC.OutputPath)),           string.Empty},
+                { s.GetOptionLabelLocaleID(nameof(SC.OutputPathType)),      "出力先" },
+                { s.GetOptionDescLocaleID(nameof(SC.OutputPathType)),       "ファイルの出力先パスを選択します。" },
                 { s.GetOptionLabelLocaleID(nameof(SC.ResetSettings)),        "リセット" },
                 { s.GetOptionDescLocaleID(nameof(SC.ResetSettings)),        "設定をリセットします。" },
                 { s.GetOptionLabelLocaleID(nameof(SC.Export)),              "エクスポート"},
@@ -29,9 +31,12 @@ namespace CS2MapView.Exporter
                 { s.GetOptionLabelLocaleID(nameof(SC.ExportResult)),        "実行結果"},
                 { s.GetOptionDescLocaleID(nameof(SC.ExportResult)), string.Empty },
 
+                { s.GetEnumValueLocaleID(SC.PathType.Documents), "ドキュメント" },
+                { s.GetEnumValueLocaleID(SC.PathType.Desktop), "デスクトップ" },
+                { s.GetEnumValueLocaleID(SC.PathType.AppData), "LocalLow" },
                 { s.GetEnumValueLocaleID(SC.ResolutionRestriction.Width4096) , "4096x4096" },
                 { s.GetEnumValueLocaleID(SC.ResolutionRestriction.Width2048) , "2048x2048" },
-                { s.GetEnumValueLocaleID(SC.ResolutionRestriction.Width1024) , "1024x1024" }
+                { s.GetEnumValueLocaleID(SC.ResolutionRestriction.Width1024) , "1024x1024" },
 
             };
         }

@@ -34,6 +34,13 @@ namespace CS2MapView.Exporter
             Width2048,
             Width1024
         }
+        [Preserve]
+        public enum PathType
+        {
+            Documents,
+            Desktop,
+            AppData
+        }
 
         private Mod? Mod { get; set; }
         /// <summary>
@@ -44,6 +51,18 @@ namespace CS2MapView.Exporter
 
         [SettingsUISection(Key_UISectionOutputConfig)]
         public bool AddFileNameTimestamp { get; set; }
+
+        private PathType _outputPathType = PathType.Documents;
+        [SettingsUISection(Key_UISectionPath)]
+        public PathType OutputPathType
+        {
+            get => _outputPathType;
+            set
+            {
+                _outputPathType = value;
+                _outputPath = GetPath(_outputPathType);
+            }
+        }
 
         private string? _outputPath;
         [SettingsUISection(Key_UISectionPath)]
@@ -57,11 +76,16 @@ namespace CS2MapView.Exporter
             {
                 _exportResult = "";
                 var sys = CS2MapViewSystem.Instance;
-                if(sys is null)
+                if (sys is null)
                 {
                     _exportResult = "failed.";
                     return;
                 }
+                if (!Directory.Exists(OutputPath))
+                {
+                    Directory.CreateDirectory(OutputPath);
+                }
+
                 Task<string?> task = sys.RunExport(OutputPath, HeightMapResolutionRestriction, AddFileNameTimestamp);
                 task?.Wait();
                 var result = task?.Result;
@@ -95,23 +119,34 @@ namespace CS2MapView.Exporter
 
         public override void SetDefaults()
         {
-            var spDir = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
-            if (spDir is null)
-            {
-                _outputPath = string.Empty;
-            }
-            else
-            {
-                _outputPath = Path.Combine(spDir, "CS2MapView");
-            }
+            _outputPathType = PathType.Documents;
+            _outputPath = GetPath(_outputPathType);
 
-            if (!Directory.Exists(_outputPath))
-            {
-                Directory.CreateDirectory(_outputPath);
-            }
+
             HeightMapResolutionRestriction = ResolutionRestriction.Width1024;
             AddFileNameTimestamp = true;
 
+        }
+
+        private string GetPath(PathType type)
+        {
+            string? result = null;
+            switch (type)
+            {
+                case PathType.Documents:
+                    result = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+                    break;
+                case PathType.Desktop:
+                    result = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+                    break;
+                case PathType.AppData:
+                    var local = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
+                    result = local is null ? null : Path.GetFullPath(Path.Combine(local, @"..\LocalLow\Colossal Order\Cities Skylines II"));
+
+                    break;
+            }
+
+            return result is null ? "CS2MapView" : Path.Combine(result, "CS2MapView");
         }
     }
 

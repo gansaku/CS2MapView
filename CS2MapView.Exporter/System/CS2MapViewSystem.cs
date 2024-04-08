@@ -1,33 +1,21 @@
 ﻿using Colossal.Entities;
 using Colossal.Logging;
 using CS2MapView.Serialization;
-using GB = Game.Buildings;
+using Game.Areas;
+using Game.Buildings;
 using Game.City;
-using Game.Simulation;
+using Game.Net;
+using Game.Routes;
 using Game.Tools;
+using Game.UI;
 using System;
+using System.Collections.Generic;
 using System.IO;
 using System.IO.Compression;
-using System.Linq;
-using System.Numerics;
-using System.Text;
+using System.Reflection;
 using System.Threading.Tasks;
 using Unity.Collections;
 using Unity.Entities;
-using System.Collections.Generic;
-using Game.UI;
-using Game.Areas;
-using Unity.Mathematics;
-using Game.Objects;
-using GP = Game.Prefabs;
-using Game.Net;
-using Game.Vehicles;
-using System.Runtime.CompilerServices;
-using Game.Prefabs;
-using Game.Buildings;
-using System.Data;
-using Game.Routes;
-using System.Reflection;
 
 
 namespace CS2MapView.Exporter.System
@@ -40,7 +28,7 @@ namespace CS2MapView.Exporter.System
 
         private CityConfigurationSystem? CityConfigurationSystem { get; set; }
         private NameSystem? NameSystem { get; set; }
-       
+
         private TerrainReader? TerrainReader { get; set; }
         private bool LoadErrorDetected { get; set; } = false;
         private SystemRefs? SystemRefs { get; set; }
@@ -61,7 +49,7 @@ namespace CS2MapView.Exporter.System
 
             CityConfigurationSystem = World.GetOrCreateSystemManaged<CityConfigurationSystem>();
             NameSystem = World.GetOrCreateSystemManaged<NameSystem>();
-            
+
             if (CityConfigurationSystem is null || NameSystem is null)
             {
                 LoadErrorDetected = true;
@@ -70,7 +58,7 @@ namespace CS2MapView.Exporter.System
             }
             EntityQuery GetQueryWithoutTemp<T>()
             {
-                return GetEntityQuery( ComponentType.ReadOnly<T>(), ComponentType.Exclude<Temp>() );
+                return GetEntityQuery(ComponentType.ReadOnly<T>(), ComponentType.Exclude<Temp>());
             }
             SystemRefs.Queries.AllDistricts = GetQueryWithoutTemp<District>();
             SystemRefs.Queries.AllRoads = GetQueryWithoutTemp<Road>();
@@ -148,7 +136,7 @@ namespace CS2MapView.Exporter.System
         private void ReadAndWriteDistricts(ZipArchive zip)
         {
             var list = new List<CS2DistrictInfo>();
-            
+
             using var districtEntities = SystemRefs!.Queries.AllDistricts.ToEntityArray(Allocator.Persistent);
             foreach (var entity in districtEntities)
             {
@@ -181,10 +169,10 @@ namespace CS2MapView.Exporter.System
         }
 
 
-   
+
 
 
     }
 
-   
+
 }

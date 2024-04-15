@@ -118,15 +118,15 @@ namespace CS2MapView.Theme
         /// 白地図テーマ
         /// </summary>
         [XmlIgnore]
-        public static DrawingTheme White
+        public static DrawingTheme GrayScale
         {
             get
             {
                 return new DrawingTheme
                 {
-                    Name = "white",
+                    Name = "grayscale",
                     Strokes = StrokeRules.Default,
-                    Colors = ColorRules.White,
+                    Colors = ColorRules.GrayScale,
                     CableCarDecorationSpan = 64f,
                     CableCarDecorationLength = new(0.5f, 0.9f, 0.5f, 3f, 0.5f),
                     MonorailDecorationSpan = 64f,

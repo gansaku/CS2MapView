@@ -13,14 +13,14 @@ namespace CS2MapView.Drawing.Labels
         internal SKPaint? StreetNameStroke;
         internal SKPaint? StreetNameFill;
 
-        internal LabelPaintDefs(StringTheme? tr, float scale, float worldScale)
+        internal LabelPaintDefs(StringTheme? tr, StringColors? colors, float scale, float worldScale)
         {
-            Init(tr, scale, worldScale);
+            Init(tr, colors,scale, worldScale);
         }
 
-        internal void Init(StringTheme? tr, float scale, float worldScale)
+        internal void Init(StringTheme? tr, StringColors? colors, float scale, float worldScale)
         {
-            if (tr?.Colors is null)
+            if (colors is null)
             {
                 return;
             }
@@ -63,13 +63,13 @@ namespace CS2MapView.Drawing.Labels
             }
 
 
-            var building = GetWithColor(tr.BuildingName, tr.Colors.BuildingNameFill, tr.Colors.BuildingNameStroke);
+            var building = GetWithColor(tr.BuildingName, colors.BuildingNameFill, colors.BuildingNameStroke);
             BuildingNameStroke = GetStrokePaint(building);
             BuildingNameFill = GetFillPaint(building);
-            var district = GetWithColor(tr.DistrictName, tr.Colors.DistrictNameFill, tr.Colors.DistrictNameStroke);
+            var district = GetWithColor(tr.DistrictName, colors.DistrictNameFill, colors.DistrictNameStroke);
             DistrictNameStroke = GetStrokePaint(district);
             DistrictNameFill = GetFillPaint(district);
-            var streetName = GetWithColor(tr.StreetName, tr.Colors.StreetNameFill, tr.Colors.StreetNameStroke);
+            var streetName = GetWithColor(tr.StreetName, colors.StreetNameFill, colors.StreetNameStroke);
             StreetNameStroke = GetStrokePaint(streetName);
             StreetNameFill = GetFillPaint(streetName);
 

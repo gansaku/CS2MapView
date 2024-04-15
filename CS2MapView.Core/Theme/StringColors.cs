@@ -4,7 +4,7 @@
     /// 文字列の表示色設定
     /// 他図形とは異なり、Stroke→Fillの順に描画される。
     /// </summary>
-    public class StringColorRules
+    public class StringColors
     {
         /// <summary>
         /// 建物名
@@ -33,13 +33,23 @@
         /// <summary>
         /// デフォルト設定値
         /// </summary>
-        public static StringColorRules Default => new()
+        public static StringColors Default => new()
         {
             BuildingNameFill = SerializableColor.FromARGB(255, 70, 70, 70),
             BuildingNameStroke = SerializableColor.FromARGB(180, 255, 255, 255),
             DistrictNameFill = SerializableColor.FromARGB(255, 90, 90, 90),
             DistrictNameStroke = SerializableColor.FromARGB(140, 255, 255, 255),
             StreetNameFill = SerializableColor.FromARGB(255, 70, 70, 220),
+            StreetNameStroke = SerializableColor.FromARGB(255, 255, 255, 255)
+        };
+
+        public static StringColors GrayScale => new()
+        {
+            BuildingNameFill = SerializableColor.FromARGB(255, 70, 70, 70),
+            BuildingNameStroke = SerializableColor.FromARGB(180, 255, 255, 255),
+            DistrictNameFill = SerializableColor.FromARGB(255, 90, 90, 90),
+            DistrictNameStroke = SerializableColor.FromARGB(140, 255, 255, 255),
+            StreetNameFill = SerializableColor.FromARGB(255, 120, 120, 120),
             StreetNameStroke = SerializableColor.FromARGB(255, 255, 255, 255)
         };
 

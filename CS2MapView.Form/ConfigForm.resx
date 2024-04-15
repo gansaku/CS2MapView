@@ -117,1251 +117,1500 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="ThemeLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>42, 15</value>
-  </data>
-  <data name="&gt;&gt;RenderMonorailCheckbox.Parent" xml:space="preserve">
-    <value>groupBox3</value>
-  </data>
-  <data name="&gt;&gt;RenderTramLinesCheckbox.Name" xml:space="preserve">
-    <value>RenderTramLinesCheckbox</value>
-  </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="RenderAirplaneLinesCheckbox.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;RenderTrainStopsCheckbox.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="ContourIntervalCombobox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>520, 18</value>
-  </data>
-  <data name="&gt;&gt;HideRICOCheckbox.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="RenderMonorailStopsCheckbox.Text" xml:space="preserve">
-    <value>Monorail</value>
-  </data>
-  <data name="VectorizeLandCheckbox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>104, 19</value>
-  </data>
-  <data name="&gt;&gt;HideCargoLinesCheckbox.Name" xml:space="preserve">
-    <value>HideCargoLinesCheckbox</value>
-  </data>
-  <data name="RenderMetroStopsCheckbox.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="RenderDistrictNameLabelCheckbox.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;RenderBusLinesCheckbox.Parent" xml:space="preserve">
-    <value>groupBox5</value>
-  </data>
-  <data name="UserPrefabNameCheckbox.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="VectorizeWaterCheckbox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>110, 19</value>
-  </data>
-  <data name="RenderMapSymbolCheckbox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>96, 19</value>
-  </data>
-  <data name="&gt;&gt;RenderShipLinesCheckbox.Name" xml:space="preserve">
-    <value>RenderShipLinesCheckbox</value>
-  </data>
-  <data name="&gt;&gt;RenderCableCarCheckbox.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;groupBox2.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;VectorizeWaterCheckbox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="WaterMaxResolutionLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;RenderMonorailStopsCheckbox.Parent" xml:space="preserve">
-    <value>groupBox6</value>
-  </data>
-  <data name="&gt;&gt;SubmitButton.Name" xml:space="preserve">
-    <value>SubmitButton</value>
-  </data>
-  <data name="&gt;&gt;VectorizeWaterCheckbox.Name" xml:space="preserve">
-    <value>VectorizeWaterCheckbox</value>
-  </data>
-  <data name="FormCancelButton.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;DefaultMapSymbolStyleLabel.Parent" xml:space="preserve">
-    <value>GeneralConfigTabPage</value>
-  </data>
-  <data name="&gt;&gt;RenderTrainLinesCheckbox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="RenderAirplaneLinesCheckbox.Text" xml:space="preserve">
-    <value>Airplane</value>
-  </data>
-  <data name="SubmitButton.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;RenderShipStopsCheckbox.Name" xml:space="preserve">
-    <value>RenderShipStopsCheckbox</value>
-  </data>
-  <data name="RenderTramLinesCheckbox.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="VectorizeLandCheckbox.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="RenderBuildingNameLabelCheckbox.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;RenderShipStopsCheckbox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="RenderMetroLinesCheckbox.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="ContourLinesIntervalsLabel.Text" xml:space="preserve">
-    <value>Contour lines intervals</value>
-  </data>
-  <data name="&gt;&gt;groupBox4.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="RenderMetroCheckbox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>58, 19</value>
-  </data>
-  <data name="RenderBuildingNameLabelCheckbox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 19</value>
-  </data>
-  <data name="RenderTramCheckbox.Text" xml:space="preserve">
-    <value>Tram</value>
-  </data>
-  <data name="RenderShipLinesCheckbox.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="StringThemeCombobox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>487, 19</value>
-  </data>
-  <data name="RenderAirplaneLinesCheckbox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>505, 22</value>
-  </data>
-  <data name="RenderCableCarCheckbox.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;RenderBusStopsCheckbox.Name" xml:space="preserve">
-    <value>RenderBusStopsCheckbox</value>
-  </data>
-  <data name="RenderStreetNameLabelCheckbox.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;ContourLinesIntervalsLabel.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="ThemeLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 22</value>
-  </data>
-  <data name="&gt;&gt;WaterMaxResolutionTextbox.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;GeneralConfigTabPage.Parent" xml:space="preserve">
-    <value>ConfigTab</value>
-  </data>
-  <data name="&gt;&gt;groupBox4.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="RenderTramStopsCheckbox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>177, 22</value>
-  </data>
-  <data name="RenderMetroCheckbox.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;DisableBuildingBorderCheckbox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ContourIntervalCombobox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;RenderMonorailCheckbox.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="RenderTrainStopsCheckbox.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="WaterMaxResolutionTextbox.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;RenderStreetNameLabelCheckbox.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;groupBox4.Parent" xml:space="preserve">
-    <value>LayerConfigTabPage</value>
-  </data>
-  <data name="&gt;&gt;TerrainMaxResolutionTextbox.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;ThemeCombobox.Name" xml:space="preserve">
-    <value>ThemeCombobox</value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="ConfigTab.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Top</value>
-  </data>
-  <data name="LayerConfigTabPage.Size" type="System.Drawing.Size, System.Drawing">
-    <value>866, 376</value>
-  </data>
-  <data name="RenderTramStopsCheckbox.Text" xml:space="preserve">
-    <value>Tram</value>
-  </data>
-  <data name="&gt;&gt;groupBox6.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;HideCargoLinesCheckbox.Parent" xml:space="preserve">
-    <value>LayerConfigTabPage</value>
-  </data>
-  <data name="&gt;&gt;RenderAirplaneLinesCheckbox.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="RenderMonorailCheckbox.Text" xml:space="preserve">
-    <value>Monorail</value>
-  </data>
-  <data name="&gt;&gt;LayerConfigTabPage.Parent" xml:space="preserve">
-    <value>ConfigTab</value>
-  </data>
-  <data name="VectorizeLandCheckbox.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;GeneralConfigTabPage.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;StringThemeCombobox.Parent" xml:space="preserve">
-    <value>GeneralConfigTabPage</value>
-  </data>
-  <data name="RenderMonorailStopsCheckbox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>338, 22</value>
-  </data>
-  <data name="ThemeLabel.Text" xml:space="preserve">
-    <value>Theme</value>
-  </data>
-  <data name="LayerConfigGridView.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 3</value>
-  </data>
-  <data name="RenderAirplaneStopsCheckbox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>505, 22</value>
-  </data>
-  <data name="DefaultMapSymbolStyleLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;SubmitButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="RenderBuildingNameLabelCheckbox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>11, 22</value>
-  </data>
-  <data name="RenderStreetNameLabelCheckbox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>125, 22</value>
-  </data>
-  <data name="&gt;&gt;RenderBusLinesCheckbox.Name" xml:space="preserve">
-    <value>RenderBusLinesCheckbox</value>
-  </data>
-  <data name="groupBox6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>619, 46</value>
-  </data>
-  <data name="&gt;&gt;RenderTramCheckbox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;StringThemeCombobox.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="groupBox1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 2, 3, 2</value>
-  </data>
-  <data name="RenderTramStopsCheckbox.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="TerrainMaxResolutionLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="DefaultMapSymbolStyleLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="RenderShipLinesCheckbox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="&gt;&gt;RenderShipLinesCheckbox.Parent" xml:space="preserve">
-    <value>groupBox5</value>
-  </data>
-  <data name="&gt;&gt;RenderDistrictNameLabelCheckbox.Name" xml:space="preserve">
-    <value>RenderDistrictNameLabelCheckbox</value>
-  </data>
-  <data name="RenderTrainLinesCheckbox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>90, 22</value>
-  </data>
-  <data name="groupBox5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>233, 222</value>
-  </data>
-  <data name="RenderMapSymbolCheckbox.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Settings</value>
-  </data>
-  <data name="&gt;&gt;TerrainMaxResolutionLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="groupBox6.Text" xml:space="preserve">
-    <value>Transport stops</value>
-  </data>
-  <data name="TextStyleLabel.Text" xml:space="preserve">
-    <value>Text style</value>
-  </data>
-  <data name="ThemeCombobox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>142, 19</value>
-  </data>
-  <data name="RenderMonorailCheckbox.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="groupBox4.Text" xml:space="preserve">
-    <value>Labels</value>
-  </data>
-  <data name="RenderTrainStopsCheckbox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>90, 22</value>
-  </data>
-  <data name="&gt;&gt;RenderCableCarCheckbox.Name" xml:space="preserve">
-    <value>RenderCableCarCheckbox</value>
-  </data>
-  <data name="groupBox5.Text" xml:space="preserve">
-    <value>Transport lines</value>
-  </data>
-  <data name="&gt;&gt;UserPrefabNameCheckbox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;RenderMetroCheckbox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;StringThemeCombobox.Name" xml:space="preserve">
-    <value>StringThemeCombobox</value>
-  </data>
-  <data name="&gt;&gt;TextStyleLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="RenderAirplaneLinesCheckbox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="&gt;&gt;RenderBuildingNameLabelCheckbox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="RenderShipStopsCheckbox.Text" xml:space="preserve">
-    <value>Ship</value>
-  </data>
-  <data name="&gt;&gt;DefaultMapSymbolStyleCombobox.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="RenderMonorailLinesCheckbox.Text" xml:space="preserve">
-    <value>Monorail</value>
-  </data>
-  <data name="&gt;&gt;RenderAirplaneStopsCheckbox.Name" xml:space="preserve">
-    <value>RenderAirplaneStopsCheckbox</value>
-  </data>
-  <data name="&gt;&gt;RenderTramCheckbox.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;FormCancelButton.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="groupBox3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>619, 48</value>
-  </data>
-  <data name="RenderAirplaneStopsCheckbox.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="RenderTramStopsCheckbox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>51, 19</value>
-  </data>
-  <data name="&gt;&gt;VectorizeLandCheckbox.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="panel1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Bottom</value>
-  </data>
-  <data name="&gt;&gt;ThemeLabel.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;WaterMaxResolutionLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="RenderShipStopsCheckbox.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="RenderBusLinesCheckbox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>45, 19</value>
-  </data>
-  <data name="&gt;&gt;RenderMetroCheckbox.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="RenderCableCarCheckbox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>491, 22</value>
-  </data>
-  <data name="&gt;&gt;groupBox2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ThemeLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="LayerConfigTabPage.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 24</value>
-  </data>
-  <data name="RenderBusLinesCheckbox.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;LayerConfigTabPage.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;groupBox3.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;DefaultMapSymbolStyleLabel.Name" xml:space="preserve">
-    <value>DefaultMapSymbolStyleLabel</value>
-  </data>
-  <data name="&gt;&gt;ConfigTab.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;VectorizeLandCheckbox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;RenderMonorailStopsCheckbox.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;groupBox5.Name" xml:space="preserve">
-    <value>groupBox5</value>
-  </data>
-  <data name="DisableBuildingBorderCheckbox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>11, 20</value>
-  </data>
-  <data name="&gt;&gt;GeneralConfigTabPage.Name" xml:space="preserve">
-    <value>GeneralConfigTabPage</value>
-  </data>
-  <data name="ThemeLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="RenderCableCarCheckbox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 2, 3, 2</value>
-  </data>
-  <data name="groupBox4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>233, 145</value>
-  </data>
-  <data name="&gt;&gt;RenderDistrictNameLabelCheckbox.Parent" xml:space="preserve">
-    <value>groupBox4</value>
-  </data>
-  <data name="RenderMonorailLinesCheckbox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>74, 19</value>
-  </data>
-  <data name="&gt;&gt;RenderMetroLinesCheckbox.Name" xml:space="preserve">
-    <value>RenderMetroLinesCheckbox</value>
-  </data>
-  <data name="&gt;&gt;HideRICOCheckbox.Name" xml:space="preserve">
-    <value>HideRICOCheckbox</value>
-  </data>
-  <data name="RenderMetroLinesCheckbox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>58, 19</value>
-  </data>
-  <data name="&gt;&gt;RenderBuildingNameLabelCheckbox.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;RenderMapSymbolCheckbox.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="RenderMonorailLinesCheckbox.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;VectorizeWaterCheckbox.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="HideCargoLinesCheckbox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="groupBox3.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 2, 3, 2</value>
-  </data>
-  <data name="RenderStreetNameLabelCheckbox.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="RenderStreetNameLabelCheckbox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>61, 19</value>
-  </data>
-  <data name="&gt;&gt;RenderShipStopsCheckbox.Parent" xml:space="preserve">
-    <value>groupBox6</value>
-  </data>
-  <data name="&gt;&gt;LayerConfigGridView.Parent" xml:space="preserve">
-    <value>LayerConfigTabPage</value>
-  </data>
-  <data name="DisableBuildingBorderCheckbox.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="RenderShipLinesCheckbox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>49, 19</value>
-  </data>
-  <data name="&gt;&gt;ThemeCombobox.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="groupBox5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>619, 46</value>
-  </data>
-  <data name="RenderBusStopsCheckbox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="RenderDistrictNameLabelCheckbox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>244, 22</value>
-  </data>
-  <data name="RenderBusStopsCheckbox.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;RenderAirplaneStopsCheckbox.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="RenderMonorailStopsCheckbox.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;RenderMetroLinesCheckbox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;RenderMonorailStopsCheckbox.Name" xml:space="preserve">
-    <value>RenderMonorailStopsCheckbox</value>
-  </data>
   <data name="HideCargoLinesCheckbox.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="HideRICOCheckbox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>11, 42</value>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="HideCargoLinesCheckbox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
-  <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>874, 35</value>
-  </data>
-  <data name="DisableBuildingBorderCheckbox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 2, 3, 2</value>
-  </data>
-  <data name="&gt;&gt;UserPrefabNameCheckbox.Name" xml:space="preserve">
-    <value>UserPrefabNameCheckbox</value>
-  </data>
-  <data name="FormCancelButton.Text" xml:space="preserve">
-    <value>Cancel</value>
-  </data>
-  <data name="groupBox3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>233, 92</value>
-  </data>
-  <data name="StringThemeCombobox.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="VectorizeLandCheckbox.Text" xml:space="preserve">
-    <value>Vectorize lands</value>
-  </data>
-  <data name="&gt;&gt;VectorizeLandCheckbox.Parent" xml:space="preserve">
-    <value>groupBox1</value>
-  </data>
-  <data name="groupBox2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>297, 73</value>
-  </data>
-  <data name="&gt;&gt;VectorizeLandCheckbox.Name" xml:space="preserve">
-    <value>VectorizeLandCheckbox</value>
-  </data>
-  <data name="RenderMapSymbolCheckbox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>368, 22</value>
-  </data>
-  <data name="&gt;&gt;RenderBusLinesCheckbox.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="TerrainMaxResolutionTextbox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>50, 23</value>
-  </data>
-  <data name="RenderRailwaysCheckbox.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;WaterMaxResolutionTextbox.Parent" xml:space="preserve">
-    <value>groupBox1</value>
-  </data>
-  <data name="&gt;&gt;FormCancelButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="ContourIntervalCombobox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>121, 23</value>
-  </data>
-  <data name="&gt;&gt;VectorizeWaterCheckbox.Parent" xml:space="preserve">
-    <value>groupBox1</value>
-  </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Form, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;RenderBusLinesCheckbox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="RenderMonorailLinesCheckbox.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="LayerConfigTabPage.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 3, 3, 3</value>
-  </data>
-  <data name="&gt;&gt;RenderTrainLinesCheckbox.Name" xml:space="preserve">
-    <value>RenderTrainLinesCheckbox</value>
-  </data>
-  <data name="HideRICOCheckbox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>172, 19</value>
-  </data>
-  <data name="RenderRailwaysCheckbox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 2, 3, 2</value>
-  </data>
-  <data name="RenderTramLinesCheckbox.Text" xml:space="preserve">
-    <value>Tram</value>
-  </data>
-  <data name="&gt;&gt;ConfigTab.Name" xml:space="preserve">
-    <value>ConfigTab</value>
-  </data>
-  <data name="HideCargoLinesCheckbox.Text" xml:space="preserve">
-    <value>Hide cargo lines</value>
-  </data>
-  <data name="&gt;&gt;ContourIntervalCombobox.Name" xml:space="preserve">
-    <value>ContourIntervalCombobox</value>
-  </data>
-  <data name="&gt;&gt;LayerConfigGridView.Type" xml:space="preserve">
-    <value>Gfw.Ui.WindowsForms.SortableBindingGridView, Gfw.Ui.WindowsForms, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;RenderTrainLinesCheckbox.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="RenderMapSymbolCheckbox.Text" xml:space="preserve">
-    <value>Map symbols</value>
-  </data>
-  <data name="ContourIntervalCombobox.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;groupBox5.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;groupBox1.Parent" xml:space="preserve">
-    <value>GeneralConfigTabPage</value>
-  </data>
-  <data name="RenderMetroCheckbox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>266, 22</value>
-  </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>874, 450</value>
-  </data>
-  <data name="&gt;&gt;RenderStreetNameLabelCheckbox.Name" xml:space="preserve">
-    <value>RenderStreetNameLabelCheckbox</value>
-  </data>
-  <data name="RenderShipLinesCheckbox.Text" xml:space="preserve">
-    <value>Ship</value>
-  </data>
-  <data name="groupBox6.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;HideRICOCheckbox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ConfigTab.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="RenderMetroCheckbox.Text" xml:space="preserve">
-    <value>Metro</value>
-  </data>
-  <data name="RenderBusStopsCheckbox.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;TextStyleLabel.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="LayerConfigTabPage.Text" xml:space="preserve">
-    <value>Layers</value>
-  </data>
-  <data name="&gt;&gt;panel1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="RenderBusLinesCheckbox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>11, 22</value>
-  </data>
-  <data name="groupBox4.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="RenderMonorailCheckbox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>74, 19</value>
-  </data>
-  <data name="RenderRailwaysCheckbox.Text" xml:space="preserve">
-    <value>Train</value>
-  </data>
-  <data name="&gt;&gt;RenderShipLinesCheckbox.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;RenderTramLinesCheckbox.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="ContourLinesIntervalsLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="RenderDistrictNameLabelCheckbox.Text" xml:space="preserve">
-    <value>Districts</value>
-  </data>
-  <data name="TextStyleLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="HideCargoLinesCheckbox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>244, 326</value>
   </data>
   <data name="HideCargoLinesCheckbox.Size" type="System.Drawing.Size, System.Drawing">
     <value>111, 19</value>
   </data>
-  <data name="&gt;&gt;TextStyleLabel.Name" xml:space="preserve">
-    <value>TextStyleLabel</value>
-  </data>
-  <data name="&gt;&gt;RenderTramStopsCheckbox.Parent" xml:space="preserve">
-    <value>groupBox6</value>
-  </data>
-  <data name="groupBox1.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 2, 3, 2</value>
-  </data>
-  <data name="RenderTramCheckbox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>51, 19</value>
-  </data>
-  <data name="&gt;&gt;TerrainMaxResolutionLabel.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="&gt;&gt;ContourIntervalCombobox.Parent" xml:space="preserve">
-    <value>groupBox1</value>
-  </data>
-  <data name="&gt;&gt;RenderTramStopsCheckbox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;RenderAirplaneStopsCheckbox.Parent" xml:space="preserve">
-    <value>groupBox6</value>
-  </data>
-  <data name="RenderBuildingNameLabelCheckbox.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="RenderMonorailStopsCheckbox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="RenderCableCarCheckbox.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="groupBox1.Text" xml:space="preserve">
-    <value>Terrain</value>
-  </data>
-  <data name="TerrainMaxResolutionLabel.Text" xml:space="preserve">
-    <value>Terrain max resolution</value>
-  </data>
-  <data name="&gt;&gt;RenderTrainStopsCheckbox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="RenderMonorailCheckbox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>373, 22</value>
-  </data>
-  <data name="RenderTramCheckbox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>144, 22</value>
-  </data>
-  <data name="RenderMonorailLinesCheckbox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>338, 22</value>
-  </data>
-  <data name="ThemeLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;groupBox5.Parent" xml:space="preserve">
-    <value>LayerConfigTabPage</value>
-  </data>
-  <data name="&gt;&gt;SubmitButton.Parent" xml:space="preserve">
-    <value>panel1</value>
-  </data>
-  <data name="RenderDistrictNameLabelCheckbox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>68, 19</value>
-  </data>
-  <data name="DefaultMapSymbolStyleCombobox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>487, 47</value>
-  </data>
-  <data name="&gt;&gt;groupBox3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;RenderRailwaysCheckbox.Name" xml:space="preserve">
-    <value>RenderRailwaysCheckbox</value>
-  </data>
-  <data name="&gt;&gt;RenderBusStopsCheckbox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="groupBox2.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 2, 3, 2</value>
-  </data>
-  <data name="WaterMaxResolutionTextbox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>50, 23</value>
-  </data>
-  <data name="RenderMetroStopsCheckbox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>58, 19</value>
-  </data>
-  <data name="&gt;&gt;TextStyleLabel.Parent" xml:space="preserve">
-    <value>GeneralConfigTabPage</value>
-  </data>
-  <data name="RenderMetroStopsCheckbox.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;RenderAirplaneLinesCheckbox.Parent" xml:space="preserve">
-    <value>groupBox5</value>
-  </data>
-  <data name="&gt;&gt;RenderMonorailCheckbox.Name" xml:space="preserve">
-    <value>RenderMonorailCheckbox</value>
-  </data>
-  <data name="RenderMapSymbolCheckbox.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;RenderAirplaneLinesCheckbox.Name" xml:space="preserve">
-    <value>RenderAirplaneLinesCheckbox</value>
-  </data>
-  <data name="ConfigTab.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="groupBox2.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="groupBox4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>619, 71</value>
-  </data>
-  <data name="ThemeCombobox.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;ThemeLabel.Parent" xml:space="preserve">
-    <value>GeneralConfigTabPage</value>
-  </data>
-  <data name="&gt;&gt;ContourLinesIntervalsLabel.Name" xml:space="preserve">
-    <value>ContourLinesIntervalsLabel</value>
-  </data>
-  <data name="&gt;&gt;RenderBusStopsCheckbox.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="RenderShipStopsCheckbox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>435, 22</value>
-  </data>
-  <data name="groupBox2.Text" xml:space="preserve">
-    <value>Buildings</value>
-  </data>
-  <data name="DefaultMapSymbolStyleLabel.Text" xml:space="preserve">
-    <value>Default map symbol style</value>
-  </data>
-  <data name="RenderCableCarCheckbox.Text" xml:space="preserve">
-    <value>Cable car</value>
-  </data>
-  <data name="RenderAirplaneStopsCheckbox.Text" xml:space="preserve">
-    <value>Airplane</value>
-  </data>
-  <data name="RenderBusLinesCheckbox.Text" xml:space="preserve">
-    <value>Bus</value>
-  </data>
-  <data name="&gt;&gt;DisableBuildingBorderCheckbox.Name" xml:space="preserve">
-    <value>DisableBuildingBorderCheckbox</value>
-  </data>
-  <data name="UserPrefabNameCheckbox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>11, 46</value>
-  </data>
-  <data name="groupBox2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>233, 5</value>
-  </data>
-  <data name="&gt;&gt;DisableBuildingBorderCheckbox.Parent" xml:space="preserve">
-    <value>groupBox2</value>
-  </data>
-  <data name="RenderAirplaneStopsCheckbox.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;ThemeLabel.Name" xml:space="preserve">
-    <value>ThemeLabel</value>
-  </data>
-  <data name="RenderMetroLinesCheckbox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>254, 22</value>
-  </data>
-  <data name="LayerConfigGridView.RowHeadersWidth" type="System.Int32, mscorlib">
-    <value>51</value>
-  </data>
-  <data name="GeneralConfigTabPage.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;RenderCableCarCheckbox.Parent" xml:space="preserve">
-    <value>groupBox3</value>
-  </data>
-  <data name="&gt;&gt;RenderTramLinesCheckbox.Parent" xml:space="preserve">
-    <value>groupBox5</value>
-  </data>
-  <data name="&gt;&gt;RenderMetroCheckbox.Parent" xml:space="preserve">
-    <value>groupBox3</value>
-  </data>
-  <data name="RenderMetroLinesCheckbox.Text" xml:space="preserve">
-    <value>Metro</value>
-  </data>
-  <data name="WaterMaxResolutionLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>149, 58</value>
-  </data>
-  <data name="&gt;&gt;groupBox1.Name" xml:space="preserve">
-    <value>groupBox1</value>
-  </data>
-  <data name="FormCancelButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>714, 3</value>
-  </data>
-  <data name="&gt;&gt;RenderMetroStopsCheckbox.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="VectorizeWaterCheckbox.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;ThemeCombobox.Parent" xml:space="preserve">
-    <value>GeneralConfigTabPage</value>
-  </data>
-  <data name="RenderTramLinesCheckbox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="RenderShipStopsCheckbox.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;groupBox1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;WaterMaxResolutionLabel.Parent" xml:space="preserve">
-    <value>groupBox1</value>
-  </data>
-  <data name="groupBox3.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;FormCancelButton.Name" xml:space="preserve">
-    <value>FormCancelButton</value>
-  </data>
-  <data name="&gt;&gt;GeneralConfigTabPage.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="groupBox2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 2, 3, 2</value>
-  </data>
-  <data name="ConfigTab.Size" type="System.Drawing.Size, System.Drawing">
-    <value>874, 404</value>
-  </data>
-  <data name="&gt;&gt;RenderTramStopsCheckbox.Name" xml:space="preserve">
-    <value>RenderTramStopsCheckbox</value>
-  </data>
-  <data name="SubmitButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 23</value>
-  </data>
   <data name="HideCargoLinesCheckbox.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="groupBox6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>233, 274</value>
+  <data name="HideCargoLinesCheckbox.Text" xml:space="preserve">
+    <value>Hide cargo lines</value>
   </data>
-  <data name="&gt;&gt;RenderMonorailCheckbox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="RenderTrainLinesCheckbox.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;UserPrefabNameCheckbox.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="RenderTrainStopsCheckbox.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="GeneralConfigTabPage.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 24</value>
-  </data>
-  <data name="&gt;&gt;RenderRailwaysCheckbox.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="HideRICOCheckbox.Text" xml:space="preserve">
-    <value>Do not draw RICO buildings</value>
-  </data>
-  <data name="RenderMetroStopsCheckbox.Text" xml:space="preserve">
-    <value>Metro</value>
+  <data name="&gt;&gt;HideCargoLinesCheckbox.Name" xml:space="preserve">
+    <value>HideCargoLinesCheckbox</value>
   </data>
   <data name="&gt;&gt;HideCargoLinesCheckbox.Type" xml:space="preserve">
     <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;RenderMetroStopsCheckbox.Name" xml:space="preserve">
-    <value>RenderMetroStopsCheckbox</value>
+  <data name="&gt;&gt;HideCargoLinesCheckbox.Parent" xml:space="preserve">
+    <value>LayerConfigTabPage</value>
   </data>
-  <data name="DisableBuildingBorderCheckbox.Text" xml:space="preserve">
-    <value>Do not draw border line of buildings</value>
+  <data name="&gt;&gt;HideCargoLinesCheckbox.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="RenderBusStopsCheckbox.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="RenderBusStopsCheckbox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="RenderBusStopsCheckbox.Location" type="System.Drawing.Point, System.Drawing">
     <value>11, 22</value>
   </data>
-  <data name="UserPrefabNameCheckbox.Text" xml:space="preserve">
-    <value>Use prefab names</value>
-  </data>
-  <data name="FormCancelButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 23</value>
-  </data>
-  <data name="&gt;&gt;LayerConfigGridView.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="DefaultMapSymbolStyleCombobox.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;WaterMaxResolutionLabel.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="RenderMetroLinesCheckbox.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;RenderRailwaysCheckbox.Parent" xml:space="preserve">
-    <value>groupBox3</value>
-  </data>
-  <data name="&gt;&gt;RenderMapSymbolCheckbox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="RenderMonorailStopsCheckbox.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="WaterMaxResolutionLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;groupBox3.Parent" xml:space="preserve">
-    <value>LayerConfigTabPage</value>
-  </data>
-  <data name="&gt;&gt;RenderTrainStopsCheckbox.Name" xml:space="preserve">
-    <value>RenderTrainStopsCheckbox</value>
-  </data>
-  <data name="&gt;&gt;ContourIntervalCombobox.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;ContourLinesIntervalsLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;RenderMetroLinesCheckbox.Parent" xml:space="preserve">
-    <value>groupBox5</value>
-  </data>
-  <data name="&gt;&gt;DefaultMapSymbolStyleLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;groupBox5.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="RenderDistrictNameLabelCheckbox.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="HideRICOCheckbox.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;WaterMaxResolutionTextbox.Name" xml:space="preserve">
-    <value>WaterMaxResolutionTextbox</value>
-  </data>
-  <data name="ContourLinesIntervalsLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>379, 21</value>
-  </data>
-  <data name="RenderTrainLinesCheckbox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>51, 19</value>
-  </data>
-  <data name="DefaultMapSymbolStyleLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>327, 50</value>
-  </data>
-  <data name="RenderTramLinesCheckbox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>177, 22</value>
-  </data>
-  <data name="RenderTramStopsCheckbox.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="RenderMetroStopsCheckbox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>254, 22</value>
-  </data>
-  <data name="TextStyleLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>55, 15</value>
-  </data>
-  <data name="&gt;&gt;RenderTramLinesCheckbox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;groupBox3.Name" xml:space="preserve">
-    <value>groupBox3</value>
-  </data>
-  <data name="&gt;&gt;RenderTramCheckbox.Name" xml:space="preserve">
-    <value>RenderTramCheckbox</value>
-  </data>
   <data name="RenderBusStopsCheckbox.Size" type="System.Drawing.Size, System.Drawing">
     <value>45, 19</value>
   </data>
-  <data name="&gt;&gt;RenderTramStopsCheckbox.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;groupBox2.Parent" xml:space="preserve">
-    <value>LayerConfigTabPage</value>
-  </data>
-  <data name="TextStyleLabel.TabIndex" type="System.Int32, mscorlib">
+  <data name="RenderBusStopsCheckbox.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="&gt;&gt;DisableBuildingBorderCheckbox.ZOrder" xml:space="preserve">
-    <value>0</value>
+  <data name="RenderBusStopsCheckbox.Text" xml:space="preserve">
+    <value>Bus</value>
   </data>
-  <data name="&gt;&gt;groupBox6.Name" xml:space="preserve">
+  <data name="&gt;&gt;RenderBusStopsCheckbox.Name" xml:space="preserve">
+    <value>RenderBusStopsCheckbox</value>
+  </data>
+  <data name="&gt;&gt;RenderBusStopsCheckbox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;RenderBusStopsCheckbox.Parent" xml:space="preserve">
     <value>groupBox6</value>
   </data>
-  <data name="RenderRailwaysCheckbox.AutoSize" type="System.Boolean, mscorlib">
+  <data name="&gt;&gt;RenderBusStopsCheckbox.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="RenderAirplaneStopsCheckbox.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="RenderAirplaneStopsCheckbox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="groupBox5.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;RenderMonorailLinesCheckbox.Name" xml:space="preserve">
-    <value>RenderMonorailLinesCheckbox</value>
-  </data>
-  <data name="&gt;&gt;HideRICOCheckbox.Parent" xml:space="preserve">
-    <value>groupBox2</value>
-  </data>
-  <data name="groupBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 95</value>
-  </data>
-  <data name="&gt;&gt;RenderTramCheckbox.Parent" xml:space="preserve">
-    <value>groupBox3</value>
-  </data>
-  <data name="RenderBuildingNameLabelCheckbox.Text" xml:space="preserve">
-    <value>Buildings</value>
-  </data>
-  <data name="RenderRailwaysCheckbox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 22</value>
-  </data>
-  <data name="VectorizeLandCheckbox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>17, 20</value>
-  </data>
-  <data name="RenderTramCheckbox.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="RenderMonorailCheckbox.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="RenderTrainStopsCheckbox.Text" xml:space="preserve">
-    <value>Train</value>
-  </data>
-  <data name="&gt;&gt;RenderMonorailLinesCheckbox.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="TextStyleLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>327, 22</value>
-  </data>
-  <data name="GeneralConfigTabPage.Text" xml:space="preserve">
-    <value>General</value>
-  </data>
-  <data name="RenderTrainLinesCheckbox.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;RenderMonorailLinesCheckbox.Parent" xml:space="preserve">
-    <value>groupBox5</value>
-  </data>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>96, 96</value>
-  </data>
-  <data name="VectorizeWaterCheckbox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>17, 57</value>
-  </data>
-  <data name="&gt;&gt;groupBox4.Name" xml:space="preserve">
-    <value>groupBox4</value>
-  </data>
-  <data name="&gt;&gt;panel1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="HideRICOCheckbox.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;TerrainMaxResolutionTextbox.Parent" xml:space="preserve">
-    <value>groupBox1</value>
-  </data>
-  <data name="&gt;&gt;RenderCableCarCheckbox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;LayerConfigGridView.Name" xml:space="preserve">
-    <value>LayerConfigGridView</value>
-  </data>
-  <data name="&gt;&gt;WaterMaxResolutionLabel.Name" xml:space="preserve">
-    <value>WaterMaxResolutionLabel</value>
-  </data>
-  <data name="WaterMaxResolutionTextbox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>292, 55</value>
-  </data>
-  <data name="&gt;&gt;RenderRailwaysCheckbox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="RenderBusLinesCheckbox.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="RenderShipLinesCheckbox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>435, 22</value>
-  </data>
-  <data name="HideCargoLinesCheckbox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>244, 326</value>
-  </data>
-  <data name="GeneralConfigTabPage.Size" type="System.Drawing.Size, System.Drawing">
-    <value>866, 376</value>
-  </data>
-  <data name="TerrainMaxResolutionLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>149, 21</value>
-  </data>
-  <data name="ThemeCombobox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>121, 23</value>
-  </data>
-  <data name="RenderStreetNameLabelCheckbox.Text" xml:space="preserve">
-    <value>Streets</value>
-  </data>
-  <data name="&gt;&gt;RenderAirplaneLinesCheckbox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="groupBox1.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;RenderMetroLinesCheckbox.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="UserPrefabNameCheckbox.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="TerrainMaxResolutionLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>123, 15</value>
-  </data>
-  <data name="&gt;&gt;RenderStreetNameLabelCheckbox.Parent" xml:space="preserve">
-    <value>groupBox4</value>
-  </data>
-  <data name="RenderMonorailLinesCheckbox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="StringThemeCombobox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>121, 23</value>
-  </data>
-  <data name="RenderTrainStopsCheckbox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>51, 19</value>
-  </data>
-  <data name="&gt;&gt;RenderMapSymbolCheckbox.Parent" xml:space="preserve">
-    <value>groupBox4</value>
-  </data>
-  <data name="&gt;&gt;TerrainMaxResolutionLabel.Parent" xml:space="preserve">
-    <value>groupBox1</value>
-  </data>
-  <data name="&gt;&gt;groupBox6.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="panel1.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;groupBox6.Parent" xml:space="preserve">
-    <value>LayerConfigTabPage</value>
-  </data>
-  <data name="&gt;&gt;RenderDistrictNameLabelCheckbox.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="DisableBuildingBorderCheckbox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>217, 19</value>
-  </data>
-  <data name="&gt;&gt;RenderStreetNameLabelCheckbox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="TerrainMaxResolutionTextbox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>Disable</value>
-  </data>
-  <data name="&gt;&gt;RenderMetroStopsCheckbox.Parent" xml:space="preserve">
-    <value>groupBox6</value>
+  <data name="RenderAirplaneStopsCheckbox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>505, 22</value>
   </data>
   <data name="RenderAirplaneStopsCheckbox.Size" type="System.Drawing.Size, System.Drawing">
     <value>70, 19</value>
   </data>
+  <data name="RenderAirplaneStopsCheckbox.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="RenderAirplaneStopsCheckbox.Text" xml:space="preserve">
+    <value>Airplane</value>
+  </data>
+  <data name="&gt;&gt;RenderAirplaneStopsCheckbox.Name" xml:space="preserve">
+    <value>RenderAirplaneStopsCheckbox</value>
+  </data>
+  <data name="&gt;&gt;RenderAirplaneStopsCheckbox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;RenderAirplaneStopsCheckbox.Parent" xml:space="preserve">
+    <value>groupBox6</value>
+  </data>
+  <data name="&gt;&gt;RenderAirplaneStopsCheckbox.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="RenderShipStopsCheckbox.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="RenderShipStopsCheckbox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="RenderShipStopsCheckbox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>435, 22</value>
+  </data>
+  <data name="RenderShipStopsCheckbox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>49, 19</value>
+  </data>
+  <data name="RenderShipStopsCheckbox.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="RenderShipStopsCheckbox.Text" xml:space="preserve">
+    <value>Ship</value>
+  </data>
+  <data name="&gt;&gt;RenderShipStopsCheckbox.Name" xml:space="preserve">
+    <value>RenderShipStopsCheckbox</value>
+  </data>
+  <data name="&gt;&gt;RenderShipStopsCheckbox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;RenderShipStopsCheckbox.Parent" xml:space="preserve">
+    <value>groupBox6</value>
+  </data>
+  <data name="&gt;&gt;RenderShipStopsCheckbox.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="RenderMonorailStopsCheckbox.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="RenderMonorailStopsCheckbox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="RenderMonorailStopsCheckbox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>338, 22</value>
+  </data>
+  <data name="RenderMonorailStopsCheckbox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>74, 19</value>
+  </data>
+  <data name="RenderMonorailStopsCheckbox.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="RenderMonorailStopsCheckbox.Text" xml:space="preserve">
+    <value>Monorail</value>
+  </data>
+  <data name="&gt;&gt;RenderMonorailStopsCheckbox.Name" xml:space="preserve">
+    <value>RenderMonorailStopsCheckbox</value>
+  </data>
+  <data name="&gt;&gt;RenderMonorailStopsCheckbox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;RenderMonorailStopsCheckbox.Parent" xml:space="preserve">
+    <value>groupBox6</value>
+  </data>
+  <data name="&gt;&gt;RenderMonorailStopsCheckbox.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="RenderMetroStopsCheckbox.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="RenderMetroStopsCheckbox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="RenderMetroStopsCheckbox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>254, 22</value>
+  </data>
+  <data name="RenderMetroStopsCheckbox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>58, 19</value>
+  </data>
+  <data name="RenderMetroStopsCheckbox.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="RenderMetroStopsCheckbox.Text" xml:space="preserve">
+    <value>Metro</value>
+  </data>
+  <data name="&gt;&gt;RenderMetroStopsCheckbox.Name" xml:space="preserve">
+    <value>RenderMetroStopsCheckbox</value>
+  </data>
+  <data name="&gt;&gt;RenderMetroStopsCheckbox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;RenderMetroStopsCheckbox.Parent" xml:space="preserve">
+    <value>groupBox6</value>
+  </data>
+  <data name="&gt;&gt;RenderMetroStopsCheckbox.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="RenderTramStopsCheckbox.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="RenderTramStopsCheckbox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="RenderTramStopsCheckbox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>177, 22</value>
+  </data>
+  <data name="RenderTramStopsCheckbox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>51, 19</value>
+  </data>
+  <data name="RenderTramStopsCheckbox.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="RenderTramStopsCheckbox.Text" xml:space="preserve">
+    <value>Tram</value>
+  </data>
+  <data name="&gt;&gt;RenderTramStopsCheckbox.Name" xml:space="preserve">
+    <value>RenderTramStopsCheckbox</value>
+  </data>
+  <data name="&gt;&gt;RenderTramStopsCheckbox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;RenderTramStopsCheckbox.Parent" xml:space="preserve">
+    <value>groupBox6</value>
+  </data>
+  <data name="&gt;&gt;RenderTramStopsCheckbox.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="RenderTrainStopsCheckbox.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="RenderTrainStopsCheckbox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="RenderTrainStopsCheckbox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>90, 22</value>
+  </data>
+  <data name="RenderTrainStopsCheckbox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>51, 19</value>
+  </data>
+  <data name="RenderTrainStopsCheckbox.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="RenderTrainStopsCheckbox.Text" xml:space="preserve">
+    <value>Train</value>
+  </data>
+  <data name="&gt;&gt;RenderTrainStopsCheckbox.Name" xml:space="preserve">
+    <value>RenderTrainStopsCheckbox</value>
+  </data>
+  <data name="&gt;&gt;RenderTrainStopsCheckbox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;RenderTrainStopsCheckbox.Parent" xml:space="preserve">
+    <value>groupBox6</value>
+  </data>
+  <data name="&gt;&gt;RenderTrainStopsCheckbox.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="groupBox6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>233, 274</value>
+  </data>
+  <data name="groupBox6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>619, 46</value>
+  </data>
+  <data name="groupBox6.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="groupBox6.Text" xml:space="preserve">
+    <value>Transport stops</value>
+  </data>
+  <data name="&gt;&gt;groupBox6.Name" xml:space="preserve">
+    <value>groupBox6</value>
+  </data>
+  <data name="&gt;&gt;groupBox6.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBox6.Parent" xml:space="preserve">
+    <value>LayerConfigTabPage</value>
+  </data>
+  <data name="&gt;&gt;groupBox6.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="RenderBusLinesCheckbox.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="RenderBusLinesCheckbox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="RenderBusLinesCheckbox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>11, 22</value>
+  </data>
+  <data name="RenderBusLinesCheckbox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 19</value>
+  </data>
+  <data name="RenderBusLinesCheckbox.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="RenderBusLinesCheckbox.Text" xml:space="preserve">
+    <value>Bus</value>
+  </data>
+  <data name="&gt;&gt;RenderBusLinesCheckbox.Name" xml:space="preserve">
+    <value>RenderBusLinesCheckbox</value>
+  </data>
+  <data name="&gt;&gt;RenderBusLinesCheckbox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;RenderBusLinesCheckbox.Parent" xml:space="preserve">
+    <value>groupBox5</value>
+  </data>
+  <data name="&gt;&gt;RenderBusLinesCheckbox.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="RenderAirplaneLinesCheckbox.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="RenderAirplaneLinesCheckbox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="RenderAirplaneLinesCheckbox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>505, 22</value>
+  </data>
+  <data name="RenderAirplaneLinesCheckbox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>70, 19</value>
+  </data>
+  <data name="RenderAirplaneLinesCheckbox.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="RenderAirplaneLinesCheckbox.Text" xml:space="preserve">
+    <value>Airplane</value>
+  </data>
+  <data name="&gt;&gt;RenderAirplaneLinesCheckbox.Name" xml:space="preserve">
+    <value>RenderAirplaneLinesCheckbox</value>
+  </data>
+  <data name="&gt;&gt;RenderAirplaneLinesCheckbox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;RenderAirplaneLinesCheckbox.Parent" xml:space="preserve">
+    <value>groupBox5</value>
+  </data>
+  <data name="&gt;&gt;RenderAirplaneLinesCheckbox.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="RenderShipLinesCheckbox.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="RenderShipLinesCheckbox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="RenderShipLinesCheckbox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>435, 22</value>
+  </data>
+  <data name="RenderShipLinesCheckbox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>49, 19</value>
+  </data>
+  <data name="RenderShipLinesCheckbox.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="RenderShipLinesCheckbox.Text" xml:space="preserve">
+    <value>Ship</value>
+  </data>
+  <data name="&gt;&gt;RenderShipLinesCheckbox.Name" xml:space="preserve">
+    <value>RenderShipLinesCheckbox</value>
+  </data>
+  <data name="&gt;&gt;RenderShipLinesCheckbox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;RenderShipLinesCheckbox.Parent" xml:space="preserve">
+    <value>groupBox5</value>
+  </data>
+  <data name="&gt;&gt;RenderShipLinesCheckbox.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="RenderMonorailLinesCheckbox.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="RenderMonorailLinesCheckbox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="RenderMonorailLinesCheckbox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>338, 22</value>
+  </data>
+  <data name="RenderMonorailLinesCheckbox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>74, 19</value>
+  </data>
+  <data name="RenderMonorailLinesCheckbox.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="RenderMonorailLinesCheckbox.Text" xml:space="preserve">
+    <value>Monorail</value>
+  </data>
+  <data name="&gt;&gt;RenderMonorailLinesCheckbox.Name" xml:space="preserve">
+    <value>RenderMonorailLinesCheckbox</value>
+  </data>
+  <data name="&gt;&gt;RenderMonorailLinesCheckbox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;RenderMonorailLinesCheckbox.Parent" xml:space="preserve">
+    <value>groupBox5</value>
+  </data>
+  <data name="&gt;&gt;RenderMonorailLinesCheckbox.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="RenderMetroLinesCheckbox.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="RenderMetroLinesCheckbox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="RenderMetroLinesCheckbox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>254, 22</value>
+  </data>
+  <data name="RenderMetroLinesCheckbox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>58, 19</value>
+  </data>
+  <data name="RenderMetroLinesCheckbox.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="RenderMetroLinesCheckbox.Text" xml:space="preserve">
+    <value>Metro</value>
+  </data>
+  <data name="&gt;&gt;RenderMetroLinesCheckbox.Name" xml:space="preserve">
+    <value>RenderMetroLinesCheckbox</value>
+  </data>
+  <data name="&gt;&gt;RenderMetroLinesCheckbox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;RenderMetroLinesCheckbox.Parent" xml:space="preserve">
+    <value>groupBox5</value>
+  </data>
+  <data name="&gt;&gt;RenderMetroLinesCheckbox.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="RenderTramLinesCheckbox.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="RenderTramLinesCheckbox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="RenderTramLinesCheckbox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>177, 22</value>
+  </data>
+  <data name="RenderTramLinesCheckbox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>51, 19</value>
+  </data>
+  <data name="RenderTramLinesCheckbox.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="RenderTramLinesCheckbox.Text" xml:space="preserve">
+    <value>Tram</value>
+  </data>
+  <data name="&gt;&gt;RenderTramLinesCheckbox.Name" xml:space="preserve">
+    <value>RenderTramLinesCheckbox</value>
+  </data>
+  <data name="&gt;&gt;RenderTramLinesCheckbox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;RenderTramLinesCheckbox.Parent" xml:space="preserve">
+    <value>groupBox5</value>
+  </data>
+  <data name="&gt;&gt;RenderTramLinesCheckbox.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="RenderTrainLinesCheckbox.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="RenderTrainLinesCheckbox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>90, 22</value>
+  </data>
+  <data name="RenderTrainLinesCheckbox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>51, 19</value>
+  </data>
+  <data name="RenderTrainLinesCheckbox.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="RenderTrainLinesCheckbox.Text" xml:space="preserve">
+    <value>Train</value>
+  </data>
+  <data name="&gt;&gt;RenderTrainLinesCheckbox.Name" xml:space="preserve">
+    <value>RenderTrainLinesCheckbox</value>
+  </data>
+  <data name="&gt;&gt;RenderTrainLinesCheckbox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;RenderTrainLinesCheckbox.Parent" xml:space="preserve">
+    <value>groupBox5</value>
+  </data>
+  <data name="&gt;&gt;RenderTrainLinesCheckbox.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="groupBox5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>233, 222</value>
+  </data>
+  <data name="groupBox5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>619, 46</value>
+  </data>
+  <data name="groupBox5.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="groupBox5.Text" xml:space="preserve">
+    <value>Transport lines</value>
+  </data>
+  <data name="&gt;&gt;groupBox5.Name" xml:space="preserve">
+    <value>groupBox5</value>
+  </data>
+  <data name="&gt;&gt;groupBox5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBox5.Parent" xml:space="preserve">
+    <value>LayerConfigTabPage</value>
+  </data>
+  <data name="&gt;&gt;groupBox5.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="UserPrefabNameCheckbox.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="UserPrefabNameCheckbox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>11, 46</value>
+  </data>
+  <data name="UserPrefabNameCheckbox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>119, 19</value>
+  </data>
+  <data name="UserPrefabNameCheckbox.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="UserPrefabNameCheckbox.Text" xml:space="preserve">
+    <value>Use prefab names</value>
+  </data>
+  <data name="&gt;&gt;UserPrefabNameCheckbox.Name" xml:space="preserve">
+    <value>UserPrefabNameCheckbox</value>
+  </data>
+  <data name="&gt;&gt;UserPrefabNameCheckbox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;UserPrefabNameCheckbox.Parent" xml:space="preserve">
+    <value>groupBox4</value>
+  </data>
+  <data name="&gt;&gt;UserPrefabNameCheckbox.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="RenderDistrictNameLabelCheckbox.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="RenderDistrictNameLabelCheckbox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>244, 22</value>
+  </data>
+  <data name="RenderDistrictNameLabelCheckbox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>68, 19</value>
+  </data>
+  <data name="RenderDistrictNameLabelCheckbox.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="RenderDistrictNameLabelCheckbox.Text" xml:space="preserve">
+    <value>Districts</value>
+  </data>
+  <data name="&gt;&gt;RenderDistrictNameLabelCheckbox.Name" xml:space="preserve">
+    <value>RenderDistrictNameLabelCheckbox</value>
+  </data>
+  <data name="&gt;&gt;RenderDistrictNameLabelCheckbox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;RenderDistrictNameLabelCheckbox.Parent" xml:space="preserve">
+    <value>groupBox4</value>
+  </data>
+  <data name="&gt;&gt;RenderDistrictNameLabelCheckbox.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="RenderMapSymbolCheckbox.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="RenderMapSymbolCheckbox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>368, 22</value>
+  </data>
+  <data name="RenderMapSymbolCheckbox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>96, 19</value>
+  </data>
+  <data name="RenderMapSymbolCheckbox.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="RenderMapSymbolCheckbox.Text" xml:space="preserve">
+    <value>Map symbols</value>
+  </data>
+  <data name="&gt;&gt;RenderMapSymbolCheckbox.Name" xml:space="preserve">
+    <value>RenderMapSymbolCheckbox</value>
+  </data>
+  <data name="&gt;&gt;RenderMapSymbolCheckbox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;RenderMapSymbolCheckbox.Parent" xml:space="preserve">
+    <value>groupBox4</value>
+  </data>
+  <data name="&gt;&gt;RenderMapSymbolCheckbox.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="RenderStreetNameLabelCheckbox.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="RenderStreetNameLabelCheckbox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>125, 22</value>
+  </data>
+  <data name="RenderStreetNameLabelCheckbox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>61, 19</value>
+  </data>
+  <data name="RenderStreetNameLabelCheckbox.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="RenderStreetNameLabelCheckbox.Text" xml:space="preserve">
+    <value>Streets</value>
+  </data>
+  <data name="&gt;&gt;RenderStreetNameLabelCheckbox.Name" xml:space="preserve">
+    <value>RenderStreetNameLabelCheckbox</value>
+  </data>
+  <data name="&gt;&gt;RenderStreetNameLabelCheckbox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;RenderStreetNameLabelCheckbox.Parent" xml:space="preserve">
+    <value>groupBox4</value>
+  </data>
+  <data name="&gt;&gt;RenderStreetNameLabelCheckbox.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="RenderBuildingNameLabelCheckbox.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="RenderBuildingNameLabelCheckbox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>11, 22</value>
+  </data>
+  <data name="RenderBuildingNameLabelCheckbox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 19</value>
+  </data>
+  <data name="RenderBuildingNameLabelCheckbox.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="RenderBuildingNameLabelCheckbox.Text" xml:space="preserve">
+    <value>Buildings</value>
+  </data>
+  <data name="&gt;&gt;RenderBuildingNameLabelCheckbox.Name" xml:space="preserve">
+    <value>RenderBuildingNameLabelCheckbox</value>
+  </data>
+  <data name="&gt;&gt;RenderBuildingNameLabelCheckbox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;RenderBuildingNameLabelCheckbox.Parent" xml:space="preserve">
+    <value>groupBox4</value>
+  </data>
+  <data name="&gt;&gt;RenderBuildingNameLabelCheckbox.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="groupBox4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>233, 145</value>
+  </data>
+  <data name="groupBox4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>619, 71</value>
+  </data>
+  <data name="groupBox4.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="groupBox4.Text" xml:space="preserve">
+    <value>Labels</value>
+  </data>
+  <data name="&gt;&gt;groupBox4.Name" xml:space="preserve">
+    <value>groupBox4</value>
+  </data>
+  <data name="&gt;&gt;groupBox4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBox4.Parent" xml:space="preserve">
+    <value>LayerConfigTabPage</value>
+  </data>
+  <data name="&gt;&gt;groupBox4.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="RenderMetroCheckbox.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="RenderMetroCheckbox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>266, 22</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="RenderMetroCheckbox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="RenderMetroCheckbox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>58, 19</value>
+  </data>
+  <data name="RenderMetroCheckbox.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="RenderMetroCheckbox.Text" xml:space="preserve">
+    <value>Metro</value>
+  </data>
+  <data name="&gt;&gt;RenderMetroCheckbox.Name" xml:space="preserve">
+    <value>RenderMetroCheckbox</value>
+  </data>
+  <data name="&gt;&gt;RenderMetroCheckbox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;RenderMetroCheckbox.Parent" xml:space="preserve">
+    <value>groupBox3</value>
+  </data>
+  <data name="&gt;&gt;RenderMetroCheckbox.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="RenderTramCheckbox.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="RenderTramCheckbox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>144, 22</value>
+  </data>
+  <data name="RenderTramCheckbox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="RenderTramCheckbox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>51, 19</value>
+  </data>
+  <data name="RenderTramCheckbox.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="RenderTramCheckbox.Text" xml:space="preserve">
+    <value>Tram</value>
+  </data>
+  <data name="&gt;&gt;RenderTramCheckbox.Name" xml:space="preserve">
+    <value>RenderTramCheckbox</value>
+  </data>
+  <data name="&gt;&gt;RenderTramCheckbox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;RenderTramCheckbox.Parent" xml:space="preserve">
+    <value>groupBox3</value>
+  </data>
+  <data name="&gt;&gt;RenderTramCheckbox.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="RenderCableCarCheckbox.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="RenderCableCarCheckbox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>491, 22</value>
+  </data>
+  <data name="RenderCableCarCheckbox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="RenderCableCarCheckbox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>74, 19</value>
+  </data>
+  <data name="RenderCableCarCheckbox.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="RenderCableCarCheckbox.Text" xml:space="preserve">
+    <value>Cable car</value>
+  </data>
+  <data name="&gt;&gt;RenderCableCarCheckbox.Name" xml:space="preserve">
+    <value>RenderCableCarCheckbox</value>
+  </data>
+  <data name="&gt;&gt;RenderCableCarCheckbox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;RenderCableCarCheckbox.Parent" xml:space="preserve">
+    <value>groupBox3</value>
+  </data>
+  <data name="&gt;&gt;RenderCableCarCheckbox.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="RenderMonorailCheckbox.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="RenderMonorailCheckbox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>373, 22</value>
+  </data>
+  <data name="RenderMonorailCheckbox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="RenderMonorailCheckbox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>74, 19</value>
+  </data>
+  <data name="RenderMonorailCheckbox.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="RenderMonorailCheckbox.Text" xml:space="preserve">
+    <value>Monorail</value>
+  </data>
+  <data name="&gt;&gt;RenderMonorailCheckbox.Name" xml:space="preserve">
+    <value>RenderMonorailCheckbox</value>
+  </data>
+  <data name="&gt;&gt;RenderMonorailCheckbox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;RenderMonorailCheckbox.Parent" xml:space="preserve">
+    <value>groupBox3</value>
+  </data>
+  <data name="&gt;&gt;RenderMonorailCheckbox.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="RenderRailwaysCheckbox.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="RenderRailwaysCheckbox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 22</value>
+  </data>
+  <data name="RenderRailwaysCheckbox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="RenderRailwaysCheckbox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>51, 19</value>
+  </data>
+  <data name="RenderRailwaysCheckbox.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="RenderRailwaysCheckbox.Text" xml:space="preserve">
+    <value>Train</value>
+  </data>
+  <data name="&gt;&gt;RenderRailwaysCheckbox.Name" xml:space="preserve">
+    <value>RenderRailwaysCheckbox</value>
+  </data>
+  <data name="&gt;&gt;RenderRailwaysCheckbox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;RenderRailwaysCheckbox.Parent" xml:space="preserve">
+    <value>groupBox3</value>
+  </data>
+  <data name="&gt;&gt;RenderRailwaysCheckbox.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="groupBox3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>233, 92</value>
+  </data>
+  <data name="groupBox3.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="groupBox3.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="groupBox3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>619, 48</value>
+  </data>
+  <data name="groupBox3.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="groupBox3.Text" xml:space="preserve">
+    <value>Railway tracks</value>
+  </data>
+  <data name="&gt;&gt;groupBox3.Name" xml:space="preserve">
+    <value>groupBox3</value>
+  </data>
+  <data name="&gt;&gt;groupBox3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBox3.Parent" xml:space="preserve">
+    <value>LayerConfigTabPage</value>
+  </data>
+  <data name="&gt;&gt;groupBox3.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="DisableBuildingBorderCheckbox.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="DisableBuildingBorderCheckbox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>11, 20</value>
+  </data>
+  <data name="DisableBuildingBorderCheckbox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="DisableBuildingBorderCheckbox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>217, 19</value>
+  </data>
+  <data name="DisableBuildingBorderCheckbox.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="DisableBuildingBorderCheckbox.Text" xml:space="preserve">
+    <value>Do not draw border line of buildings</value>
+  </data>
+  <data name="&gt;&gt;DisableBuildingBorderCheckbox.Name" xml:space="preserve">
+    <value>DisableBuildingBorderCheckbox</value>
+  </data>
+  <data name="&gt;&gt;DisableBuildingBorderCheckbox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;DisableBuildingBorderCheckbox.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;DisableBuildingBorderCheckbox.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="HideRICOCheckbox.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="HideRICOCheckbox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>11, 42</value>
+  </data>
+  <data name="HideRICOCheckbox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="HideRICOCheckbox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>172, 19</value>
+  </data>
+  <data name="HideRICOCheckbox.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="HideRICOCheckbox.Text" xml:space="preserve">
+    <value>Do not draw RICO buildings</value>
+  </data>
+  <data name="&gt;&gt;HideRICOCheckbox.Name" xml:space="preserve">
+    <value>HideRICOCheckbox</value>
+  </data>
+  <data name="&gt;&gt;HideRICOCheckbox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;HideRICOCheckbox.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;HideRICOCheckbox.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="groupBox2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>233, 5</value>
+  </data>
+  <data name="groupBox2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="groupBox2.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="groupBox2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>297, 73</value>
+  </data>
+  <data name="groupBox2.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="groupBox2.Text" xml:space="preserve">
+    <value>Buildings</value>
+  </data>
+  <data name="&gt;&gt;groupBox2.Name" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;groupBox2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBox2.Parent" xml:space="preserve">
+    <value>LayerConfigTabPage</value>
+  </data>
+  <data name="&gt;&gt;groupBox2.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="LayerConfigGridView.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 3</value>
+  </data>
+  <data name="LayerConfigGridView.RowHeadersWidth" type="System.Int32, mscorlib">
+    <value>51</value>
+  </data>
+  <data name="LayerConfigGridView.Size" type="System.Drawing.Size, System.Drawing">
+    <value>219, 217</value>
+  </data>
+  <data name="LayerConfigGridView.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;LayerConfigGridView.Name" xml:space="preserve">
+    <value>LayerConfigGridView</value>
+  </data>
+  <data name="&gt;&gt;LayerConfigGridView.Type" xml:space="preserve">
+    <value>Gfw.Ui.WindowsForms.SortableBindingGridView, Gfw.Ui.WindowsForms, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;LayerConfigGridView.Parent" xml:space="preserve">
+    <value>LayerConfigTabPage</value>
+  </data>
+  <data name="&gt;&gt;LayerConfigGridView.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="LayerConfigTabPage.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 24</value>
+  </data>
+  <data name="LayerConfigTabPage.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="LayerConfigTabPage.Size" type="System.Drawing.Size, System.Drawing">
+    <value>866, 376</value>
+  </data>
+  <data name="LayerConfigTabPage.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="LayerConfigTabPage.Text" xml:space="preserve">
+    <value>Layers</value>
+  </data>
+  <data name="&gt;&gt;LayerConfigTabPage.Name" xml:space="preserve">
+    <value>LayerConfigTabPage</value>
+  </data>
+  <data name="&gt;&gt;LayerConfigTabPage.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;LayerConfigTabPage.Parent" xml:space="preserve">
+    <value>ConfigTab</value>
+  </data>
+  <data name="&gt;&gt;LayerConfigTabPage.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="VectorizeLandCheckbox.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="VectorizeLandCheckbox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>17, 20</value>
+  </data>
+  <data name="VectorizeLandCheckbox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>104, 19</value>
+  </data>
+  <data name="VectorizeLandCheckbox.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="VectorizeLandCheckbox.Text" xml:space="preserve">
+    <value>Vectorize lands</value>
+  </data>
+  <data name="&gt;&gt;VectorizeLandCheckbox.Name" xml:space="preserve">
+    <value>VectorizeLandCheckbox</value>
+  </data>
+  <data name="&gt;&gt;VectorizeLandCheckbox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;VectorizeLandCheckbox.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;VectorizeLandCheckbox.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="WaterMaxResolutionTextbox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>Disable</value>
+  </data>
+  <data name="WaterMaxResolutionTextbox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>292, 55</value>
+  </data>
+  <data name="WaterMaxResolutionTextbox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>50, 23</value>
+  </data>
+  <data name="WaterMaxResolutionTextbox.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="WaterMaxResolutionTextbox.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Right</value>
+  </data>
+  <data name="&gt;&gt;WaterMaxResolutionTextbox.Name" xml:space="preserve">
+    <value>WaterMaxResolutionTextbox</value>
+  </data>
+  <data name="&gt;&gt;WaterMaxResolutionTextbox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;WaterMaxResolutionTextbox.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;WaterMaxResolutionTextbox.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="ContourLinesIntervalsLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="ContourLinesIntervalsLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>379, 21</value>
+  </data>
+  <data name="ContourLinesIntervalsLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>124, 15</value>
+  </data>
+  <data name="ContourLinesIntervalsLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="ContourLinesIntervalsLabel.Text" xml:space="preserve">
+    <value>Contour lines intervals</value>
+  </data>
+  <data name="&gt;&gt;ContourLinesIntervalsLabel.Name" xml:space="preserve">
+    <value>ContourLinesIntervalsLabel</value>
+  </data>
+  <data name="&gt;&gt;ContourLinesIntervalsLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ContourLinesIntervalsLabel.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;ContourLinesIntervalsLabel.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="TerrainMaxResolutionTextbox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>Disable</value>
+  </data>
+  <data name="TerrainMaxResolutionTextbox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>292, 18</value>
+  </data>
+  <data name="TerrainMaxResolutionTextbox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>50, 23</value>
+  </data>
+  <data name="TerrainMaxResolutionTextbox.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="TerrainMaxResolutionTextbox.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Right</value>
+  </data>
+  <data name="&gt;&gt;TerrainMaxResolutionTextbox.Name" xml:space="preserve">
+    <value>TerrainMaxResolutionTextbox</value>
+  </data>
+  <data name="&gt;&gt;TerrainMaxResolutionTextbox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;TerrainMaxResolutionTextbox.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;TerrainMaxResolutionTextbox.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="ContourIntervalCombobox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>520, 18</value>
+  </data>
+  <data name="ContourIntervalCombobox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>121, 23</value>
+  </data>
+  <data name="ContourIntervalCombobox.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;ContourIntervalCombobox.Name" xml:space="preserve">
+    <value>ContourIntervalCombobox</value>
+  </data>
+  <data name="&gt;&gt;ContourIntervalCombobox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ContourIntervalCombobox.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;ContourIntervalCombobox.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="WaterMaxResolutionLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="WaterMaxResolutionLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>149, 58</value>
+  </data>
+  <data name="WaterMaxResolutionLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>119, 15</value>
+  </data>
+  <data name="WaterMaxResolutionLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="WaterMaxResolutionLabel.Text" xml:space="preserve">
+    <value>Water max resolution</value>
+  </data>
+  <data name="&gt;&gt;WaterMaxResolutionLabel.Name" xml:space="preserve">
+    <value>WaterMaxResolutionLabel</value>
+  </data>
+  <data name="&gt;&gt;WaterMaxResolutionLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;WaterMaxResolutionLabel.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;WaterMaxResolutionLabel.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="VectorizeWaterCheckbox.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="VectorizeWaterCheckbox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>17, 57</value>
+  </data>
+  <data name="VectorizeWaterCheckbox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>110, 19</value>
+  </data>
+  <data name="VectorizeWaterCheckbox.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="VectorizeWaterCheckbox.Text" xml:space="preserve">
+    <value>Vectorize waters</value>
+  </data>
+  <data name="&gt;&gt;VectorizeWaterCheckbox.Name" xml:space="preserve">
+    <value>VectorizeWaterCheckbox</value>
+  </data>
+  <data name="&gt;&gt;VectorizeWaterCheckbox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;VectorizeWaterCheckbox.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;VectorizeWaterCheckbox.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="TerrainMaxResolutionLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="TerrainMaxResolutionLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>149, 21</value>
+  </data>
+  <data name="TerrainMaxResolutionLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>123, 15</value>
+  </data>
+  <data name="TerrainMaxResolutionLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="TerrainMaxResolutionLabel.Text" xml:space="preserve">
+    <value>Terrain max resolution</value>
+  </data>
+  <data name="&gt;&gt;TerrainMaxResolutionLabel.Name" xml:space="preserve">
+    <value>TerrainMaxResolutionLabel</value>
+  </data>
+  <data name="&gt;&gt;TerrainMaxResolutionLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;TerrainMaxResolutionLabel.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;TerrainMaxResolutionLabel.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="groupBox1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 95</value>
+  </data>
+  <data name="groupBox1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="groupBox1.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="groupBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>722, 94</value>
+  </data>
+  <data name="groupBox1.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="groupBox1.Text" xml:space="preserve">
+    <value>Terrain</value>
+  </data>
+  <data name="&gt;&gt;groupBox1.Name" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;groupBox1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBox1.Parent" xml:space="preserve">
+    <value>GeneralConfigTabPage</value>
+  </data>
+  <data name="&gt;&gt;groupBox1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="DefaultMapSymbolStyleCombobox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>487, 47</value>
+  </data>
+  <data name="DefaultMapSymbolStyleCombobox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>121, 23</value>
+  </data>
+  <data name="DefaultMapSymbolStyleCombobox.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;DefaultMapSymbolStyleCombobox.Name" xml:space="preserve">
+    <value>DefaultMapSymbolStyleCombobox</value>
+  </data>
+  <data name="&gt;&gt;DefaultMapSymbolStyleCombobox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;DefaultMapSymbolStyleCombobox.Parent" xml:space="preserve">
+    <value>GeneralConfigTabPage</value>
+  </data>
+  <data name="&gt;&gt;DefaultMapSymbolStyleCombobox.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="StringThemeCombobox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>487, 19</value>
+  </data>
+  <data name="StringThemeCombobox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>121, 23</value>
+  </data>
+  <data name="StringThemeCombobox.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;StringThemeCombobox.Name" xml:space="preserve">
+    <value>StringThemeCombobox</value>
+  </data>
+  <data name="&gt;&gt;StringThemeCombobox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;StringThemeCombobox.Parent" xml:space="preserve">
+    <value>GeneralConfigTabPage</value>
+  </data>
+  <data name="&gt;&gt;StringThemeCombobox.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="ThemeCombobox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>142, 19</value>
+  </data>
+  <data name="ThemeCombobox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>121, 23</value>
+  </data>
+  <data name="ThemeCombobox.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;ThemeCombobox.Name" xml:space="preserve">
+    <value>ThemeCombobox</value>
+  </data>
   <data name="&gt;&gt;ThemeCombobox.Type" xml:space="preserve">
     <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ThemeCombobox.Parent" xml:space="preserve">
+    <value>GeneralConfigTabPage</value>
+  </data>
+  <data name="&gt;&gt;ThemeCombobox.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="DefaultMapSymbolStyleLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="DefaultMapSymbolStyleLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>327, 50</value>
+  </data>
+  <data name="DefaultMapSymbolStyleLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>139, 15</value>
+  </data>
+  <data name="DefaultMapSymbolStyleLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="DefaultMapSymbolStyleLabel.Text" xml:space="preserve">
+    <value>Default map symbol style</value>
+  </data>
+  <data name="&gt;&gt;DefaultMapSymbolStyleLabel.Name" xml:space="preserve">
+    <value>DefaultMapSymbolStyleLabel</value>
+  </data>
+  <data name="&gt;&gt;DefaultMapSymbolStyleLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;DefaultMapSymbolStyleLabel.Parent" xml:space="preserve">
+    <value>GeneralConfigTabPage</value>
+  </data>
+  <data name="&gt;&gt;DefaultMapSymbolStyleLabel.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="TextStyleLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="TextStyleLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>327, 22</value>
+  </data>
+  <data name="TextStyleLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>55, 15</value>
+  </data>
+  <data name="TextStyleLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="TextStyleLabel.Text" xml:space="preserve">
+    <value>Text style</value>
+  </data>
+  <data name="&gt;&gt;TextStyleLabel.Name" xml:space="preserve">
+    <value>TextStyleLabel</value>
+  </data>
+  <data name="&gt;&gt;TextStyleLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;TextStyleLabel.Parent" xml:space="preserve">
+    <value>GeneralConfigTabPage</value>
+  </data>
+  <data name="&gt;&gt;TextStyleLabel.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="ThemeLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="ThemeLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 22</value>
+  </data>
+  <data name="ThemeLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>42, 15</value>
+  </data>
+  <data name="ThemeLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="ThemeLabel.Text" xml:space="preserve">
+    <value>Theme</value>
+  </data>
+  <data name="&gt;&gt;ThemeLabel.Name" xml:space="preserve">
+    <value>ThemeLabel</value>
+  </data>
+  <data name="&gt;&gt;ThemeLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ThemeLabel.Parent" xml:space="preserve">
+    <value>GeneralConfigTabPage</value>
+  </data>
+  <data name="&gt;&gt;ThemeLabel.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="GeneralConfigTabPage.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 24</value>
+  </data>
+  <data name="GeneralConfigTabPage.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="GeneralConfigTabPage.Size" type="System.Drawing.Size, System.Drawing">
+    <value>866, 376</value>
+  </data>
+  <data name="GeneralConfigTabPage.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="GeneralConfigTabPage.Text" xml:space="preserve">
+    <value>General</value>
+  </data>
+  <data name="&gt;&gt;GeneralConfigTabPage.Name" xml:space="preserve">
+    <value>GeneralConfigTabPage</value>
+  </data>
+  <data name="&gt;&gt;GeneralConfigTabPage.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GeneralConfigTabPage.Parent" xml:space="preserve">
+    <value>ConfigTab</value>
+  </data>
+  <data name="&gt;&gt;GeneralConfigTabPage.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="ConfigTab.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="ConfigTab.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="ConfigTab.Size" type="System.Drawing.Size, System.Drawing">
+    <value>874, 404</value>
+  </data>
+  <data name="ConfigTab.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;ConfigTab.Name" xml:space="preserve">
+    <value>ConfigTab</value>
+  </data>
+  <data name="&gt;&gt;ConfigTab.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ConfigTab.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;ConfigTab.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="SubmitButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>795, 3</value>
+  </data>
+  <data name="SubmitButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
+  </data>
+  <data name="SubmitButton.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="SubmitButton.Text" xml:space="preserve">
+    <value>Submit</value>
+  </data>
+  <data name="&gt;&gt;SubmitButton.Name" xml:space="preserve">
+    <value>SubmitButton</value>
+  </data>
+  <data name="&gt;&gt;SubmitButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;SubmitButton.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;SubmitButton.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="FormCancelButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>714, 3</value>
+  </data>
+  <data name="FormCancelButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
+  </data>
+  <data name="FormCancelButton.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="FormCancelButton.Text" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="&gt;&gt;FormCancelButton.Name" xml:space="preserve">
+    <value>FormCancelButton</value>
+  </data>
+  <data name="&gt;&gt;FormCancelButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;FormCancelButton.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;FormCancelButton.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="panel1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Bottom</value>
+  </data>
+  <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 415</value>
+  </data>
+  <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>874, 35</value>
+  </data>
+  <data name="panel1.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;panel1.Name" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;panel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>96, 96</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>874, 450</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -3580,256 +3829,13 @@
         EISS5Tzj7OUFy0XM/w8H1qHKLxs/kQAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="&gt;&gt;RenderMetroStopsCheckbox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="LayerConfigTabPage.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;groupBox2.Name" xml:space="preserve">
-    <value>groupBox2</value>
-  </data>
-  <data name="&gt;&gt;FormCancelButton.Parent" xml:space="preserve">
-    <value>panel1</value>
-  </data>
-  <data name="&gt;&gt;RenderShipStopsCheckbox.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="groupBox3.Text" xml:space="preserve">
-    <value>Railway tracks</value>
-  </data>
-  <data name="&gt;&gt;RenderBuildingNameLabelCheckbox.Parent" xml:space="preserve">
-    <value>groupBox4</value>
-  </data>
-  <data name="GeneralConfigTabPage.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 3, 3, 3</value>
-  </data>
-  <data name="&gt;&gt;ConfigTab.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="ContourLinesIntervalsLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="RenderShipStopsCheckbox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="LayerConfigGridView.Size" type="System.Drawing.Size, System.Drawing">
-    <value>219, 217</value>
-  </data>
-  <data name="RenderMetroLinesCheckbox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="&gt;&gt;RenderShipLinesCheckbox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="groupBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>722, 94</value>
-  </data>
-  <data name="&gt;&gt;DefaultMapSymbolStyleCombobox.Name" xml:space="preserve">
-    <value>DefaultMapSymbolStyleCombobox</value>
-  </data>
-  <data name="RenderMonorailStopsCheckbox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>74, 19</value>
-  </data>
-  <data name="SubmitButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>795, 3</value>
-  </data>
-  <data name="RenderShipLinesCheckbox.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;TerrainMaxResolutionTextbox.Name" xml:space="preserve">
-    <value>TerrainMaxResolutionTextbox</value>
-  </data>
-  <data name="RenderMetroCheckbox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 2, 3, 2</value>
-  </data>
-  <data name="HideRICOCheckbox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 2, 3, 2</value>
-  </data>
-  <data name="&gt;&gt;HideCargoLinesCheckbox.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="UserPrefabNameCheckbox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>119, 19</value>
-  </data>
-  <data name="RenderTramStopsCheckbox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="WaterMaxResolutionLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>119, 15</value>
-  </data>
-  <data name="RenderAirplaneLinesCheckbox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>70, 19</value>
-  </data>
-  <data name="&gt;&gt;RenderMonorailLinesCheckbox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="RenderTrainLinesCheckbox.Text" xml:space="preserve">
-    <value>Train</value>
-  </data>
-  <data name="VectorizeWaterCheckbox.Text" xml:space="preserve">
-    <value>Vectorize waters</value>
-  </data>
-  <data name="&gt;&gt;RenderMonorailStopsCheckbox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="ConfigTab.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="&gt;&gt;RenderBuildingNameLabelCheckbox.Name" xml:space="preserve">
-    <value>RenderBuildingNameLabelCheckbox</value>
-  </data>
-  <data name="RenderTramLinesCheckbox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>51, 19</value>
-  </data>
-  <data name="&gt;&gt;RenderBusStopsCheckbox.Parent" xml:space="preserve">
-    <value>groupBox6</value>
-  </data>
-  <data name="RenderShipStopsCheckbox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>49, 19</value>
-  </data>
-  <data name="&gt;&gt;RenderMetroCheckbox.Name" xml:space="preserve">
-    <value>RenderMetroCheckbox</value>
-  </data>
-  <data name="VectorizeWaterCheckbox.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="SubmitButton.Text" xml:space="preserve">
-    <value>Submit</value>
-  </data>
-  <data name="RenderTramCheckbox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 2, 3, 2</value>
-  </data>
-  <data name="&gt;&gt;StringThemeCombobox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="DisableBuildingBorderCheckbox.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;TerrainMaxResolutionLabel.Name" xml:space="preserve">
-    <value>TerrainMaxResolutionLabel</value>
-  </data>
-  <data name="&gt;&gt;DefaultMapSymbolStyleLabel.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;RenderTrainStopsCheckbox.Parent" xml:space="preserve">
-    <value>groupBox6</value>
-  </data>
-  <data name="&gt;&gt;UserPrefabNameCheckbox.Parent" xml:space="preserve">
-    <value>groupBox4</value>
-  </data>
-  <data name="TerrainMaxResolutionLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;ContourLinesIntervalsLabel.Parent" xml:space="preserve">
-    <value>groupBox1</value>
-  </data>
-  <data name="&gt;&gt;LayerConfigTabPage.ZOrder" xml:space="preserve">
-    <value>0</value>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Settings</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>ConfigForm</value>
   </data>
-  <data name="RenderMonorailCheckbox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 2, 3, 2</value>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;LayerConfigTabPage.Name" xml:space="preserve">
-    <value>LayerConfigTabPage</value>
-  </data>
-  <data name="&gt;&gt;RenderTrainLinesCheckbox.Parent" xml:space="preserve">
-    <value>groupBox5</value>
-  </data>
-  <data name="ContourLinesIntervalsLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>124, 15</value>
-  </data>
-  <data name="RenderBusLinesCheckbox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="DefaultMapSymbolStyleLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>139, 15</value>
-  </data>
-  <data name="&gt;&gt;RenderAirplaneStopsCheckbox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;RenderMapSymbolCheckbox.Name" xml:space="preserve">
-    <value>RenderMapSymbolCheckbox</value>
-  </data>
-  <data name="RenderMetroStopsCheckbox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="groupBox3.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 2, 3, 2</value>
-  </data>
-  <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 415</value>
-  </data>
-  <data name="&gt;&gt;panel1.Name" xml:space="preserve">
-    <value>panel1</value>
-  </data>
-  <data name="&gt;&gt;WaterMaxResolutionTextbox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="RenderMetroCheckbox.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="TerrainMaxResolutionTextbox.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;DefaultMapSymbolStyleCombobox.Parent" xml:space="preserve">
-    <value>GeneralConfigTabPage</value>
-  </data>
-  <data name="RenderTramLinesCheckbox.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;SubmitButton.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="DefaultMapSymbolStyleCombobox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>121, 23</value>
-  </data>
-  <data name="&gt;&gt;groupBox1.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;TerrainMaxResolutionTextbox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;RenderDistrictNameLabelCheckbox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;DefaultMapSymbolStyleCombobox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="RenderAirplaneLinesCheckbox.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="RenderTrainStopsCheckbox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="LayerConfigGridView.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="RenderRailwaysCheckbox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>51, 19</value>
-  </data>
-  <data name="RenderTramCheckbox.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="TerrainMaxResolutionTextbox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>292, 18</value>
-  </data>
-  <data name="WaterMaxResolutionLabel.Text" xml:space="preserve">
-    <value>Water max resolution</value>
-  </data>
-  <data name="RenderCableCarCheckbox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>74, 19</value>
-  </data>
-  <data name="WaterMaxResolutionTextbox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>Disable</value>
-  </data>
-  <data name="RenderBusStopsCheckbox.Text" xml:space="preserve">
-    <value>Bus</value>
-  </data>
-  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
 </root>

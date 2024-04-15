@@ -86,10 +86,10 @@ namespace CS2MapView.Data
             {
                 await DrawingTheme.Default.SaveAsync(defaultThemeFile);
             }
-            var whiteThemeFile = Path.Combine(ThemeDirectory, "white.c2theme");
-            if (!File.Exists(whiteThemeFile))
+            var grayScaleThemeFile = Path.Combine(ThemeDirectory, "grayscale.c2theme");
+            if (!File.Exists(grayScaleThemeFile))
             {
-                await DrawingTheme.White.SaveAsync(whiteThemeFile);
+                await DrawingTheme.GrayScale.SaveAsync(grayScaleThemeFile);
             }
             var themeCandidates = new List<DrawingTheme>();
             foreach (var f in Directory.EnumerateFiles(ThemeDirectory).Where(fn => fn.EndsWith(".c2theme", StringComparison.OrdinalIgnoreCase)))

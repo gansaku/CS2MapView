@@ -15,10 +15,7 @@ namespace CS2MapView.Theme
         /// スタイル名
         /// </summary>
         public string? Name { get; set; }
-        /// <summary>
-        /// 色スタイル
-        /// </summary>
-        public StringColorRules? Colors { get; set; }
+
         /// <summary>
         /// 建物名
         /// </summary>
@@ -66,7 +63,6 @@ namespace CS2MapView.Theme
         public static StringTheme Default => new()
         {
             Name = "default",
-            Colors = StringColorRules.Default,
             BuildingName = new(GetSafeFontFamily(FontYuGothic), new Width(12.5f, 1f, 12.5f, 12.5f, 8f), new StrokeStyle(new(3f, 1f, 3f, 3f, 0f))),
             DistrictName = new(GetSafeFontFamily(FontMeiryo), new Width(18f, 1f, 18f, 18f, 8f), new StrokeStyle(new(4f, 1f, 4f, 4f, 0f))),
             StreetName = new(GetSafeFontFamily(FontYuGothic), new Width(12f, 1f, 12f, 12f, 8f), new StrokeStyle(new(2f, 1f, 2f, 2f, 0f)))

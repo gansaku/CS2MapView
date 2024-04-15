@@ -98,15 +98,14 @@
             // 
             // ConfigTab
             // 
-            resources.ApplyResources(ConfigTab, "ConfigTab");
             ConfigTab.Controls.Add(LayerConfigTabPage);
             ConfigTab.Controls.Add(GeneralConfigTabPage);
+            resources.ApplyResources(ConfigTab, "ConfigTab");
             ConfigTab.Name = "ConfigTab";
             ConfigTab.SelectedIndex = 0;
             // 
             // LayerConfigTabPage
             // 
-            resources.ApplyResources(LayerConfigTabPage, "LayerConfigTabPage");
             LayerConfigTabPage.Controls.Add(HideCargoLinesCheckbox);
             LayerConfigTabPage.Controls.Add(groupBox6);
             LayerConfigTabPage.Controls.Add(groupBox5);
@@ -114,6 +113,7 @@
             LayerConfigTabPage.Controls.Add(groupBox3);
             LayerConfigTabPage.Controls.Add(groupBox2);
             LayerConfigTabPage.Controls.Add(LayerConfigGridView);
+            resources.ApplyResources(LayerConfigTabPage, "LayerConfigTabPage");
             LayerConfigTabPage.Name = "LayerConfigTabPage";
             LayerConfigTabPage.UseVisualStyleBackColor = true;
             LayerConfigTabPage.Click += LayerConfigTabPage_Click;
@@ -126,7 +126,6 @@
             // 
             // groupBox6
             // 
-            resources.ApplyResources(groupBox6, "groupBox6");
             groupBox6.Controls.Add(RenderBusStopsCheckbox);
             groupBox6.Controls.Add(RenderAirplaneStopsCheckbox);
             groupBox6.Controls.Add(RenderShipStopsCheckbox);
@@ -134,6 +133,7 @@
             groupBox6.Controls.Add(RenderMetroStopsCheckbox);
             groupBox6.Controls.Add(RenderTramStopsCheckbox);
             groupBox6.Controls.Add(RenderTrainStopsCheckbox);
+            resources.ApplyResources(groupBox6, "groupBox6");
             groupBox6.Name = "groupBox6";
             groupBox6.TabStop = false;
             // 
@@ -181,7 +181,6 @@
             // 
             // groupBox5
             // 
-            resources.ApplyResources(groupBox5, "groupBox5");
             groupBox5.Controls.Add(RenderBusLinesCheckbox);
             groupBox5.Controls.Add(RenderAirplaneLinesCheckbox);
             groupBox5.Controls.Add(RenderShipLinesCheckbox);
@@ -189,6 +188,7 @@
             groupBox5.Controls.Add(RenderMetroLinesCheckbox);
             groupBox5.Controls.Add(RenderTramLinesCheckbox);
             groupBox5.Controls.Add(RenderTrainLinesCheckbox);
+            resources.ApplyResources(groupBox5, "groupBox5");
             groupBox5.Name = "groupBox5";
             groupBox5.TabStop = false;
             // 
@@ -236,12 +236,12 @@
             // 
             // groupBox4
             // 
-            resources.ApplyResources(groupBox4, "groupBox4");
             groupBox4.Controls.Add(UserPrefabNameCheckbox);
             groupBox4.Controls.Add(RenderDistrictNameLabelCheckbox);
             groupBox4.Controls.Add(RenderMapSymbolCheckbox);
             groupBox4.Controls.Add(RenderStreetNameLabelCheckbox);
             groupBox4.Controls.Add(RenderBuildingNameLabelCheckbox);
+            resources.ApplyResources(groupBox4, "groupBox4");
             groupBox4.Name = "groupBox4";
             groupBox4.TabStop = false;
             // 
@@ -277,12 +277,12 @@
             // 
             // groupBox3
             // 
-            resources.ApplyResources(groupBox3, "groupBox3");
             groupBox3.Controls.Add(RenderMetroCheckbox);
             groupBox3.Controls.Add(RenderTramCheckbox);
             groupBox3.Controls.Add(RenderCableCarCheckbox);
             groupBox3.Controls.Add(RenderMonorailCheckbox);
             groupBox3.Controls.Add(RenderRailwaysCheckbox);
+            resources.ApplyResources(groupBox3, "groupBox3");
             groupBox3.Name = "groupBox3";
             groupBox3.TabStop = false;
             // 
@@ -318,9 +318,9 @@
             // 
             // groupBox2
             // 
-            resources.ApplyResources(groupBox2, "groupBox2");
             groupBox2.Controls.Add(DisableBuildingBorderCheckbox);
             groupBox2.Controls.Add(HideRICOCheckbox);
+            resources.ApplyResources(groupBox2, "groupBox2");
             groupBox2.Name = "groupBox2";
             groupBox2.TabStop = false;
             // 
@@ -338,18 +338,17 @@
             // 
             // LayerConfigGridView
             // 
-            resources.ApplyResources(LayerConfigGridView, "LayerConfigGridView");
             LayerConfigGridView.AllowUserToAddRows = false;
             LayerConfigGridView.AllowUserToDeleteRows = false;
             LayerConfigGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             LayerConfigGridView.CurrentSortColumn = null;
+            resources.ApplyResources(LayerConfigGridView, "LayerConfigGridView");
             LayerConfigGridView.Name = "LayerConfigGridView";
             LayerConfigGridView.RowHeadersVisible = false;
             LayerConfigGridView.RowNumberVisible = true;
             // 
             // GeneralConfigTabPage
             // 
-            resources.ApplyResources(GeneralConfigTabPage, "GeneralConfigTabPage");
             GeneralConfigTabPage.Controls.Add(groupBox1);
             GeneralConfigTabPage.Controls.Add(DefaultMapSymbolStyleCombobox);
             GeneralConfigTabPage.Controls.Add(StringThemeCombobox);
@@ -357,12 +356,12 @@
             GeneralConfigTabPage.Controls.Add(DefaultMapSymbolStyleLabel);
             GeneralConfigTabPage.Controls.Add(TextStyleLabel);
             GeneralConfigTabPage.Controls.Add(ThemeLabel);
+            resources.ApplyResources(GeneralConfigTabPage, "GeneralConfigTabPage");
             GeneralConfigTabPage.Name = "GeneralConfigTabPage";
             GeneralConfigTabPage.UseVisualStyleBackColor = true;
             // 
             // groupBox1
             // 
-            resources.ApplyResources(groupBox1, "groupBox1");
             groupBox1.Controls.Add(VectorizeLandCheckbox);
             groupBox1.Controls.Add(WaterMaxResolutionTextbox);
             groupBox1.Controls.Add(ContourLinesIntervalsLabel);
@@ -371,6 +370,7 @@
             groupBox1.Controls.Add(WaterMaxResolutionLabel);
             groupBox1.Controls.Add(VectorizeWaterCheckbox);
             groupBox1.Controls.Add(TerrainMaxResolutionLabel);
+            resources.ApplyResources(groupBox1, "groupBox1");
             groupBox1.Name = "groupBox1";
             groupBox1.TabStop = false;
             // 
@@ -399,9 +399,9 @@
             // 
             // ContourIntervalCombobox
             // 
-            resources.ApplyResources(ContourIntervalCombobox, "ContourIntervalCombobox");
             ContourIntervalCombobox.DropDownStyle = ComboBoxStyle.DropDownList;
             ContourIntervalCombobox.FormattingEnabled = true;
+            resources.ApplyResources(ContourIntervalCombobox, "ContourIntervalCombobox");
             ContourIntervalCombobox.Name = "ContourIntervalCombobox";
             // 
             // WaterMaxResolutionLabel
@@ -422,23 +422,23 @@
             // 
             // DefaultMapSymbolStyleCombobox
             // 
-            resources.ApplyResources(DefaultMapSymbolStyleCombobox, "DefaultMapSymbolStyleCombobox");
             DefaultMapSymbolStyleCombobox.DropDownStyle = ComboBoxStyle.DropDownList;
             DefaultMapSymbolStyleCombobox.FormattingEnabled = true;
+            resources.ApplyResources(DefaultMapSymbolStyleCombobox, "DefaultMapSymbolStyleCombobox");
             DefaultMapSymbolStyleCombobox.Name = "DefaultMapSymbolStyleCombobox";
             // 
             // StringThemeCombobox
             // 
-            resources.ApplyResources(StringThemeCombobox, "StringThemeCombobox");
             StringThemeCombobox.DropDownStyle = ComboBoxStyle.DropDownList;
             StringThemeCombobox.FormattingEnabled = true;
+            resources.ApplyResources(StringThemeCombobox, "StringThemeCombobox");
             StringThemeCombobox.Name = "StringThemeCombobox";
             // 
             // ThemeCombobox
             // 
-            resources.ApplyResources(ThemeCombobox, "ThemeCombobox");
             ThemeCombobox.DropDownStyle = ComboBoxStyle.DropDownList;
             ThemeCombobox.FormattingEnabled = true;
+            resources.ApplyResources(ThemeCombobox, "ThemeCombobox");
             ThemeCombobox.Name = "ThemeCombobox";
             // 
             // DefaultMapSymbolStyleLabel
@@ -472,9 +472,9 @@
             // 
             // panel1
             // 
-            resources.ApplyResources(panel1, "panel1");
             panel1.Controls.Add(FormCancelButton);
             panel1.Controls.Add(SubmitButton);
+            resources.ApplyResources(panel1, "panel1");
             panel1.Name = "panel1";
             // 
             // ConfigForm

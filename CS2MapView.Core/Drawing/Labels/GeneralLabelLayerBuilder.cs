@@ -87,10 +87,11 @@ namespace CS2MapView.Drawing.Labels
                 {
                     var allObj = LabelContentManager.Contents.GetAllOrderedObjects().Where(t => !t.Yielded);
                     var stringTheme = AppRoot.Context.StringTheme!;
-                    SetStreetNameDrawCommands(allObj.SelectNotNull(t => t as StreetNameLabel)!, stringTheme);
-                    SetBuildingDrawCommands(allObj.SelectNotNull(t => t as BuildingNameLabel)!, stringTheme);
+                    var colors = AppRoot.Context.Theme.Colors!.StringColors!;
+                    SetStreetNameDrawCommands(allObj.SelectNotNull(t => t as StreetNameLabel)!, stringTheme, colors);
+                    SetBuildingDrawCommands(allObj.SelectNotNull(t => t as BuildingNameLabel)!, stringTheme, colors);
                     SetMapSymbolDrawCommands(allObj.SelectNotNull(t => t as MapSymbol)!);
-                    SetDistrictNameDrawCommands(allObj.SelectNotNull(t => t as DistrictNameLabel)!, stringTheme);
+                    SetDistrictNameDrawCommands(allObj.SelectNotNull(t => t as DistrictNameLabel)!, stringTheme, colors);
 
                 }
             }
@@ -114,11 +115,11 @@ namespace CS2MapView.Drawing.Labels
 
         }
 
-        private void SetStreetNameDrawCommands(IEnumerable<StreetNameLabel> labels, StringTheme theme)
+        private void SetStreetNameDrawCommands(IEnumerable<StreetNameLabel> labels, StringTheme theme, StringColors colors)
         {
             var textStyle = theme.StreetName;
             var textStylec = textStyle is null ? null
-                : new TextStyleWithColor(textStyle, theme.Colors!.StreetNameFill, theme.Colors.StreetNameStroke);
+                : new TextStyleWithColor(textStyle, colors.StreetNameFill, colors.StreetNameStroke);
 
             if (textStylec is null)
             {
@@ -186,20 +187,20 @@ namespace CS2MapView.Drawing.Labels
             }
         }
 
-        private void SetBuildingDrawCommands(IEnumerable<BuildingNameLabel> buildings, StringTheme stringTheme)
+        private void SetBuildingDrawCommands(IEnumerable<BuildingNameLabel> buildings, StringTheme stringTheme, StringColors colors)
         {
             var buildingTextStyle = stringTheme.BuildingName;
             var buildingTextStylec = buildingTextStyle is null ? null
-                : new TextStyleWithColor(buildingTextStyle, stringTheme.Colors!.BuildingNameFill, stringTheme.Colors.BuildingNameStroke);
+                : new TextStyleWithColor(buildingTextStyle, colors.BuildingNameFill, colors.BuildingNameStroke);
             if (buildingTextStylec is null) { return; }
             SetTextDrawCommands(buildings, buildingTextStylec);
         }
 
-        private void SetDistrictNameDrawCommands(IEnumerable<DistrictNameLabel> districts, StringTheme stringTheme)
+        private void SetDistrictNameDrawCommands(IEnumerable<DistrictNameLabel> districts, StringTheme stringTheme, StringColors colors)
         {
             var tw = stringTheme.DistrictName;
             var twc = tw is null ? null :
-                new TextStyleWithColor(tw, stringTheme.Colors!.DistrictNameFill, stringTheme.Colors.DistrictNameStroke);
+                new TextStyleWithColor(tw, colors.DistrictNameFill, colors.DistrictNameStroke);
             if (twc is null)
             {
                 return;

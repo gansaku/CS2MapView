@@ -23,6 +23,11 @@ namespace CS2MapView.Theme
         [XmlArray("WaterContours")]
         [XmlArrayItem("Contour")]
         public List<ContourColor>? WaterContourColors { get; set; }
+
+        /// <summary>
+        /// テキストの色
+        /// </summary>
+        public StringColors? StringColors { get; set; }
         /// <summary>
         /// 区域境界
         /// </summary>
@@ -243,10 +248,11 @@ namespace CS2MapView.Theme
             CableCarWay = SerializableColor.FromARGB(255, 40, 40, 40),
             MonorailWay = SerializableColor.FromARGB(255, 0, 0, 0),
             TransportStopStroke= SerializableColor.FromARGB(255,0,0,0),
-            TransportStopFill = SerializableColor.FromARGB(255,255,255,255)
+            TransportStopFill = SerializableColor.FromARGB(255,255,255,255),
+            StringColors = StringColors.Default
         };
 
-        internal static ColorRules White => new()
+        internal static ColorRules GrayScale => new()
         {
             LandContourColors =
                     [
@@ -265,37 +271,38 @@ namespace CS2MapView.Theme
             PublicTransportBuilding = SerializableColor.GrayScale(230),
             PublicBuilding = SerializableColor.GrayScale(230),
             BeautificationBuilding = SerializableColor.GrayScale(230),
-            Train = SerializableColor.FromARGB(255, 0, 0, 0),
-            TrainDash = SerializableColor.FromARGB(255, 255, 255, 255),
-            TrainTunnel = SerializableColor.FromARGB(255, 0, 0, 0),
-            TrainTunnelDash = SerializableColor.FromARGB(255, 0, 0, 0),
-            Metroway = SerializableColor.FromARGB(180, 0, 140, 180),
-            MetrowayDash = SerializableColor.FromARGB(180, 255, 255, 255),
-            Tramway = SerializableColor.FromARGB(255, 0, 180, 140),
-            TramwayDash = SerializableColor.FromARGB(255, 255, 255, 255),
-            Road = SerializableColor.FromARGB(255, 230, 230, 230),
-            RoadBorder = SerializableColor.FromARGB(255, 90, 90, 90),
-            RoadTunnel = SerializableColor.FromARGB(255, 240, 240, 240),
-            RoadTunnelBorder = SerializableColor.FromARGB(255, 100, 100, 100),
-            RoadElevated = SerializableColor.FromARGB(255, 220, 220, 220),
-            RoadElevatedBorder = SerializableColor.FromARGB(255, 70, 70, 70),
-            Highway = SerializableColor.FromARGB(255, 255, 225, 100),
-            HighwayBorder = SerializableColor.FromARGB(255, 200, 100, 100),
-            HighwayTunnel = SerializableColor.FromARGB(255, 255, 235, 130),
-            HighwayTunnelBorder = SerializableColor.FromARGB(255, 200, 100, 100),
-            HighwayElevated = SerializableColor.FromARGB(255, 255, 225, 100),
-            HighwayElevatedBorder = SerializableColor.FromARGB(255, 200, 100, 100),
-            Beautification = SerializableColor.FromARGB(255, 230, 210, 210),
-            BeautificationBorder = SerializableColor.FromARGB(255, 110, 100, 100),
-            BeautificationTunnel = SerializableColor.FromARGB(255, 220, 200, 200),
-            BeautificationTunnelBorder = SerializableColor.FromARGB(255, 110, 100, 100),
-            BeautificationElevated = SerializableColor.FromARGB(255, 240, 220, 220),
-            BeautificationElevatedBorder = SerializableColor.FromARGB(255, 110, 100, 100),
+            Train = SerializableColor.GrayScale(40),
+            TrainDash = SerializableColor.GrayScale(255),
+            TrainTunnel = SerializableColor.GrayScale(40),
+            TrainTunnelDash = SerializableColor.GrayScale(40),
+            Metroway = SerializableColor.GrayScale(70),
+            MetrowayDash = SerializableColor.GrayScale(255),
+            Tramway = SerializableColor.GrayScale(90),
+            TramwayDash = SerializableColor.GrayScale(255),
+            Road = SerializableColor.GrayScale(230),
+            RoadBorder = SerializableColor.GrayScale(90),
+            RoadTunnel = SerializableColor.GrayScale(240),
+            RoadTunnelBorder = SerializableColor.GrayScale(100),
+            RoadElevated = SerializableColor.GrayScale(220),
+            RoadElevatedBorder = SerializableColor.GrayScale(70),
+            Highway = SerializableColor.GrayScale(200),
+            HighwayBorder = SerializableColor.GrayScale(60),
+            HighwayTunnel = SerializableColor.GrayScale(200),
+            HighwayTunnelBorder = SerializableColor.GrayScale(60),
+            HighwayElevated = SerializableColor.GrayScale(210),
+            HighwayElevatedBorder = SerializableColor.GrayScale(70),
+            Beautification = SerializableColor.GrayScale(220),
+            BeautificationBorder = SerializableColor.GrayScale(100),
+            BeautificationTunnel = SerializableColor.GrayScale(220),
+            BeautificationTunnelBorder = SerializableColor.GrayScale(100),
+            BeautificationElevated = SerializableColor.GrayScale(220),
+            BeautificationElevatedBorder = SerializableColor.GrayScale(100),
             ForestBase = SerializableColor.FromARGB(255, 20, 120, 20),
             CableCarWay = SerializableColor.FromARGB(255, 40, 40, 40),
             MonorailWay = SerializableColor.FromARGB(255, 0, 0, 0),
             TransportStopStroke = SerializableColor.FromARGB(255, 0, 0, 0),
-            TransportStopFill = SerializableColor.FromARGB(255, 255, 255, 255)
+            TransportStopFill = SerializableColor.FromARGB(255, 255, 255, 255),
+            StringColors = StringColors.GrayScale
         };
 
         /// <summary>

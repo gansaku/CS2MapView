@@ -78,7 +78,7 @@
         /// </summary>
         public bool HideCargoLines { get; set; } = true;
 
-
+        /*
         /// <summary>
         /// バスとトラムの停留所をマージするか
         /// </summary>
@@ -108,6 +108,6 @@
         /// 系統番号をマージして表示
         /// </summary>
         public bool UseMergedRouteNumberings { get; set; } = true;
-
+        */
     }
 }

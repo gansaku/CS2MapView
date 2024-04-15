@@ -8,18 +8,38 @@
 	<!--Long description of the mod. Single line or multi line. Supports minimal markdown subset-->
 	<!--LongDescription Value="CS2MapView Expoter" /-->
 	<LongDescription>
-CS2MapView Expoter
-	</LongDescription>
+# CS2MapView.Exporter beta
+
+This mod only outputs files for CS2MapView viewe application.
+Unlike [CSLMapView](https://steamcommunity.com/sharedfiles/filedetails/?id=845665815 "CSLMapView"), the viewer is not shipped with the mod. Please get viewer application (cs2mapview.exe) from [github](https://github.com/gansaku/CS2MapView/ "github").
+
+## Requirements
+Viewer requires
+* Windows 64bit
+* [.NET 8 Desktop Runtime](https://dotnet.microsoft.com/download/dotnet/8.0 ".NET 8 Desktop Runtime")
+
+## Installation
+* Download cs2mapview_win64_x.x.x.zip and unzip it to anywhere you like.
+
+## Usage
+### Export map data
+* (In game) Option -> CS2MAPVIEW -> Export
+### Viewer Operation
+* Not implemented to launch the viewer directly from the game, so launch the cs2mapview.exe directly.
+* Mouse Wheel : zoom
+* Ctrl + Wheel : rotate
+* Left Drag : map scroll
+  </LongDescription>
 	<!--Thumbnail-->
 	<Thumbnail Value="Properties/Thumbnail.png" />
 	<!--Screenshot, can be set multiple times-->
 	<Screenshot Value="" />
 	<!--Tag, can be set multiple times-->
-	<Tag Value="" />
+	<Tag Value="Code Mod" />
 	<!--Link to the forum post where the mod can be discussed-->
 	<ForumLink Value="" />
 	<!--Version of the mod-->
-	<ModVersion Value="1.0" />
+	<ModVersion Value="0.0.1" />
 	<!--Recommended version of the base game to use the mod-->
 	<GameVersion Value="1.0.*" />
 	<!--Dependency for the mod, can be set multiple times-->
@@ -29,5 +49,5 @@ CS2MapView Expoter
 	<!--ChangeLog>
 	</ChangeLog-->
 	<!--External link. supported types are discord, github, youtube, twitch, x, paypal, patreon-->
-	<ExternalLink Type="" Url="" />
+	<ExternalLink Type="github" Url="https://github.com/gansaku/CS2MapView" />
 </Publish>

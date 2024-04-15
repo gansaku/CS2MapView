@@ -32,7 +32,7 @@ namespace CS2MapView.Config
         /// <summary>
         /// 地形等高線
         /// </summary>
-        public bool VectorizeTerrainLand { get; set; } = false;
+        public bool VectorizeTerrainLand { get; set; } = true;
         /// <summary>
         /// 水域ベクター化
         /// </summary>

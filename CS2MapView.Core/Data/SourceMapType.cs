@@ -240,7 +240,8 @@ namespace CS2MapView.Data
         /// インポートデータを型ありで取得
         /// </summary>
         /// <returns></returns>
-        public T GetImportData() => ImportData is null ? ThrowArgNull() : ImportData as T ?? ThrowInvalidCast(ImportData);
+        public T GetImportData() => ImportData is null ? ThrowArgNull() 
+            : ImportData as T ?? ThrowInvalidCast(ImportData);
 
 
     }

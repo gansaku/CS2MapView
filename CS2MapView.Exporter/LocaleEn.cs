@@ -36,6 +36,7 @@ namespace CS2MapView.Exporter
                 { s.GetOptionLabelLocaleID(nameof(SC.ExportResult)),        "Status"},
                 { s.GetOptionDescLocaleID(nameof(SC.ExportResult)), string.Empty },
 
+                { s.GetEnumValueLocaleID(SC.PathType.Custom), "Custom" },
                 { s.GetEnumValueLocaleID(SC.PathType.Documents), "Documents" },
                 { s.GetEnumValueLocaleID(SC.PathType.Desktop), "Desktop" },
                 { s.GetEnumValueLocaleID(SC.PathType.AppData), "LocalLow" },

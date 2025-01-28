@@ -14,6 +14,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ソリューション項目", "ソリューション項目", "{A07ECEDE-CB8F-43E5-99A4-A9BB52A7ECF7}"
 	ProjectSection(SolutionItems) = preProject
 		LICENSE = LICENSE
+		UpdateVersion.ps1 = UpdateVersion.ps1
 	EndProjectSection
 EndProject
 Global

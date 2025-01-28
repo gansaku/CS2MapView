@@ -37,6 +37,7 @@ namespace CS2MapView.Exporter
         [Preserve]
         public enum PathType
         {
+            Custom,
             Documents,
             Desktop,
             AppData
@@ -66,7 +67,28 @@ namespace CS2MapView.Exporter
 
         private string? _outputPath;
         [SettingsUISection(Key_UISectionPath)]
-        public string? OutputPath => _outputPath;
+        [SettingsUITextInput]
+        [SettingsUIDisableByCondition(typeof(PathType), nameof(OutputPathEnabled), true)]
+        public string? OutputPath
+        {
+            get => _outputPath;
+            set
+            {
+                if (_outputPathType == PathType.Custom)
+                {
+                    OutputPathLastUserInput = value;
+                }
+                _outputPath = value;
+            }
+        }
+
+        public bool OutputPathEnabled() => OutputPathType == PathType.Custom;
+
+        [SettingsUIHidden]
+        public string? OutputPathLastUserInput
+        {
+            get; set;
+        }
 
         [SettingsUISection(Key_UISectionExecution)]
         [SettingsUIButton]
@@ -142,8 +164,14 @@ namespace CS2MapView.Exporter
                 case PathType.AppData:
                     var local = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
                     result = local is null ? null : Path.GetFullPath(Path.Combine(local, @"..\LocalLow\Colossal Order\Cities Skylines II"));
-
                     break;
+                case PathType.Custom:
+                    if (OutputPathLastUserInput != null)
+                    {
+                        return OutputPathLastUserInput;
+                    }
+                    var drv = Environment.GetEnvironmentVariable("SystemDrive");
+                    return drv ?? "/";
             }
 
             return result is null ? "CS2MapView" : Path.Combine(result, "CS2MapView");

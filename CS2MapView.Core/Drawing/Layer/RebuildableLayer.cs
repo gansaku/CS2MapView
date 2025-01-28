@@ -36,11 +36,11 @@ namespace CS2MapView.Drawing.Layer
         /// <summary>
         /// trueの場合、拡大率変更の際に再構築が必要であることを示す。
         /// </summary>
-        public bool Resizable => Builder as IRebuildOnResizeLayerBuilder is not null;
+        public bool Resizable => Builder is IRebuildOnResizeLayerBuilder;
         /// <summary>
         /// trueの場合、回転の際に再構築が必要であることを示す。
         /// </summary>
-        public bool Rotatable => Builder as IRebuildOnRotateLayerBuilder is not null;
+        public bool Rotatable => Builder is IRebuildOnRotateLayerBuilder;
         /// <summary>
         /// 拡大率変更の際の再構築を実行する。
         /// </summary>

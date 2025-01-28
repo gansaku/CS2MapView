@@ -1,5 +1,5 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
-
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
@@ -9,20 +9,17 @@
     <Platforms>AnyCPU;x64</Platforms>
     <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
-    <Version>0.0.1</Version>
+    <Version>0.1.0</Version>
     <Copyright>copyright(c) 2024 gansaku</Copyright>
   </PropertyGroup>
-
   <ItemGroup>
     <PackageReference Include="log4net" Version="2.0.15" />
     <PackageReference Include="SkiaSharp" Version="2.88.7" />
     <PackageReference Include="Svg.Skia" Version="1.0.0.13" />
   </ItemGroup>
-
   <ItemGroup>
     <ProjectReference Include="..\CS2MapView.Serialization\CS2MapView.Serialization.csproj" />
   </ItemGroup>
-
   <ItemGroup>
     <Reference Include="CSLMapViewXML">
       <HintPath>oldver\CSLMapViewXML.dll</HintPath>
@@ -31,7 +28,6 @@
       <HintPath>lib\Gfw.Common.dll</HintPath>
     </Reference>
   </ItemGroup>
-
   <ItemGroup>
     <Compile Update="Resources.Designer.cs">
       <DependentUpon>Resources.resx</DependentUpon>
@@ -39,14 +35,12 @@
       <AutoGen>True</AutoGen>
     </Compile>
   </ItemGroup>
-
   <ItemGroup>
     <EmbeddedResource Update="Resources.resx">
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <Generator>ResXFileCodeGenerator</Generator>
     </EmbeddedResource>
   </ItemGroup>
-
   <ItemGroup>
     <None Update="images\ja\broadleafTrees.svg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -796,5 +790,4 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
-
 </Project>

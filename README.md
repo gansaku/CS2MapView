@@ -1,4 +1,6 @@
 # CS2MapView
+[![en](https://img.shields.io/badge/lang-en-red.svg)](https://github.com/gansaku/CS2MapView/blob/master/README.md)
+[![ja](https://img.shields.io/badge/lang-ja-jp.svg)](https://github.com/gansaku/CS2MapView/blob/master/README.ja.md)
 
 This program draws maps of Cities:Skylines II like [CSLMapView](https://steamcommunity.com/sharedfiles/filedetails/?id=845665815).
 

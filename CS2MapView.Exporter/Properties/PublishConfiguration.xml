@@ -10,16 +10,14 @@
 	<LongDescription>
 # CS2MapView.Exporter beta
 
-This mod only outputs files for CS2MapView viewe application.
+This mod only outputs files for CS2MapView viewer application.
 Unlike [CSLMapView](https://steamcommunity.com/sharedfiles/filedetails/?id=845665815 "CSLMapView"), the viewer is not shipped with the mod. Please get viewer application (cs2mapview.exe) from [github](https://github.com/gansaku/CS2MapView/ "github").
 
-## Requirements
-Viewer requires
-* Windows 64bit
-* [.NET 8 Desktop Runtime](https://dotnet.microsoft.com/download/dotnet/8.0 ".NET 8 Desktop Runtime")
-
-## Installation
-* Download cs2mapview_win64_x.x.x.zip and unzip it to anywhere you like.
+## Viewer Installation
+* Requirements
+  * Windows 64bit
+  * [.NET 8 Desktop Runtime](https://dotnet.microsoft.com/download/dotnet/8.0 ".NET 8 Desktop Runtime")
+* Download [cs2mapview_x.x.x.zip](https://github.com/gansaku/CS2MapView/releases) and unzip it to anywhere you like.
 
 ## Usage
 ### Export map data

@@ -9,7 +9,7 @@ This program draws maps of Cities:Skylines II like [CSLMapView](https://steamcom
 * [.NET 8 Desktop Runtime](https://dotnet.microsoft.com/download/dotnet/8.0 ".NET 8 Desktop Runtime")
 
 ## Installation
-1. Download the latest packages from [github/release](https://github.com/gansaku/CS2MapView/releases/).
+1. Download the latest packages from [Releases](https://github.com/gansaku/CS2MapView/releases/).
 2. ~~Install CS2MapView.Exporter mod in Paradox mods.~~<br>
 Download and unzip the mod (CS2MapView.Exporter_x.x.x.zip) into the mod directory of the game. <br>
 C:\Users\\(username)\AppData\LocalLow\Colossal Order\Cities Skylines II\Mods\CS2MapView.Exporter<br>

@@ -10,8 +10,12 @@ Cities:Skylines IIの地図を描画するプログラムです。
 * [.NET 8 Desktop Runtime](https://dotnet.microsoft.com/download/dotnet/8.0 ".NET 8 Desktop Runtime")
 
 ## インストール
-1. Paradox mods で CS2MapView.Exporter MODを導入してください。
-2. [Github](https://github.com/gansaku/CS2MapView/releases/)からビューアをダウンロードして、任意の場所に展開してください。CSLMapViewのようにビューアを同梱したりはしていません。
+1. [リリースページ](https://github.com/gansaku/CS2MapView/releases/)に最新のパッケージがあります。
+2. ~~Paradox mods で CS2MapView.Exporter MODを導入してください。~~
+   MOD(CS2MapView.Exporter_x.x.x.zip)をダウンロードし、ゲームのMODフォルダーに解凍してください。<br>
+   場所は通常はC:\Users\\(username)\AppData\LocalLow\Colossal Order\Cities Skylines II\Mods\CS2MapView.Exporterです。<br>
+   参考:[issues/3](https://github.com/gansaku/CS2MapView/issues/3)
+3. ビューア(cs2mapview_x.x.x.zip)をダウンロードして、任意の場所に展開してください。
 
  
 ## 使い方

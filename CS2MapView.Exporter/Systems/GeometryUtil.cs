@@ -1,11 +1,11 @@
-﻿using Colossal.Mathematics;
+using Colossal.Mathematics;
 using CS2MapView.Serialization;
 using System;
 using System.Collections.Generic;
 using System.Text;
 using Unity.Mathematics;
 
-namespace CS2MapView.Exporter.System
+namespace CS2MapView.Exporter.Systems
 {
     internal static class GeometryUtil
     {

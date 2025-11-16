@@ -1,4 +1,4 @@
-﻿using CS2MapView.Serialization;
+using CS2MapView.Serialization;
 using Game.Net;
 using Game.Prefabs;
 using Game.UI;
@@ -9,7 +9,7 @@ using System.Text;
 using Unity.Collections;
 using Unity.Entities;
 
-namespace CS2MapView.Exporter.System
+namespace CS2MapView.Exporter.Systems
 {
 
     internal class RailwaysReader

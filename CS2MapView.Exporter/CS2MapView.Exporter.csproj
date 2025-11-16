@@ -2,9 +2,10 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OutputType>Library</OutputType>
-    <TargetFramework>netstandard2.1</TargetFramework>
+    <TargetFramework>net48</TargetFramework>
     <Configurations>Debug;Release</Configurations>
     <Version>0.1.1</Version>
+    <LangVersion>9.0</LangVersion>
     <Copyright>copyright(c) 2024 gansaku</Copyright>
     <!--The folder where Game.dll is located. Set it only if the game is not installed in the default location, otherwise keep it empty-->
     <CustomManagedPath></CustomManagedPath>
@@ -24,6 +25,10 @@
   <Import Project="$([System.Environment]::GetEnvironmentVariable('CSII_TOOLPATH', 'EnvironmentVariableTarget.User'))\Mod.props" />
   <Import Project="$([System.Environment]::GetEnvironmentVariable('CSII_TOOLPATH', 'EnvironmentVariableTarget.User'))\Mod.targets" />
   <ItemGroup>
+    <Reference Include="netstandard">
+      <HintPath>$(ManagedPath)\netstandard.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
     <Reference Include="Game">
       <Private>false</Private>
     </Reference>
@@ -63,6 +68,8 @@
     <Reference Include="Unity.Mathematics">
       <Private>false</Private>
     </Reference>
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.IO.Compression.FileSystem" />
   </ItemGroup>
   <ItemGroup>
     <Reference Update="System">

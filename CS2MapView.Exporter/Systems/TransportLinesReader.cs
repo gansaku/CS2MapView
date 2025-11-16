@@ -1,4 +1,4 @@
-﻿using Colossal.Serialization.Entities;
+using Colossal.Serialization.Entities;
 using CS2MapView.Serialization;
 using Game.Common;
 using Game.Net;
@@ -14,7 +14,7 @@ using System.Text;
 using Unity.Collections;
 using Unity.Entities;
 
-namespace CS2MapView.Exporter.System
+namespace CS2MapView.Exporter.Systems
 {
     internal class TransportLinesReader
     {

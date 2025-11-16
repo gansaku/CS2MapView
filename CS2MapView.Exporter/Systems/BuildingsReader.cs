@@ -19,7 +19,7 @@ using Game.Buildings;
 using System.Linq;
 
 
-namespace CS2MapView.Exporter.System
+namespace CS2MapView.Exporter.Systems
 {
     internal class BuildingsReader
     {
@@ -138,12 +138,13 @@ namespace CS2MapView.Exporter.System
 
                 if(SystemRefs.TryGetBuffer<GO.SubObject>(entity,true,out var subObjects))
                 {
-                    for (int i = 0; i < subObjects.Length; i++)
+                    var subObjectsArray = subObjects.AsNativeArray();
+                    for (int i = 0; i < subObjectsArray.Length; i++)
                     {
-                        debugSubObject.Add(subObjects[i].m_SubObject);
-                        if(SystemRefs.TryGetComponent<Building>(subObjects[i].m_SubObject,out var subBuilding))
+                        debugSubObject.Add(subObjectsArray[i].m_SubObject);
+                        if(SystemRefs.TryGetComponent<Building>(subObjectsArray[i].m_SubObject,out var subBuilding))
                         {
-                            subBuildings.Add(subObjects[i].m_SubObject.Index,entity.Index);
+                            subBuildings.Add(subObjectsArray[i].m_SubObject.Index,entity.Index);
                         }
                     }
                 }

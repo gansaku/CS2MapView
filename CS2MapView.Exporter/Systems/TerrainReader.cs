@@ -1,4 +1,3 @@
-﻿
 using CS2MapView.Serialization;
 using Game.Simulation;
 using System;
@@ -9,7 +8,7 @@ using System.Numerics;
 using Unity.Collections.LowLevel.Unsafe;
 using System.Linq;
 
-namespace CS2MapView.Exporter.System
+namespace CS2MapView.Exporter.Systems
 {
 
     internal class TerrainReader
@@ -94,7 +93,7 @@ namespace CS2MapView.Exporter.System
             }
 
 
-            data.SeaLevel = WaterSystem.SeaLevel;
+            data.SeaLevel = m_waterSystem.SeaLevel;
             data.Water = new CS2TerrainWaterDataInfo
             {
                 Resolution = new Vector3(resolutionXz, sd.resolution.y, resolutionXz),

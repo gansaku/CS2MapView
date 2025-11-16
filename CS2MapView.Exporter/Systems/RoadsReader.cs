@@ -1,4 +1,4 @@
-﻿using Colossal.Entities;
+using Colossal.Entities;
 using CS2MapView.Serialization;
 using Game.Net;
 using Game.Prefabs;
@@ -15,7 +15,7 @@ using Unity.Entities;
 using static Game.Prefabs.TriggerPrefabData;
 using static Game.UI.NameSystem;
 
-namespace CS2MapView.Exporter.System
+namespace CS2MapView.Exporter.Systems
 {
     internal class RoadsReader
     {

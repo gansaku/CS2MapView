@@ -18,7 +18,7 @@ using Unity.Collections;
 using Unity.Entities;
 
 
-namespace CS2MapView.Exporter.System
+namespace CS2MapView.Exporter.Systems
 {
     public partial class CS2MapViewSystem : COSystemBase
     {
@@ -35,13 +35,13 @@ namespace CS2MapView.Exporter.System
 
         public static event Action<string?>? ExportFinished;
 
-        private struct ExportJob
+        public struct ExportJob
         {
             public string? Dir;
             public CS2MapViewModSettings.ResolutionRestriction Restriction;
             public bool AddTimestamp;
         }
-        private readonly Queue<ExportJob> _pending = new();
+        private readonly List<ExportJob> _pending = new List<ExportJob>();
         private bool _isRunning;
 
         internal static List<string>? DebugStringList { get; set; }
@@ -89,7 +89,8 @@ namespace CS2MapView.Exporter.System
             {
                 return;
             }
-            var job = _pending.Dequeue();
+            var job = _pending[0];
+            _pending.RemoveAt(0);
             _isRunning = true;
             string? result = null;
             try
@@ -116,7 +117,7 @@ namespace CS2MapView.Exporter.System
 
         public void RequestExport(string? dir, CS2MapViewModSettings.ResolutionRestriction heightMapRestriction, bool addTimestamp)
         {
-            _pending.Enqueue(new ExportJob { Dir = dir, Restriction = heightMapRestriction, AddTimestamp = addTimestamp });
+            _pending.Add(new ExportJob { Dir = dir, Restriction = heightMapRestriction, AddTimestamp = addTimestamp });
         }
 
         private string? ExecuteExport(string? dir, CS2MapViewModSettings.ResolutionRestriction heightMapRestriction, bool addTimestamp)

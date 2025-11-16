@@ -101,26 +101,28 @@ namespace CS2MapView.Exporter
                 if (sys is null)
                 {
                     _exportResult = "failed.";
+                    ApplyAndSave();
                     return;
                 }
                 if (!Directory.Exists(OutputPath))
                 {
-                    Directory.CreateDirectory(OutputPath);
+                    Directory.CreateDirectory(OutputPath!);
                 }
 
-                Task<string?> task = sys.RunExport(OutputPath, HeightMapResolutionRestriction, AddFileNameTimestamp);
-                task?.Wait();
-                var result = task?.Result;
-                if (!(result is null))
-                {
-                    _exportResult = $"created {result}.";
-                }
-                else
-                {
-                    _exportResult = "failed.";
-                }
+                CS2MapViewSystem.ExportFinished -= OnExportFinished; // avoid multi-subscribe
+                CS2MapViewSystem.ExportFinished += OnExportFinished;
+                sys.RequestExport(OutputPath, HeightMapResolutionRestriction, AddFileNameTimestamp);
+                _exportResult = "exporting...";
                 ApplyAndSave();
             }
+        }
+
+        private void OnExportFinished(string? result)
+        {
+            _exportResult = result is null ? "failed." : $"created {result}.";
+            ApplyAndSave();
+            // optional: unsubscribe if you only care about one result at a time
+            CS2MapViewSystem.ExportFinished -= OnExportFinished;
         }
 
         private string? _exportResult;

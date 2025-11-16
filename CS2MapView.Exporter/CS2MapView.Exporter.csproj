@@ -4,10 +4,10 @@
     <OutputType>Library</OutputType>
     <TargetFramework>netstandard2.1</TargetFramework>
     <Configurations>Debug;Release</Configurations>
-    <Version>0.1.0</Version>
+    <Version>0.1.1</Version>
     <Copyright>copyright(c) 2024 gansaku</Copyright>
     <!--The folder where Game.dll is located. Set it only if the game is not installed in the default location, otherwise keep it empty-->
-    <CustomManagedPath>I:\SteamLibrary\steamapps\common\Cities Skylines II\Cities2_Data\Managed</CustomManagedPath>
+    <CustomManagedPath></CustomManagedPath>
     <!--Path to the text file where PDX account data is stored which is required to publish the mod-->
     <!--Keep it outside of project in order to not commit it or share accidentally-->
     <!--The file should contain 2 lines:-->

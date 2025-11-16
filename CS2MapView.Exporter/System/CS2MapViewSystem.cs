@@ -33,6 +33,16 @@ namespace CS2MapView.Exporter.System
         private bool LoadErrorDetected { get; set; } = false;
         private SystemRefs? SystemRefs { get; set; }
 
+        public static event Action<string?>? ExportFinished;
+
+        private struct ExportJob
+        {
+            public string? Dir;
+            public CS2MapViewModSettings.ResolutionRestriction Restriction;
+            public bool AddTimestamp;
+        }
+        private readonly Queue<ExportJob> _pending = new();
+        private bool _isRunning;
 
         internal static List<string>? DebugStringList { get; set; }
 
@@ -71,7 +81,31 @@ namespace CS2MapView.Exporter.System
         }
         protected override void OnUpdate()
         {
-
+            if (_isRunning)
+            {
+                return;
+            }
+            if (_pending.Count == 0)
+            {
+                return;
+            }
+            var job = _pending.Dequeue();
+            _isRunning = true;
+            string? result = null;
+            try
+            {
+                result = ExecuteExport(job.Dir, job.Restriction, job.AddTimestamp);
+            }
+            catch (Exception ex)
+            {
+                Log.Error(ex.ToString());
+                result = null;
+            }
+            finally
+            {
+                _isRunning = false;
+                try { ExportFinished?.Invoke(result); } catch { }
+            }
         }
         protected override void OnDestroy()
         {
@@ -80,51 +114,54 @@ namespace CS2MapView.Exporter.System
             Instance = null;
         }
 
-        public Task<string?> RunExport(string? dir, CS2MapViewModSettings.ResolutionRestriction heightMapRestriction, bool addTimestamp)
+        public void RequestExport(string? dir, CS2MapViewModSettings.ResolutionRestriction heightMapRestriction, bool addTimestamp)
         {
-            return Task.Run((Func<string?>)(() =>
-            {
-                if (LoadErrorDetected)
-                {
-                    return null;
-                }
-
-
-                var ex = new CS2MainData();
-                DebugStringList = new List<string>();
-                ReadCityConfiguration(ex);
-
-                var timestamp = addTimestamp ? $"_{DateTime.Now:yyyyMMddHHmmss}" : string.Empty;
-
-                var fileName = Path.Combine(dir, $"{SafeFileName.GetSafeFileName(ex.CityName)}{timestamp}.cs2map");
-                using var fs = new FileStream(fileName, FileMode.Create);
-                using var zipArchive = new ZipArchive(fs, ZipArchiveMode.Create);
-
-
-                ReadAndWriteDistricts(zipArchive);
-                new BuildingsReader(SystemRefs!).ReadAndWriteBuildings(zipArchive);
-                new RoadsReader(SystemRefs!).ReadRoads(zipArchive);
-                new RailwaysReader(SystemRefs!).ReadRails(zipArchive);
-                new TransportLinesReader(SystemRefs!).ReadRoutes(zipArchive);
-
-                TerrainReader!.ReadAndWriteTerrain(ex, zipArchive, heightMapRestriction);
-                TerrainReader.ReadAndWriteWater(ex, zipArchive, heightMapRestriction);
-
-                var ver = Assembly.GetAssembly(typeof(CS2MainData)).GetName().Version;
-                ex.FileVersion = ver.ToString();
-#if DEBUG
-                ex.TestList = DebugStringList;
-#endif 
-                ZipDataWriter.WriteZipXmlEntry(zipArchive, CS2MapDataZipEntryKeys.MainXml, ex);
-
-                return fileName;
-            }));
-
+            _pending.Enqueue(new ExportJob { Dir = dir, Restriction = heightMapRestriction, AddTimestamp = addTimestamp });
         }
 
+        private string? ExecuteExport(string? dir, CS2MapViewModSettings.ResolutionRestriction heightMapRestriction, bool addTimestamp)
+        {
+            if (LoadErrorDetected)
+            {
+                return null;
+            }
+
+            var ex = new CS2MainData();
+            DebugStringList = new List<string>();
+            ReadCityConfiguration(ex);
+
+            var timestamp = addTimestamp ? $"_{DateTime.Now:yyyyMMddHHmmss}" : string.Empty;
+
+            var fileName = Path.Combine(dir!, $"{SafeFileName.GetSafeFileName(ex.CityName)}{timestamp}.cs2map");
+            using var fs = new FileStream(fileName, FileMode.Create);
+            using var zipArchive = new ZipArchive(fs, ZipArchiveMode.Create);
 
 
+            ReadAndWriteDistricts(zipArchive);
+            new BuildingsReader(SystemRefs!).ReadAndWriteBuildings(zipArchive);
+            new RoadsReader(SystemRefs!).ReadRoads(zipArchive);
+            new RailwaysReader(SystemRefs!).ReadRails(zipArchive);
+            new TransportLinesReader(SystemRefs!).ReadRoutes(zipArchive);
 
+            TerrainReader!.ReadAndWriteTerrain(ex, zipArchive, heightMapRestriction);
+            TerrainReader.ReadAndWriteWater(ex, zipArchive, heightMapRestriction);
+
+            var ver = Assembly.GetAssembly(typeof(CS2MainData))!.GetName().Version;
+            ex.FileVersion = ver!.ToString();
+#if DEBUG
+            ex.TestList = DebugStringList;
+#endif 
+            ZipDataWriter.WriteZipXmlEntry(zipArchive, CS2MapDataZipEntryKeys.MainXml, ex);
+
+            return fileName;
+        }
+
+        public Task<string?> RunExport(string? dir, CS2MapViewModSettings.ResolutionRestriction heightMapRestriction, bool addTimestamp)
+        {
+            // Kept for compatibility, now just enqueues and returns a completed task.
+            RequestExport(dir, heightMapRestriction, addTimestamp);
+            return Task.FromResult<string?>(null);
+        }
 
         private void ReadCityConfiguration(CS2MainData data)
         {
@@ -167,10 +204,6 @@ namespace CS2MapView.Exporter.System
             }
             ZipDataWriter.WriteZipXmlEntry(zip, CS2MapDataZipEntryKeys.DistrictsXml, new CS2DistrictsData { Districts = list });
         }
-
-
-
-
 
     }
 

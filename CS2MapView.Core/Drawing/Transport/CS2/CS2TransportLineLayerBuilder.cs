@@ -102,6 +102,7 @@ namespace CS2MapView.Drawing.Transport.CS2
                     CS2TransportType.Subway => ts.RenderMetroLine,
                     CS2TransportType.Ship => ts.RenderShipLine,
                     CS2TransportType.Airplane => ts.RenderAirplaneLine,
+                    CS2TransportType.Ferry => ts.RenderFerryLine,
                     _=>false
                 } ;
             }
@@ -116,6 +117,7 @@ namespace CS2MapView.Drawing.Transport.CS2
                     CS2TransportType.Subway => ts.RenderMetroStop,
                     CS2TransportType.Ship => ts.RenderShipStop,
                     CS2TransportType.Airplane => ts.RenderAirplaneStop,
+                    CS2TransportType.Ferry => ts.RenderFerryStop,
                     _ => false
                 };
             }

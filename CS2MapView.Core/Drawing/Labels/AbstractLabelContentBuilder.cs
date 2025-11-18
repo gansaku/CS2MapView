@@ -35,7 +35,7 @@ namespace CS2MapView.Drawing.Labels
         private void Build(ViewContext vc)
         {
             Debug.Print($"{GetType().Name}.Build vc={vc.TextWorldRect}");
-
+            
             FontPaintCache = new(AppRoot.Context.StringTheme, AppRoot.Context.Theme.Colors?.StringColors, vc.ScaleFactor, vc.WorldScaleFactor);
             //対象物抽出
             lock (LabelContentManager.ContentsLock)

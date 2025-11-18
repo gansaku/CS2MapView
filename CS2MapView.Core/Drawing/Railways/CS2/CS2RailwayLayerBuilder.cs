@@ -29,7 +29,20 @@ namespace CS2MapView.Drawing.Railways.CS2
         {
             AppRoot = appRoot;
             ImportData = importData;
-            ResultLayer = new BasicLayer(appRoot, ILayer.LayerNameRailways, CS2MapType.CS2WorldRect);
+            
+            // 正しい WorldRect を使用（MapExt2 対応）
+            ReadonlyRect worldRect;
+            if (importData.MainData?.WorldBounds != null)
+            {
+                var bounds = importData.MainData.WorldBounds;
+                worldRect = new ReadonlyRect(bounds.MinX, bounds.MinZ, bounds.MaxX, bounds.MaxZ);
+            }
+            else
+            {
+                worldRect = CS2MapType.CS2WorldRect;
+            }
+            
+            ResultLayer = new BasicLayer(appRoot, ILayer.LayerNameRailways, worldRect);
         }
         /// <summary>
         /// 初期構築

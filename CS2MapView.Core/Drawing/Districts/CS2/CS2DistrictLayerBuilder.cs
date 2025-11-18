@@ -25,7 +25,19 @@ namespace CS2MapView.Drawing.Districts.CS2
             }
             return Task.Run<ILayer>(() =>
             {
-                var layer = new BasicLayer(AppRoot, ILayer.LayerNameDistricts, CS2MapType.CS2WorldRect);
+                // 正しい WorldRect を使用（MapExt2 対応）
+                ReadonlyRect worldRect;
+                if (ExportData.MainData?.WorldBounds != null)
+                {
+                    var bounds = ExportData.MainData.WorldBounds;
+                    worldRect = new ReadonlyRect(bounds.MinX, bounds.MinZ, bounds.MaxX, bounds.MaxZ);
+                }
+                else
+                {
+                    worldRect = CS2MapType.CS2WorldRect;
+                }
+                
+                var layer = new BasicLayer(AppRoot, ILayer.LayerNameDistricts, worldRect);
                 var color = AppRoot.Context.Theme?.Colors?.DistrictBoundary ?? new SerializableColor();
                 var stroke = AppRoot.Context.Theme?.Strokes?.DistrictBoundary?.WithColor(color);
                 var pathes = (ExportData.Districts ?? []).Select(d => d.Geometry?.ToPath());

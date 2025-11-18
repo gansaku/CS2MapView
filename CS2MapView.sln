@@ -19,6 +19,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ソリューション項目
 		UpdateVersion.ps1 = UpdateVersion.ps1
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MapExt2", "..\MapExt2\MapExt2.csproj", "{76DAA55C-D0AD-F558-64AA-C40AB35F8590}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -59,6 +61,14 @@ Global
 		{512458B9-2C2B-40C3-84DE-664757E5D5AC}.Release|Any CPU.Build.0 = Release|Any CPU
 		{512458B9-2C2B-40C3-84DE-664757E5D5AC}.Release|x64.ActiveCfg = Release|Any CPU
 		{512458B9-2C2B-40C3-84DE-664757E5D5AC}.Release|x64.Build.0 = Release|Any CPU
+		{76DAA55C-D0AD-F558-64AA-C40AB35F8590}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{76DAA55C-D0AD-F558-64AA-C40AB35F8590}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{76DAA55C-D0AD-F558-64AA-C40AB35F8590}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{76DAA55C-D0AD-F558-64AA-C40AB35F8590}.Debug|x64.Build.0 = Debug|Any CPU
+		{76DAA55C-D0AD-F558-64AA-C40AB35F8590}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{76DAA55C-D0AD-F558-64AA-C40AB35F8590}.Release|Any CPU.Build.0 = Release|Any CPU
+		{76DAA55C-D0AD-F558-64AA-C40AB35F8590}.Release|x64.ActiveCfg = Release|Any CPU
+		{76DAA55C-D0AD-F558-64AA-C40AB35F8590}.Release|x64.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

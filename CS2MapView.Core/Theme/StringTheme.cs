@@ -10,6 +10,8 @@ namespace CS2MapView.Theme
     {
         private const string FontYuGothic = "Yu Gothic";
         private const string FontMeiryo = "Meiryo";
+        private const string FontMicrosoftYaHei = "Microsoft YaHei";
+        private const string FontSimHei = "SimHei";
 
         /// <summary>
         /// スタイル名
@@ -63,10 +65,32 @@ namespace CS2MapView.Theme
         public static StringTheme Default => new()
         {
             Name = "default",
-            BuildingName = new(GetSafeFontFamily(FontYuGothic), new Width(12.5f, 1f, 12.5f, 12.5f, 8f), new StrokeStyle(new(3f, 1f, 3f, 3f, 0f))),
-            DistrictName = new(GetSafeFontFamily(FontMeiryo), new Width(18f, 1f, 18f, 18f, 8f), new StrokeStyle(new(4f, 1f, 4f, 4f, 0f))),
-            StreetName = new(GetSafeFontFamily(FontYuGothic), new Width(12f, 1f, 12f, 12f, 8f), new StrokeStyle(new(2f, 1f, 2f, 2f, 0f)))
+            BuildingName = new(GetBestFontFamily(FontMicrosoftYaHei, FontYuGothic), new Width(12.5f, 1f, 12.5f, 12.5f, 8f), new StrokeStyle(new(3f, 1f, 3f, 3f, 0f))),
+            DistrictName = new(GetBestFontFamily(FontMicrosoftYaHei, FontMeiryo), new Width(18f, 1f, 18f, 18f, 8f), new StrokeStyle(new(4f, 1f, 4f, 4f, 0f))),
+            StreetName = new(GetBestFontFamily(FontMicrosoftYaHei, FontYuGothic), new Width(12f, 1f, 12f, 12f, 8f), new StrokeStyle(new(2f, 1f, 2f, 2f, 0f)))
         };
+
+        /// <summary>
+        /// カスタムフォント設定を適用
+        /// </summary>
+        /// <param name="buildingFont">建物名のフォント</param>
+        /// <param name="districtFont">地区名のフォント</param>
+        /// <param name="streetFont">道路名のフォント</param>
+        public void ApplyCustomFonts(string? buildingFont, string? districtFont, string? streetFont)
+        {
+            if (!string.IsNullOrEmpty(buildingFont) && BuildingName != null)
+            {
+                BuildingName.FontFamily = GetSafeFontFamily(buildingFont);
+            }
+            if (!string.IsNullOrEmpty(districtFont) && DistrictName != null)
+            {
+                DistrictName.FontFamily = GetSafeFontFamily(districtFont);
+            }
+            if (!string.IsNullOrEmpty(streetFont) && StreetName != null)
+            {
+                StreetName.FontFamily = GetSafeFontFamily(streetFont);
+            }
+        }
 
         private static string GetSafeFontFamily(string fontFamily)
         {
@@ -79,6 +103,76 @@ namespace CS2MapView.Theme
             {
                 return fontFamily;
             }
+        }
+
+        /// <summary>
+        /// 最適なフォントを取得します。優先フォントがあればそれを使用し、
+        /// なければ代替フォントを試します。
+        /// </summary>
+        /// <param name="primaryFont">優先フォント</param>
+        /// <param name="fallbackFont">代替フォント</param>
+        /// <returns>利用可能なフォント名</returns>
+        private static string GetBestFontFamily(string primaryFont, string fallbackFont)
+        {
+            // 優先フォントを試す
+            var tf = SKFontManager.Default.MatchFamily(primaryFont);
+            if (tf is not null)
+            {
+                return primaryFont;
+            }
+
+            // 代替フォントを試す
+            tf = SKFontManager.Default.MatchFamily(fallbackFont);
+            if (tf is not null)
+            {
+                return fallbackFont;
+            }
+
+            // どちらも利用できない場合は、システムのデフォルトフォントを返す
+            return SKTypeface.Default.FamilyName;
+        }
+
+        /// <summary>
+        /// システムで利用可能なすべてのフォント一覧を取得 / Get all available system fonts
+        /// </summary>
+        /// <returns>フォント名のリスト</returns>
+        public static List<string> GetAvailableFonts()
+        {
+            var fonts = new HashSet<string>();
+            var fontManager = SKFontManager.Default;
+
+            // すべてのフォントファミリーを取得
+            var familyCount = fontManager.FontFamilyCount;
+            for (int i = 0; i < familyCount; i++)
+            {
+                var familyName = fontManager.GetFamilyName(i);
+                if (!string.IsNullOrEmpty(familyName))
+                {
+                    fonts.Add(familyName);
+                }
+            }
+
+            var result = fonts.OrderBy(f => f).ToList();
+            
+            var commonChineseFonts = new[] { 
+                FontMicrosoftYaHei, 
+                FontSimHei, 
+                "SimSun", 
+                "NSimSun",
+                "Microsoft JhengHei",
+                FontYuGothic, 
+                FontMeiryo 
+            };
+            
+            foreach (var font in commonChineseFonts)
+            {
+                if (SKFontManager.Default.MatchFamily(font) != null && !result.Contains(font))
+                {
+                    result.Insert(0, font);
+                }
+            }
+
+            return result;
         }
     }
 }

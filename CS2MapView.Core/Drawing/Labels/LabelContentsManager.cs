@@ -91,19 +91,38 @@ namespace CS2MapView.Drawing.Labels
 
             int moved = 0;
             int loopCnt = 0;
-            Contents.GetAllOrderedObjects().ForEach(t => t.DisplayPosition = t.OriginalPosition);
+            
+            var activeLabels = Contents.GetAllOrderedObjects()
+                .Where(t => !t.Freezed && !t.Yielded)
+                .ToList();
+            
+            // MapExt2 大規模マップ最適化：ラベル数が多すぎる場合、レイアウト調整をスキップ
+            const int MaxLabelsForArrangement = 5000;
+            if (activeLabels.Count > MaxLabelsForArrangement)
+            {
+                Debug.Print($"LabelContentsManager.ArrangePositions: Too many labels ({activeLabels.Count}), skipping arrangement for performance");
+                // 元の位置を直接使用
+                activeLabels.ForEach(t => t.DisplayPosition = t.OriginalPosition);
+                return;
+            }
+            
+            activeLabels.ForEach(t => t.DisplayPosition = t.OriginalPosition);
+
+            // パフォーマンス向上のため最大ループ回数を削減
+            const int MaxLoops = 50;
 
             do
             {
                 moved = 0;
-                Contents.GetAllOrderedObjects().Where(t => !t.Freezed && !t.Yielded).ForEach(t => t.Speed = SKPoint.Empty);
+                activeLabels.ForEach(t => t.Speed = SKPoint.Empty);
 
-                if (loopCnt > 100)
+                if (loopCnt > MaxLoops)
                 {
+                    Debug.Print($"LabelContentsManager.ArrangePositions: Reached max loops ({MaxLoops}), stopping");
                     break;
                 }
 
-                foreach (var t in Contents.GetAllOrderedObjects().Where(t => !t.Freezed && !t.Yielded))
+                foreach (var t in activeLabels)
                 {
                     foreach (var s in Contents.GetOrderedObjects(t.Bounds).Where(t => !t.Yielded))
                     {
@@ -148,7 +167,7 @@ namespace CS2MapView.Drawing.Labels
 
                 }
 
-                Contents.GetAllOrderedObjects().Where(t => !t.Freezed).ForEach(t =>
+                activeLabels.ForEach(t =>
                 {
                     if (t.Speed != SKPoint.Empty)
                     {

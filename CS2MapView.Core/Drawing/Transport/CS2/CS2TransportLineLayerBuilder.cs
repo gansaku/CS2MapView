@@ -28,7 +28,20 @@ namespace CS2MapView.Drawing.Transport.CS2
         {
             AppRoot = appRoot;
             ImportData = importData;
-            ResultLayer = new RotatedLayer(AppRoot, ILayer.LayerNameTransportLines, CS2MapType.CS2WorldRect, this);
+            
+            // 正しい WorldRect を使用（MapExt2 対応）
+            ReadonlyRect worldRect;
+            if (importData.MainData?.WorldBounds != null)
+            {
+                var bounds = importData.MainData.WorldBounds;
+                worldRect = new ReadonlyRect(bounds.MinX, bounds.MinZ, bounds.MaxX, bounds.MaxZ);
+            }
+            else
+            {
+                worldRect = CS2MapType.CS2WorldRect;
+            }
+            
+            ResultLayer = new RotatedLayer(AppRoot, ILayer.LayerNameTransportLines, worldRect, this);
             LabelContentsManager = new(AppRoot.Context.ViewContext.TextWorldRect);
 
             using var recorder = new SKPictureRecorder();

@@ -22,14 +22,18 @@ namespace CS2MapView.Data
     {
         /// <inheritdoc/>
         public override MapType MapType => MapType.CitiesSkylines2;
+        
         /// <summary>
         /// Cities:Skilines2の街サイズ
         /// </summary>
         public static readonly ReadonlyRect CS2WorldRect = new(-7168f, -7168f, 7168f, 7168f);
+        
+        private readonly ReadonlyRect _worldRect;
+        
         /// <summary>
-        /// Cities:Skilines2の街サイズ
+        /// 実際の街サイズ（MapExt2 等の拡張対応）
         /// </summary>
-        public override ReadonlyRect WorldRect => CS2WorldRect;
+        public override ReadonlyRect WorldRect => _worldRect;
 
         /// <summary>
         /// 
@@ -37,6 +41,37 @@ namespace CS2MapView.Data
         /// <param name="importData"></param>
         public CS2MapType(CS2MapDataSet importData) : base(importData)
         {
+            _worldRect = GetWorldRectFromData(importData);
+            
+            // デバッグ情報をログに出力
+            var log = log4net.LogManager.GetLogger(typeof(CS2MapType));
+            if (importData?.MainData?.WorldBounds != null)
+            {
+                var bounds = importData.MainData.WorldBounds;
+                log.Info($"[CS2MapView] WorldBounds detected: ({bounds.MinX}, {bounds.MinZ}) to ({bounds.MaxX}, {bounds.MaxZ})");
+                log.Info($"[CS2MapView] Map size: {bounds.MaxX - bounds.MinX}m x {bounds.MaxZ - bounds.MinZ}m");
+            }
+            else
+            {
+                log.Info("[CS2MapView] No WorldBounds found, using default vanilla size (±7168)");
+            }
+        }
+
+        /// <summary>
+        /// データから実際のワールド座標範囲を取得
+        /// WorldBounds が存在する場合はそれを使用、なければデフォルト値
+        /// </summary>
+        private static ReadonlyRect GetWorldRectFromData(CS2MapDataSet importData)
+        {
+            // WorldBounds が存在する場合はそれを使用
+            if (importData?.MainData?.WorldBounds != null)
+            {
+                var bounds = importData.MainData.WorldBounds;
+                return new ReadonlyRect(bounds.MinX, bounds.MinZ, bounds.MaxX, bounds.MaxZ);
+            }
+            
+            // フォールバック：デフォルトサイズ（原版）
+            return CS2WorldRect;
         }
 
         /// <inheritdoc/>
@@ -46,9 +81,10 @@ namespace CS2MapView.Data
         {
             public LoadProgressInfo.Process ProcessType => process;
         }
-        private static Task<ILayer> DummyLayer(ICS2MapViewRoot root, string name, LoadProgressInfo.Process process)
+        
+        private Task<ILayer> DummyLayer(ICS2MapViewRoot root, string name, LoadProgressInfo.Process process)
         {
-            return Task.Run<ILayer>(() => new RebuildableLayer(root, name, CS2WorldRect, new DummyRebuildableLayer(process)));
+            return Task.Run<ILayer>(() => new RebuildableLayer(root, name, WorldRect, new DummyRebuildableLayer(process)));
         }
 
         /// <inheritdoc/>
@@ -56,7 +92,7 @@ namespace CS2MapView.Data
             => new CS2BuildingLayerBuilder(appRoot, GetImportData()).BuildAsync(lpi);
         /// <inheritdoc/>
         public override Task<ILayer> BuildGridLayerAsync(ICS2MapViewRoot appRoot, LoadProgressInfo? lpi)
-            => new CS2GridLayerBuilder(appRoot).BuildAsync(lpi);
+            => new CS2GridLayerBuilder(appRoot, GetImportData()).BuildAsync(lpi);
 
         /// <inheritdoc/>
         public override Task BuildLabelContentsAsync(ICS2MapViewRoot appRoot, LabelContentsManager manager)

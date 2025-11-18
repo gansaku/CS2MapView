@@ -70,6 +70,14 @@ namespace CS2MapView.Data
             Theme = ThemeCandidates.FirstOrDefault(tc => tc.Name == themeName, DrawingTheme.Default);
             StringThemeCandidates = await PrepareStringThemeCandidates();
             StringTheme = StringThemeCandidates.FirstOrDefault(t => t.Name == stringThemeName, StringTheme.Default);
+
+            // ユーザーのカスタムフォント設定を適用
+            StringTheme.ApplyCustomFonts(
+                UserSettings.CustomBuildingNameFont,
+                UserSettings.CustomDistrictNameFont,
+                UserSettings.CustomStreetNameFont
+            );
+            
             ContourHeights = ContourHeightsCandidate.FirstOrDefault(ch => ch.Name == contourHeightsName);
             ContourHeights ??= ContourHeights.Default;
 #nullable restore
@@ -149,11 +157,19 @@ namespace CS2MapView.Data
 
             var layers = mapData.Layers?.OrderBy(
                 layer => UserSettings.LayerDrawingOrder.FirstOrDefault(
-                    lo => lo.Name == layer.LayerName)?.Order);
+                    lo => lo.Name == layer.LayerName)?.Order).ToList();
+            
             if (layers is not null)
             {
                 foreach (var layer in layers)
                 {
+                    // MapExt2 最適化：超高倍率ではパフォーマンス問題を回避するために terrain の描画をスキップ
+                    // TODO: 高倍率レンダリングをサポートするために、terrain レイヤーのパフォーマンス最適化がさらに必要
+                    if (layer.LayerName == "terrain" && vc.ScaleFactor >= 6f)
+                    {
+                        continue;
+                    }
+                    
                     layer.DrawLayer(canvas, vc, worldRectVisible, canvasRect);
                 }
             }

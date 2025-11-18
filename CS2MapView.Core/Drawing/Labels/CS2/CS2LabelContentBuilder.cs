@@ -5,14 +5,15 @@ using CS2MapView.Util;
 using CS2MapView.Util.CS1;
 using CS2MapView.Util.CS2;
 using SkiaSharp;
-using System.Diagnostics;
 using System.Numerics;
+using log4net;
 
 namespace CS2MapView.Drawing.Labels.CS2
 {
     internal class CS2LabelContentBuilder : AbstractLabelContentBuilder
     {
-
+        private static readonly ILog Logger = LogManager.GetLogger(typeof(CS2LabelContentBuilder));
+        
         private CS2MapDataSet ExportData { get; init; }
         private CS2BuildingRenderingManager BuildingRenderingManager { get; init; }
 
@@ -22,24 +23,49 @@ namespace CS2MapView.Drawing.Labels.CS2
             ExportData = exportData;
             BuildingRenderingManager = new(appRoot);
         }
+        
         protected override void AddContents(ViewContext vc)
         {
-            LabelContentManager.Contents.AddRange(BuildDistrictNameLabels(vc));
-            LabelContentManager.Contents.AddRange(BuildBuildingNameLabels(vc));
-            LabelContentManager.Contents.AddRange(BuildStreetNameLabels(vc));
+            float samplingRatio = CalculateLabelSamplingRatio(vc);
+            
+            var districts = BuildDistrictNameLabels(vc, samplingRatio);
+            var buildings = BuildBuildingNameLabels(vc, samplingRatio);
+            var streets = BuildStreetNameLabels(vc, samplingRatio);
+            
+            LabelContentManager.Contents.AddRange(districts);
+            LabelContentManager.Contents.AddRange(buildings);
+            LabelContentManager.Contents.AddRange(streets);
+        }
+        
+        private float CalculateLabelSamplingRatio(ViewContext vc)
+        {
+            var textRect = vc.TextWorldRect;
+            float currentArea = textRect.Width * textRect.Height;
+            
+            const float BaseMapArea = 14336f * 14336f;
+            const float MaxReasonableArea = BaseMapArea * 16f;
+            
+            if (currentArea > MaxReasonableArea)
+            {
+                float ratio = (float)Math.Sqrt(MaxReasonableArea / currentArea);
+                return Math.Max(0.25f, ratio);
+            }
+            
+            return 1.0f;
         }
 
         private SKPoint ApplyRotateScaleTransform(ViewContext vc, SKPoint p)
         {
             return vc.TextWorldTransform.MapPoint(p);
         }
+        
         private SKPoint ApplyRotateScaleTransform(ViewContext vc, Vector3 vec)
         {
             var p = vec.ToMapSpace();
             return vc.TextWorldTransform.MapPoint(p);
         }
 
-        private List<StreetNameLabel> BuildStreetNameLabels(ViewContext vc)
+        private List<StreetNameLabel> BuildStreetNameLabels(ViewContext vc, float samplingRatio = 1.0f)
         {
             var result = new List<StreetNameLabel>();
             if (!AppRoot.Context.UserSettings.RenderStreetNames)
@@ -51,8 +77,18 @@ namespace CS2MapView.Drawing.Labels.CS2
             {
                 return result;
             }
-            foreach (var seg in ExportData.RoadInfo?.RoadSegments ?? [])
+            
+            var segments = ExportData.RoadInfo?.RoadSegments ?? [];
+            int step = (int)Math.Ceiling(1.0f / samplingRatio);
+            int index = 0;
+            
+            foreach (var seg in segments)
             {
+                if (samplingRatio < 1.0f && (index++ % step) != 0)
+                {
+                    continue;
+                }
+                
                 if (string.IsNullOrEmpty(seg.CustomName))
                 {
                     continue;
@@ -94,13 +130,13 @@ namespace CS2MapView.Drawing.Labels.CS2
                 StreetNameLabel st = new()
                 {
                     Text = seg.CustomName,
-                    OriginalPosition = tightBounds.Center(), /*new SKPoint(points.Average(t => t.X), points.Average(t => t.Y))*/
+                    OriginalPosition = tightBounds.Center(),
                     DisplayPosition = tightBounds.Center(),
                     PathPoints = pathPoints,
                     PathType = AbstractTextOnPathLabel.PathPointType.CubicBesier,
                     Ascent = textBound.Top * vc.ViewScaleFromWorld,
                     Size = (tightBounds.Width, tightBounds.Height),
-                    TextOffset = (seg.Length * vc.ViewScaleFromWorld - textWidth) / 4f // /4は謎
+                    TextOffset = (seg.Length * vc.ViewScaleFromWorld - textWidth) / 4f
                 };
 
                 result.Add(st);
@@ -108,7 +144,7 @@ namespace CS2MapView.Drawing.Labels.CS2
             return result;
         }
 
-        private List<AbstractMapLabel> BuildBuildingNameLabels(ViewContext vc)
+        private List<AbstractMapLabel> BuildBuildingNameLabels(ViewContext vc, float samplingRatio = 1.0f)
         {
             var result = new List<AbstractMapLabel>();
 
@@ -123,8 +159,19 @@ namespace CS2MapView.Drawing.Labels.CS2
             }
             var mapSymbolTargetSize = AppRoot.Context.Theme.MapSymbolSize.StrokeWidthByScale(vc.ScaleFactor, vc.WorldScaleFactor);
 
-            foreach (var bld in ExportData.Buildings ?? [])
+            var buildings = ExportData.Buildings ?? [];
+            int step = (int)Math.Ceiling(1.0f / samplingRatio);
+            int index = 0;
+            
+            foreach (var bld in buildings)
             {
+                bool isImportantBuilding = AppRoot.Context.UserSettings.RenderMapSymbol && bld.ParentBuilding < 0;
+                
+                if (!isImportantBuilding && samplingRatio < 1.0f && (index++ % step) != 0)
+                {
+                    continue;
+                }
+                
                 BuildingNameLabel? label = null;
                 SKPoint buildingPos = ApplyRotateScaleTransform(vc, bld.Position);
                 CS2BuildingPrefab? prefab = null;
@@ -156,7 +203,7 @@ namespace CS2MapView.Drawing.Labels.CS2
                     }
 
                 }
-                if (AppRoot.Context.UserSettings.RenderMapSymbol && bld.ParentBuilding < 0)
+                if (isImportantBuilding)
                 {
                     prefab ??= ExportData.BuildingPrefabs?.FirstOrDefault(t => t.Entity == bld.Prefab);
                     var (reason, symbolName, svg) = BuildingRenderingManager.GetMapSymbol(bld, prefab);
@@ -212,7 +259,7 @@ namespace CS2MapView.Drawing.Labels.CS2
             return result;
         }
 
-        private List<DistrictNameLabel> BuildDistrictNameLabels(ViewContext vc)
+        private List<DistrictNameLabel> BuildDistrictNameLabels(ViewContext vc, float samplingRatio = 1.0f)
         {
             var result = new List<DistrictNameLabel>();
             if (!AppRoot.Context.UserSettings.RenderDistrictNameLabel)
@@ -224,6 +271,7 @@ namespace CS2MapView.Drawing.Labels.CS2
             {
                 return result;
             }
+            
             foreach (var distr in ExportData.Districts ?? [])
             {
                 if (string.IsNullOrEmpty(distr.Name))
@@ -239,7 +287,5 @@ namespace CS2MapView.Drawing.Labels.CS2
             }
             return result;
         }
-
-
     }
 }

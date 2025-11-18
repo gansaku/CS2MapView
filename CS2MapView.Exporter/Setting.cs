@@ -96,33 +96,80 @@ namespace CS2MapView.Exporter
         {
             set
             {
-                _exportResult = "";
                 var sys = CS2MapViewSystem.Instance;
                 if (sys is null)
                 {
-                    _exportResult = "failed.";
+                    _exportResult = "failed - system not initialized.";
+                    Mod.log.Error("CS2MapViewSystem.Instance is null");
                     ApplyAndSave();
                     return;
                 }
-                if (!Directory.Exists(OutputPath))
+                
+                if (string.IsNullOrEmpty(OutputPath))
                 {
-                    Directory.CreateDirectory(OutputPath!);
+                    _exportResult = "failed - output path is empty.";
+                    Mod.log.Error("OutputPath is null or empty");
+                    ApplyAndSave();
+                    return;
+                }
+                
+                try
+                {
+                    if (!Directory.Exists(OutputPath))
+                    {
+                        Directory.CreateDirectory(OutputPath!);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    _exportResult = $"failed - could not create directory: {ex.Message}";
+                    Mod.log.Error($"Failed to create directory {OutputPath}: {ex}");
+                    ApplyAndSave();
+                    return;
                 }
 
-                CS2MapViewSystem.ExportFinished -= OnExportFinished; // avoid multi-subscribe
-                CS2MapViewSystem.ExportFinished += OnExportFinished;
-                sys.RequestExport(OutputPath, HeightMapResolutionRestriction, AddFileNameTimestamp);
+                // Set initial status
                 _exportResult = "exporting...";
                 ApplyAndSave();
+
+                // Subscribe to completion event
+                CS2MapViewSystem.ExportFinished -= OnExportFinished;
+                CS2MapViewSystem.ExportFinished += OnExportFinished;
+                
+                // Trigger export (runs synchronously)
+                sys.RequestExport(OutputPath, HeightMapResolutionRestriction, AddFileNameTimestamp);
+                
+                // Note: OnExportFinished will be called by RequestExport before returning
             }
         }
 
         private void OnExportFinished(string? result)
         {
-            _exportResult = result is null ? "failed." : $"created {result}.";
-            ApplyAndSave();
-            // optional: unsubscribe if you only care about one result at a time
-            CS2MapViewSystem.ExportFinished -= OnExportFinished;
+            try
+            {
+                if (result is null)
+                {
+                    _exportResult = "Export failed. Please check that a city is loaded and try again. See logs for details.";
+                }
+                else
+                {
+                    _exportResult = $"Export completed: {Path.GetFileName(result)}";
+                }
+                
+                // Force UI update
+                ApplyAndSave();
+                
+                Mod.log.Info($"Export finished with result: {result ?? "null"}");
+            }
+            catch (Exception ex)
+            {
+                Mod.log.Error($"Error in OnExportFinished: {ex}");
+            }
+            finally
+            {
+                // Unsubscribe to avoid memory leaks
+                CS2MapViewSystem.ExportFinished -= OnExportFinished;
+            }
         }
 
         private string? _exportResult;

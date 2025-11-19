@@ -217,6 +217,14 @@ public partial class MainForm : System.Windows.Forms.Form, ICS2MapViewRoot
             mousePositionWorld = inverse.MapPoint(mousePositionClient);
         }
 
+        // MapExt2かどうかを検出（マップサイズが標準サイズを超える場合）
+        bool isMapExt2 = MapData != null && 
+                         (MapData.WorldRect.Width > 14336f || MapData.WorldRect.Height > 14336f);
+        
+        // MapExt2の最大ズーム倍率は4.0f（400%）に制限
+        // 標準マップは16.0f（1600%）の制限を維持
+        float maxScaleFactor = isMapExt2 ? 4.0f : 16.0f;
+
         if (delta > 0)
         {
             var prev = WheelScalesCandidate.FirstOrDefault(ws => Context.ViewContext.ScaleFactor >= ws);
@@ -229,6 +237,13 @@ public partial class MainForm : System.Windows.Forms.Form, ICS2MapViewRoot
             {
                 next = WheelScalesCandidate.First();
             }
+            
+            // MapExt2のズーム制限を適用
+            if (next > maxScaleFactor)
+            {
+                next = maxScaleFactor;
+            }
+            
             Context.ViewContext.ScaleFactor = next;
         }
         else if (delta < 0)

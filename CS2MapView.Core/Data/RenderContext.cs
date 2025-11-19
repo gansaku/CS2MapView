@@ -161,11 +161,14 @@ namespace CS2MapView.Data
             
             if (layers is not null)
             {
+                // MapExt2かどうかを検出（マップサイズが標準の14336x14336を超える場合）
+                bool isMapExt2 = mapData.WorldRect.Width > 14336f || mapData.WorldRect.Height > 14336f;
+                
                 foreach (var layer in layers)
                 {
-                    // MapExt2 最適化：超高倍率ではパフォーマンス問題を回避するために terrain の描画をスキップ
-                    // TODO: 高倍率レンダリングをサポートするために、terrain レイヤーのパフォーマンス最適化がさらに必要
-                    if (layer.LayerName == "terrain" && vc.ScaleFactor >= 6f)
+                    // MapExt2マップ：400%を超える倍率ではパフォーマンス問題を回避するためにterrainの描画をスキップ
+                    // 標準マップ：制限を解除し、任意の倍率でのレンダリングを許可
+                    if (layer.LayerName == "terrain" && isMapExt2 && vc.ScaleFactor > 4f)
                     {
                         continue;
                     }

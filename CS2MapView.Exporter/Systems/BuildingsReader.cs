@@ -19,7 +19,7 @@ using Game.Buildings;
 using System.Linq;
 
 
-namespace CS2MapView.Exporter.System
+namespace CS2MapView.Exporter.Systems
 {
     internal class BuildingsReader
     {
@@ -90,6 +90,7 @@ namespace CS2MapView.Exporter.System
             
             var subAreaTargets = CS2BuildingTypes.ExtractorBuilding | CS2BuildingTypes.TransportStation | CS2BuildingTypes.UniqueBuilding;
             var subBuildings = new Dictionary<int,int>();
+            
             foreach (var entity in buildingEntities)
             {
                 var type = GetBuildingTypeFromBuilding(SystemRefs, entity);
@@ -105,7 +106,6 @@ namespace CS2MapView.Exporter.System
                     subAreaGeo = new CS2Geometry { Triangles = new List<CS2MapSpaceTriangle>() };
                     if (SystemRefs.TryGetBuffer<GA.SubArea>(entity, true, out var subAreaBuf))
                     {
-
                         foreach (var subArea in subAreaBuf)
                         {
                             Entity area = subArea.m_Area;
@@ -138,12 +138,13 @@ namespace CS2MapView.Exporter.System
 
                 if(SystemRefs.TryGetBuffer<GO.SubObject>(entity,true,out var subObjects))
                 {
-                    for (int i = 0; i < subObjects.Length; i++)
+                    var subObjectsArray = subObjects.AsNativeArray();
+                    for (int i = 0; i < subObjectsArray.Length; i++)
                     {
-                        debugSubObject.Add(subObjects[i].m_SubObject);
-                        if(SystemRefs.TryGetComponent<Building>(subObjects[i].m_SubObject,out var subBuilding))
+                        debugSubObject.Add(subObjectsArray[i].m_SubObject);
+                        if(SystemRefs.TryGetComponent<Building>(subObjectsArray[i].m_SubObject,out var subBuilding))
                         {
-                            subBuildings.Add(subObjects[i].m_SubObject.Index,entity.Index);
+                            subBuildings.Add(subObjectsArray[i].m_SubObject.Index,entity.Index);
                         }
                     }
                 }
@@ -167,14 +168,10 @@ namespace CS2MapView.Exporter.System
             {
                 list.First(t=>t.Entity == entry.Key).ParentBuilding = entry.Value;
             }
-
-            CS2MapViewSystem.DebugStringList?.Add("[Building]");
-            CS2MapViewSystem.DebugStringList?.AddRange(SystemRefs.DebugGetComponentTypeGroup(buildingEntities));
             
             ZipDataWriter.WriteZipXmlEntry(zip, CS2MapDataZipEntryKeys.BuildingsXml, new CS2BuildingsData { 
                 Buildings = list ,
                 BuildingPrefabs = GetPrefabs(prefabEntities) });
-
         }
 
         private List<CS2BuildingPrefab> GetPrefabs(IEnumerable<Entity> prefabEntities)

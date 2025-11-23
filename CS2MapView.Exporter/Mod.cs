@@ -1,6 +1,6 @@
 ﻿using Colossal.IO.AssetDatabase;
 using Colossal.Logging;
-using CS2MapView.Exporter.System;
+using CS2MapView.Exporter.Systems;
 using Game;
 using Game.Modding;
 using Game.SceneFlow;
@@ -10,7 +10,7 @@ namespace CS2MapView.Exporter
     public class Mod : IMod
     {
         internal const string ModPackageName = "CS2MapView.Exporter";
-        public static ILog log = LogManager.GetLogger(ModPackageName).SetShowsErrorsInUI(false);
+        public static ILog log = LogManager.GetLogger(ModPackageName).SetShowsErrorsInUI(true);
         private CS2MapViewModSettings? m_Setting;
 
         public void OnLoad(UpdateSystem updateSystem)
@@ -18,8 +18,12 @@ namespace CS2MapView.Exporter
             log.Info(nameof(OnLoad));
 
             SetupConfig();
-            //updateしてもらう必要ないけども
-            updateSystem.UpdateAfter<CS2MapViewSystem>(SystemUpdatePhase.Serialize);
+            
+            // CS2MapViewSystem must be registered to be created by Unity ECS
+            // Even though OnUpdate does nothing, registration is required for OnCreate to be called
+            updateSystem.UpdateAt<CS2MapViewSystem>(SystemUpdatePhase.GameSimulation);
+            
+            log.Info("CS2MapView.Exporter mod loaded successfully");
         }
 
         private void SetupConfig()

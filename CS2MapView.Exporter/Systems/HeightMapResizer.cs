@@ -1,6 +1,6 @@
-﻿using System;
+using System;
 
-namespace CS2MapView.Exporter.System
+namespace CS2MapView.Exporter.Systems
 {
     internal class HeightMapResizer
     {

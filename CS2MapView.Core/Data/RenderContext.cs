@@ -70,6 +70,14 @@ namespace CS2MapView.Data
             Theme = ThemeCandidates.FirstOrDefault(tc => tc.Name == themeName, DrawingTheme.Default);
             StringThemeCandidates = await PrepareStringThemeCandidates();
             StringTheme = StringThemeCandidates.FirstOrDefault(t => t.Name == stringThemeName, StringTheme.Default);
+
+            // ユーザーのカスタムフォント設定を適用
+            StringTheme.ApplyCustomFonts(
+                UserSettings.CustomBuildingNameFont,
+                UserSettings.CustomDistrictNameFont,
+                UserSettings.CustomStreetNameFont
+            );
+            
             ContourHeights = ContourHeightsCandidate.FirstOrDefault(ch => ch.Name == contourHeightsName);
             ContourHeights ??= ContourHeights.Default;
 #nullable restore
@@ -149,11 +157,22 @@ namespace CS2MapView.Data
 
             var layers = mapData.Layers?.OrderBy(
                 layer => UserSettings.LayerDrawingOrder.FirstOrDefault(
-                    lo => lo.Name == layer.LayerName)?.Order);
+                    lo => lo.Name == layer.LayerName)?.Order).ToList();
+            
             if (layers is not null)
             {
+                // MapExt2かどうかを検出（マップサイズが標準の14336x14336を超える場合）
+                bool isMapExt2 = mapData.WorldRect.Width > 14336f || mapData.WorldRect.Height > 14336f;
+                
                 foreach (var layer in layers)
                 {
+                    // MapExt2マップ：400%を超える倍率ではパフォーマンス問題を回避するためにterrainの描画をスキップ
+                    // 標準マップ：制限を解除し、任意の倍率でのレンダリングを許可
+                    if (layer.LayerName == "terrain" && isMapExt2 && vc.ScaleFactor > 4f)
+                    {
+                        continue;
+                    }
+                    
                     layer.DrawLayer(canvas, vc, worldRectVisible, canvasRect);
                 }
             }

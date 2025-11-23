@@ -10,7 +10,11 @@ namespace CS2MapView.Drawing.Buildings.CS2
 {
     public class CS2BuildingLayerBuilder(ICS2MapViewRoot AppRoot, CS2MapDataSet ExportData)
     {
-        private BasicLayer ResultLayer { get; init; } = new BasicLayer(AppRoot, ILayer.LayerNameBuildings, CS2MapType.CS2WorldRect);
+        private BasicLayer ResultLayer { get; init; } = new BasicLayer(AppRoot, ILayer.LayerNameBuildings, 
+            ExportData.MainData?.WorldBounds != null 
+                ? new ReadonlyRect(ExportData.MainData.WorldBounds.MinX, ExportData.MainData.WorldBounds.MinZ, 
+                                  ExportData.MainData.WorldBounds.MaxX, ExportData.MainData.WorldBounds.MaxZ)
+                : CS2MapType.CS2WorldRect);
 
         public Task<ILayer> BuildAsync(LoadProgressInfo? loadProgressInfo)
         {

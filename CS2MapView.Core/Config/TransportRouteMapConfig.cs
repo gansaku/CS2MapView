@@ -38,6 +38,10 @@
         /// 船路線表示有無
         /// </summary>
         public bool RenderShipLine { get; set; } = false;
+        /// <summary>
+        /// フェリー路線表示有無
+        /// </summary>
+        public bool RenderFerryLine { get; set; } = false;
 
 
         /// <summary>
@@ -72,6 +76,10 @@
         /// 船乗り場表示有無
         /// </summary>
         public bool RenderShipStop { get; set; } = false;
+        /// <summary>
+        /// フェリー乗り場表示有無
+        /// </summary>
+        public bool RenderFerryStop { get; set; } = false;
 
         /// <summary>
         /// 貨物非表示

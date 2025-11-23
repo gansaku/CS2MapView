@@ -1,4 +1,4 @@
-﻿using Colossal.Serialization.Entities;
+using Colossal.Serialization.Entities;
 using CS2MapView.Serialization;
 using Game.Common;
 using Game.Net;
@@ -14,7 +14,7 @@ using System.Text;
 using Unity.Collections;
 using Unity.Entities;
 
-namespace CS2MapView.Exporter.System
+namespace CS2MapView.Exporter.Systems
 {
     internal class TransportLinesReader
     {
@@ -61,6 +61,7 @@ namespace CS2MapView.Exporter.System
                     TransportType.Tram => CS2TransportType.Tram,
                     TransportType.Subway => CS2TransportType.Subway,
                     TransportType.Ship => CS2TransportType.Ship,
+                    TransportType.Ferry => CS2TransportType.Ferry,
                     _ => CS2TransportType.None
                 };
                 if (type == CS2TransportType.None)
@@ -146,6 +147,10 @@ namespace CS2MapView.Exporter.System
                 if (SystemRefs.HasComponent<ShipStop>(stopEntity))
                 {
                     stop.TransportType = CS2TransportType.Ship;
+                }
+                if (SystemRefs.HasComponent<FerryStop>(stopEntity))
+                {
+                    stop.TransportType = CS2TransportType.Ferry;
                 }
                 if (SystemRefs.HasComponent<SubwayStop>(stopEntity))
                 {

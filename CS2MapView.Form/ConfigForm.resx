@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!--
-    Microsoft ResX Schema 
+    Microsoft ResX Schema
 
     Version 2.0
 
@@ -48,7 +48,7 @@
     value   : The object must be serialized with
             : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
             : and then encoded with base64 encoding.
-    
+
     mimetype: application/x-microsoft.net.object.soap.base64
     value   : The object must be serialized with
             : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
@@ -127,10 +127,14 @@
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="HideCargoLinesCheckbox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>244, 326</value>
+    <value>366, 489</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="HideCargoLinesCheckbox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="HideCargoLinesCheckbox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>111, 19</value>
+    <value>175, 28</value>
   </data>
   <data name="HideCargoLinesCheckbox.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -150,6 +154,39 @@
   <data name="&gt;&gt;HideCargoLinesCheckbox.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <data name="RenderFerryStopsCheckbox.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="RenderFerryStopsCheckbox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="RenderFerryStopsCheckbox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>891, 31</value>
+  </data>
+  <data name="RenderFerryStopsCheckbox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="RenderFerryStopsCheckbox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>80, 28</value>
+  </data>
+  <data name="RenderFerryStopsCheckbox.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="RenderFerryStopsCheckbox.Text" xml:space="preserve">
+    <value>Ferry</value>
+  </data>
+  <data name="&gt;&gt;RenderFerryStopsCheckbox.Name" xml:space="preserve">
+    <value>RenderFerryStopsCheckbox</value>
+  </data>
+  <data name="&gt;&gt;RenderFerryStopsCheckbox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;RenderFerryStopsCheckbox.Parent" xml:space="preserve">
+    <value>groupBox6</value>
+  </data>
+  <data name="&gt;&gt;RenderFerryStopsCheckbox.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="RenderBusStopsCheckbox.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -157,10 +194,13 @@
     <value>NoControl</value>
   </data>
   <data name="RenderBusStopsCheckbox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>11, 22</value>
+    <value>16, 33</value>
+  </data>
+  <data name="RenderBusStopsCheckbox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="RenderBusStopsCheckbox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>45, 19</value>
+    <value>66, 28</value>
   </data>
   <data name="RenderBusStopsCheckbox.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -178,7 +218,7 @@
     <value>groupBox6</value>
   </data>
   <data name="&gt;&gt;RenderBusStopsCheckbox.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="RenderAirplaneStopsCheckbox.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -187,10 +227,13 @@
     <value>NoControl</value>
   </data>
   <data name="RenderAirplaneStopsCheckbox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>505, 22</value>
+    <value>758, 33</value>
+  </data>
+  <data name="RenderAirplaneStopsCheckbox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="RenderAirplaneStopsCheckbox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>70, 19</value>
+    <value>109, 28</value>
   </data>
   <data name="RenderAirplaneStopsCheckbox.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -208,7 +251,7 @@
     <value>groupBox6</value>
   </data>
   <data name="&gt;&gt;RenderAirplaneStopsCheckbox.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="RenderShipStopsCheckbox.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -217,10 +260,13 @@
     <value>NoControl</value>
   </data>
   <data name="RenderShipStopsCheckbox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>435, 22</value>
+    <value>652, 33</value>
+  </data>
+  <data name="RenderShipStopsCheckbox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="RenderShipStopsCheckbox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>49, 19</value>
+    <value>74, 28</value>
   </data>
   <data name="RenderShipStopsCheckbox.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -238,7 +284,7 @@
     <value>groupBox6</value>
   </data>
   <data name="&gt;&gt;RenderShipStopsCheckbox.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="RenderMonorailStopsCheckbox.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -247,10 +293,13 @@
     <value>NoControl</value>
   </data>
   <data name="RenderMonorailStopsCheckbox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>338, 22</value>
+    <value>507, 33</value>
+  </data>
+  <data name="RenderMonorailStopsCheckbox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="RenderMonorailStopsCheckbox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>74, 19</value>
+    <value>114, 28</value>
   </data>
   <data name="RenderMonorailStopsCheckbox.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -268,7 +317,7 @@
     <value>groupBox6</value>
   </data>
   <data name="&gt;&gt;RenderMonorailStopsCheckbox.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="RenderMetroStopsCheckbox.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -277,10 +326,13 @@
     <value>NoControl</value>
   </data>
   <data name="RenderMetroStopsCheckbox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>254, 22</value>
+    <value>381, 33</value>
+  </data>
+  <data name="RenderMetroStopsCheckbox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="RenderMetroStopsCheckbox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>58, 19</value>
+    <value>89, 28</value>
   </data>
   <data name="RenderMetroStopsCheckbox.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -298,7 +350,7 @@
     <value>groupBox6</value>
   </data>
   <data name="&gt;&gt;RenderMetroStopsCheckbox.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="RenderTramStopsCheckbox.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -307,10 +359,13 @@
     <value>NoControl</value>
   </data>
   <data name="RenderTramStopsCheckbox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>177, 22</value>
+    <value>266, 33</value>
+  </data>
+  <data name="RenderTramStopsCheckbox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="RenderTramStopsCheckbox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>51, 19</value>
+    <value>80, 28</value>
   </data>
   <data name="RenderTramStopsCheckbox.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -328,7 +383,7 @@
     <value>groupBox6</value>
   </data>
   <data name="&gt;&gt;RenderTramStopsCheckbox.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="RenderTrainStopsCheckbox.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -337,10 +392,13 @@
     <value>NoControl</value>
   </data>
   <data name="RenderTrainStopsCheckbox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>90, 22</value>
+    <value>135, 33</value>
+  </data>
+  <data name="RenderTrainStopsCheckbox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="RenderTrainStopsCheckbox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>51, 19</value>
+    <value>79, 28</value>
   </data>
   <data name="RenderTrainStopsCheckbox.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -358,13 +416,19 @@
     <value>groupBox6</value>
   </data>
   <data name="&gt;&gt;RenderTrainStopsCheckbox.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>7</value>
   </data>
   <data name="groupBox6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>233, 274</value>
+    <value>350, 411</value>
+  </data>
+  <data name="groupBox6.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="groupBox6.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="groupBox6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>619, 46</value>
+    <value>1039, 69</value>
   </data>
   <data name="groupBox6.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -384,6 +448,39 @@
   <data name="&gt;&gt;groupBox6.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <data name="RenderFerryLinesCheckbox.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="RenderFerryLinesCheckbox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="RenderFerryLinesCheckbox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>891, 33</value>
+  </data>
+  <data name="RenderFerryLinesCheckbox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="RenderFerryLinesCheckbox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>80, 28</value>
+  </data>
+  <data name="RenderFerryLinesCheckbox.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="RenderFerryLinesCheckbox.Text" xml:space="preserve">
+    <value>Ferry</value>
+  </data>
+  <data name="&gt;&gt;RenderFerryLinesCheckbox.Name" xml:space="preserve">
+    <value>RenderFerryLinesCheckbox</value>
+  </data>
+  <data name="&gt;&gt;RenderFerryLinesCheckbox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;RenderFerryLinesCheckbox.Parent" xml:space="preserve">
+    <value>groupBox5</value>
+  </data>
+  <data name="&gt;&gt;RenderFerryLinesCheckbox.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="RenderBusLinesCheckbox.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -391,10 +488,13 @@
     <value>NoControl</value>
   </data>
   <data name="RenderBusLinesCheckbox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>11, 22</value>
+    <value>16, 33</value>
+  </data>
+  <data name="RenderBusLinesCheckbox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="RenderBusLinesCheckbox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>45, 19</value>
+    <value>66, 28</value>
   </data>
   <data name="RenderBusLinesCheckbox.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -412,7 +512,7 @@
     <value>groupBox5</value>
   </data>
   <data name="&gt;&gt;RenderBusLinesCheckbox.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="RenderAirplaneLinesCheckbox.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -421,10 +521,13 @@
     <value>NoControl</value>
   </data>
   <data name="RenderAirplaneLinesCheckbox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>505, 22</value>
+    <value>758, 31</value>
+  </data>
+  <data name="RenderAirplaneLinesCheckbox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="RenderAirplaneLinesCheckbox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>70, 19</value>
+    <value>109, 28</value>
   </data>
   <data name="RenderAirplaneLinesCheckbox.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -442,7 +545,7 @@
     <value>groupBox5</value>
   </data>
   <data name="&gt;&gt;RenderAirplaneLinesCheckbox.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="RenderShipLinesCheckbox.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -451,10 +554,13 @@
     <value>NoControl</value>
   </data>
   <data name="RenderShipLinesCheckbox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>435, 22</value>
+    <value>652, 33</value>
+  </data>
+  <data name="RenderShipLinesCheckbox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="RenderShipLinesCheckbox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>49, 19</value>
+    <value>74, 28</value>
   </data>
   <data name="RenderShipLinesCheckbox.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -472,7 +578,7 @@
     <value>groupBox5</value>
   </data>
   <data name="&gt;&gt;RenderShipLinesCheckbox.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="RenderMonorailLinesCheckbox.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -481,10 +587,13 @@
     <value>NoControl</value>
   </data>
   <data name="RenderMonorailLinesCheckbox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>338, 22</value>
+    <value>507, 33</value>
+  </data>
+  <data name="RenderMonorailLinesCheckbox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="RenderMonorailLinesCheckbox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>74, 19</value>
+    <value>114, 28</value>
   </data>
   <data name="RenderMonorailLinesCheckbox.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -502,7 +611,7 @@
     <value>groupBox5</value>
   </data>
   <data name="&gt;&gt;RenderMonorailLinesCheckbox.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="RenderMetroLinesCheckbox.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -511,10 +620,13 @@
     <value>NoControl</value>
   </data>
   <data name="RenderMetroLinesCheckbox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>254, 22</value>
+    <value>381, 33</value>
+  </data>
+  <data name="RenderMetroLinesCheckbox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="RenderMetroLinesCheckbox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>58, 19</value>
+    <value>89, 28</value>
   </data>
   <data name="RenderMetroLinesCheckbox.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -532,7 +644,7 @@
     <value>groupBox5</value>
   </data>
   <data name="&gt;&gt;RenderMetroLinesCheckbox.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="RenderTramLinesCheckbox.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -541,10 +653,13 @@
     <value>NoControl</value>
   </data>
   <data name="RenderTramLinesCheckbox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>177, 22</value>
+    <value>266, 33</value>
+  </data>
+  <data name="RenderTramLinesCheckbox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="RenderTramLinesCheckbox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>51, 19</value>
+    <value>80, 28</value>
   </data>
   <data name="RenderTramLinesCheckbox.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -562,16 +677,19 @@
     <value>groupBox5</value>
   </data>
   <data name="&gt;&gt;RenderTramLinesCheckbox.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="RenderTrainLinesCheckbox.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="RenderTrainLinesCheckbox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>90, 22</value>
+    <value>135, 33</value>
+  </data>
+  <data name="RenderTrainLinesCheckbox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="RenderTrainLinesCheckbox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>51, 19</value>
+    <value>79, 28</value>
   </data>
   <data name="RenderTrainLinesCheckbox.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -589,13 +707,19 @@
     <value>groupBox5</value>
   </data>
   <data name="&gt;&gt;RenderTrainLinesCheckbox.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>7</value>
   </data>
   <data name="groupBox5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>233, 222</value>
+    <value>350, 333</value>
+  </data>
+  <data name="groupBox5.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="groupBox5.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="groupBox5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>619, 46</value>
+    <value>1039, 69</value>
   </data>
   <data name="groupBox5.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -619,10 +743,13 @@
     <value>True</value>
   </data>
   <data name="UserPrefabNameCheckbox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>11, 46</value>
+    <value>16, 69</value>
+  </data>
+  <data name="UserPrefabNameCheckbox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="UserPrefabNameCheckbox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>119, 19</value>
+    <value>190, 28</value>
   </data>
   <data name="UserPrefabNameCheckbox.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -646,10 +773,13 @@
     <value>True</value>
   </data>
   <data name="RenderDistrictNameLabelCheckbox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>244, 22</value>
+    <value>366, 33</value>
+  </data>
+  <data name="RenderDistrictNameLabelCheckbox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="RenderDistrictNameLabelCheckbox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>68, 19</value>
+    <value>106, 28</value>
   </data>
   <data name="RenderDistrictNameLabelCheckbox.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -673,10 +803,13 @@
     <value>True</value>
   </data>
   <data name="RenderMapSymbolCheckbox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>368, 22</value>
+    <value>552, 33</value>
+  </data>
+  <data name="RenderMapSymbolCheckbox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="RenderMapSymbolCheckbox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>96, 19</value>
+    <value>152, 28</value>
   </data>
   <data name="RenderMapSymbolCheckbox.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -700,10 +833,13 @@
     <value>True</value>
   </data>
   <data name="RenderStreetNameLabelCheckbox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>125, 22</value>
+    <value>188, 33</value>
+  </data>
+  <data name="RenderStreetNameLabelCheckbox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="RenderStreetNameLabelCheckbox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>61, 19</value>
+    <value>95, 28</value>
   </data>
   <data name="RenderStreetNameLabelCheckbox.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -727,10 +863,13 @@
     <value>True</value>
   </data>
   <data name="RenderBuildingNameLabelCheckbox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>11, 22</value>
+    <value>16, 33</value>
+  </data>
+  <data name="RenderBuildingNameLabelCheckbox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="RenderBuildingNameLabelCheckbox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 19</value>
+    <value>116, 28</value>
   </data>
   <data name="RenderBuildingNameLabelCheckbox.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -751,10 +890,16 @@
     <value>4</value>
   </data>
   <data name="groupBox4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>233, 145</value>
+    <value>350, 218</value>
+  </data>
+  <data name="groupBox4.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="groupBox4.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="groupBox4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>619, 71</value>
+    <value>1039, 106</value>
   </data>
   <data name="groupBox4.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -778,14 +923,13 @@
     <value>True</value>
   </data>
   <data name="RenderMetroCheckbox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>266, 22</value>
+    <value>399, 33</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="RenderMetroCheckbox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 2, 3, 2</value>
+    <value>4, 3, 4, 3</value>
   </data>
   <data name="RenderMetroCheckbox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>58, 19</value>
+    <value>89, 28</value>
   </data>
   <data name="RenderMetroCheckbox.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -809,13 +953,13 @@
     <value>True</value>
   </data>
   <data name="RenderTramCheckbox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>144, 22</value>
+    <value>216, 33</value>
   </data>
   <data name="RenderTramCheckbox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 2, 3, 2</value>
+    <value>4, 3, 4, 3</value>
   </data>
   <data name="RenderTramCheckbox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>51, 19</value>
+    <value>80, 28</value>
   </data>
   <data name="RenderTramCheckbox.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -839,13 +983,13 @@
     <value>True</value>
   </data>
   <data name="RenderCableCarCheckbox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>491, 22</value>
+    <value>736, 33</value>
   </data>
   <data name="RenderCableCarCheckbox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 2, 3, 2</value>
+    <value>4, 3, 4, 3</value>
   </data>
   <data name="RenderCableCarCheckbox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>74, 19</value>
+    <value>116, 28</value>
   </data>
   <data name="RenderCableCarCheckbox.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -869,13 +1013,13 @@
     <value>True</value>
   </data>
   <data name="RenderMonorailCheckbox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>373, 22</value>
+    <value>560, 33</value>
   </data>
   <data name="RenderMonorailCheckbox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 2, 3, 2</value>
+    <value>4, 3, 4, 3</value>
   </data>
   <data name="RenderMonorailCheckbox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>74, 19</value>
+    <value>114, 28</value>
   </data>
   <data name="RenderMonorailCheckbox.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -899,13 +1043,13 @@
     <value>True</value>
   </data>
   <data name="RenderRailwaysCheckbox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 22</value>
+    <value>18, 33</value>
   </data>
   <data name="RenderRailwaysCheckbox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 2, 3, 2</value>
+    <value>4, 3, 4, 3</value>
   </data>
   <data name="RenderRailwaysCheckbox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>51, 19</value>
+    <value>79, 28</value>
   </data>
   <data name="RenderRailwaysCheckbox.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -926,16 +1070,16 @@
     <value>4</value>
   </data>
   <data name="groupBox3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>233, 92</value>
+    <value>350, 138</value>
   </data>
   <data name="groupBox3.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 2, 3, 2</value>
+    <value>4, 3, 4, 3</value>
   </data>
   <data name="groupBox3.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 2, 3, 2</value>
+    <value>4, 3, 4, 3</value>
   </data>
   <data name="groupBox3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>619, 48</value>
+    <value>1039, 72</value>
   </data>
   <data name="groupBox3.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -959,13 +1103,13 @@
     <value>True</value>
   </data>
   <data name="DisableBuildingBorderCheckbox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>11, 20</value>
+    <value>16, 30</value>
   </data>
   <data name="DisableBuildingBorderCheckbox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 2, 3, 2</value>
+    <value>4, 3, 4, 3</value>
   </data>
   <data name="DisableBuildingBorderCheckbox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>217, 19</value>
+    <value>351, 28</value>
   </data>
   <data name="DisableBuildingBorderCheckbox.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -989,13 +1133,13 @@
     <value>True</value>
   </data>
   <data name="HideRICOCheckbox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>11, 42</value>
+    <value>16, 63</value>
   </data>
   <data name="HideRICOCheckbox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 2, 3, 2</value>
+    <value>4, 3, 4, 3</value>
   </data>
   <data name="HideRICOCheckbox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>172, 19</value>
+    <value>278, 28</value>
   </data>
   <data name="HideRICOCheckbox.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -1016,16 +1160,16 @@
     <value>1</value>
   </data>
   <data name="groupBox2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>233, 5</value>
+    <value>350, 8</value>
   </data>
   <data name="groupBox2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 2, 3, 2</value>
+    <value>4, 3, 4, 3</value>
   </data>
   <data name="groupBox2.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 2, 3, 2</value>
+    <value>4, 3, 4, 3</value>
   </data>
   <data name="groupBox2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>297, 73</value>
+    <value>446, 110</value>
   </data>
   <data name="groupBox2.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -1046,13 +1190,16 @@
     <value>5</value>
   </data>
   <data name="LayerConfigGridView.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 3</value>
+    <value>0, 4</value>
+  </data>
+  <data name="LayerConfigGridView.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="LayerConfigGridView.RowHeadersWidth" type="System.Int32, mscorlib">
     <value>51</value>
   </data>
   <data name="LayerConfigGridView.Size" type="System.Drawing.Size, System.Drawing">
-    <value>219, 217</value>
+    <value>328, 326</value>
   </data>
   <data name="LayerConfigGridView.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -1070,13 +1217,16 @@
     <value>6</value>
   </data>
   <data name="LayerConfigTabPage.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 24</value>
+    <value>4, 33</value>
+  </data>
+  <data name="LayerConfigTabPage.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="LayerConfigTabPage.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 3, 3, 3</value>
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="LayerConfigTabPage.Size" type="System.Drawing.Size, System.Drawing">
-    <value>866, 376</value>
+    <value>1426, 569</value>
   </data>
   <data name="LayerConfigTabPage.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -1096,14 +1246,182 @@
   <data name="&gt;&gt;LayerConfigTabPage.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <data name="StreetFontCombobox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1106, 71</value>
+  </data>
+  <data name="StreetFontCombobox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>180, 32</value>
+  </data>
+  <data name="StreetFontCombobox.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;StreetFontCombobox.Name" xml:space="preserve">
+    <value>StreetFontCombobox</value>
+  </data>
+  <data name="&gt;&gt;StreetFontCombobox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;StreetFontCombobox.Parent" xml:space="preserve">
+    <value>GeneralConfigTabPage</value>
+  </data>
+  <data name="&gt;&gt;StreetFontCombobox.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="StreetFontLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="StreetFontLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>969, 75</value>
+  </data>
+  <data name="StreetFontLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>105, 24</value>
+  </data>
+  <data name="StreetFontLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="StreetFontLabel.Text" xml:space="preserve">
+    <value>Street Font</value>
+  </data>
+  <data name="&gt;&gt;StreetFontLabel.Name" xml:space="preserve">
+    <value>StreetFontLabel</value>
+  </data>
+  <data name="&gt;&gt;StreetFontLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;StreetFontLabel.Parent" xml:space="preserve">
+    <value>GeneralConfigTabPage</value>
+  </data>
+  <data name="&gt;&gt;StreetFontLabel.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="DistrictFontCombobox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1106, 109</value>
+  </data>
+  <data name="DistrictFontCombobox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>180, 32</value>
+  </data>
+  <data name="DistrictFontCombobox.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;DistrictFontCombobox.Name" xml:space="preserve">
+    <value>DistrictFontCombobox</value>
+  </data>
+  <data name="&gt;&gt;DistrictFontCombobox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;DistrictFontCombobox.Parent" xml:space="preserve">
+    <value>GeneralConfigTabPage</value>
+  </data>
+  <data name="&gt;&gt;DistrictFontCombobox.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="DistrictFontLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="DistrictFontLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>969, 112</value>
+  </data>
+  <data name="DistrictFontLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>116, 24</value>
+  </data>
+  <data name="DistrictFontLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="DistrictFontLabel.Text" xml:space="preserve">
+    <value>District Font</value>
+  </data>
+  <data name="&gt;&gt;DistrictFontLabel.Name" xml:space="preserve">
+    <value>DistrictFontLabel</value>
+  </data>
+  <data name="&gt;&gt;DistrictFontLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;DistrictFontLabel.Parent" xml:space="preserve">
+    <value>GeneralConfigTabPage</value>
+  </data>
+  <data name="&gt;&gt;DistrictFontLabel.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="BuildingFontCombobox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1106, 33</value>
+  </data>
+  <data name="BuildingFontCombobox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>180, 32</value>
+  </data>
+  <data name="BuildingFontCombobox.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;BuildingFontCombobox.Name" xml:space="preserve">
+    <value>BuildingFontCombobox</value>
+  </data>
+  <data name="&gt;&gt;BuildingFontCombobox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;BuildingFontCombobox.Parent" xml:space="preserve">
+    <value>GeneralConfigTabPage</value>
+  </data>
+  <data name="&gt;&gt;BuildingFontCombobox.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="BuildingFontLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="BuildingFontLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>969, 37</value>
+  </data>
+  <data name="BuildingFontLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>126, 24</value>
+  </data>
+  <data name="BuildingFontLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="BuildingFontLabel.Text" xml:space="preserve">
+    <value>Building Font</value>
+  </data>
+  <data name="&gt;&gt;BuildingFontLabel.Name" xml:space="preserve">
+    <value>BuildingFontLabel</value>
+  </data>
+  <data name="&gt;&gt;BuildingFontLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;BuildingFontLabel.Parent" xml:space="preserve">
+    <value>GeneralConfigTabPage</value>
+  </data>
+  <data name="&gt;&gt;BuildingFontLabel.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="groupBox7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="groupBox7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>200, 100</value>
+  </data>
+  <data name="groupBox7.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;groupBox7.Name" xml:space="preserve">
+    <value>groupBox7</value>
+  </data>
+  <data name="&gt;&gt;groupBox7.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBox7.Parent" xml:space="preserve">
+    <value>GeneralConfigTabPage</value>
+  </data>
+  <data name="&gt;&gt;groupBox7.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
   <data name="VectorizeLandCheckbox.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="VectorizeLandCheckbox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>17, 20</value>
+    <value>26, 30</value>
+  </data>
+  <data name="VectorizeLandCheckbox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="VectorizeLandCheckbox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>104, 19</value>
+    <value>167, 28</value>
   </data>
   <data name="VectorizeLandCheckbox.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -1127,10 +1445,13 @@
     <value>Disable</value>
   </data>
   <data name="WaterMaxResolutionTextbox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>292, 55</value>
+    <value>438, 82</value>
+  </data>
+  <data name="WaterMaxResolutionTextbox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="WaterMaxResolutionTextbox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>50, 23</value>
+    <value>73, 30</value>
   </data>
   <data name="WaterMaxResolutionTextbox.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -1154,10 +1475,13 @@
     <value>True</value>
   </data>
   <data name="ContourLinesIntervalsLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>379, 21</value>
+    <value>568, 32</value>
+  </data>
+  <data name="ContourLinesIntervalsLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="ContourLinesIntervalsLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>124, 15</value>
+    <value>201, 24</value>
   </data>
   <data name="ContourLinesIntervalsLabel.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -1181,10 +1505,13 @@
     <value>Disable</value>
   </data>
   <data name="TerrainMaxResolutionTextbox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>292, 18</value>
+    <value>438, 27</value>
+  </data>
+  <data name="TerrainMaxResolutionTextbox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="TerrainMaxResolutionTextbox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>50, 23</value>
+    <value>73, 30</value>
   </data>
   <data name="TerrainMaxResolutionTextbox.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -1205,10 +1532,13 @@
     <value>3</value>
   </data>
   <data name="ContourIntervalCombobox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>520, 18</value>
+    <value>780, 27</value>
+  </data>
+  <data name="ContourIntervalCombobox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="ContourIntervalCombobox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>121, 23</value>
+    <value>180, 32</value>
   </data>
   <data name="ContourIntervalCombobox.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -1229,10 +1559,13 @@
     <value>True</value>
   </data>
   <data name="WaterMaxResolutionLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>149, 58</value>
+    <value>224, 87</value>
+  </data>
+  <data name="WaterMaxResolutionLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="WaterMaxResolutionLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>119, 15</value>
+    <value>194, 24</value>
   </data>
   <data name="WaterMaxResolutionLabel.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -1256,10 +1589,13 @@
     <value>True</value>
   </data>
   <data name="VectorizeWaterCheckbox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>17, 57</value>
+    <value>26, 86</value>
+  </data>
+  <data name="VectorizeWaterCheckbox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="VectorizeWaterCheckbox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>110, 19</value>
+    <value>177, 28</value>
   </data>
   <data name="VectorizeWaterCheckbox.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -1283,10 +1619,13 @@
     <value>True</value>
   </data>
   <data name="TerrainMaxResolutionLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>149, 21</value>
+    <value>224, 32</value>
+  </data>
+  <data name="TerrainMaxResolutionLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="TerrainMaxResolutionLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>123, 15</value>
+    <value>202, 24</value>
   </data>
   <data name="TerrainMaxResolutionLabel.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -1307,16 +1646,16 @@
     <value>7</value>
   </data>
   <data name="groupBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 95</value>
+    <value>18, 142</value>
   </data>
   <data name="groupBox1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 2, 3, 2</value>
+    <value>4, 3, 4, 3</value>
   </data>
   <data name="groupBox1.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 2, 3, 2</value>
+    <value>4, 3, 4, 3</value>
   </data>
   <data name="groupBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>722, 94</value>
+    <value>1083, 141</value>
   </data>
   <data name="groupBox1.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -1334,13 +1673,16 @@
     <value>GeneralConfigTabPage</value>
   </data>
   <data name="&gt;&gt;groupBox1.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>7</value>
   </data>
   <data name="DefaultMapSymbolStyleCombobox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>487, 47</value>
+    <value>730, 70</value>
+  </data>
+  <data name="DefaultMapSymbolStyleCombobox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="DefaultMapSymbolStyleCombobox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>121, 23</value>
+    <value>180, 32</value>
   </data>
   <data name="DefaultMapSymbolStyleCombobox.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -1355,13 +1697,16 @@
     <value>GeneralConfigTabPage</value>
   </data>
   <data name="&gt;&gt;DefaultMapSymbolStyleCombobox.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>8</value>
   </data>
   <data name="StringThemeCombobox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>487, 19</value>
+    <value>730, 28</value>
+  </data>
+  <data name="StringThemeCombobox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="StringThemeCombobox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>121, 23</value>
+    <value>180, 32</value>
   </data>
   <data name="StringThemeCombobox.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -1376,13 +1721,16 @@
     <value>GeneralConfigTabPage</value>
   </data>
   <data name="&gt;&gt;StringThemeCombobox.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>9</value>
   </data>
   <data name="ThemeCombobox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>142, 19</value>
+    <value>213, 28</value>
+  </data>
+  <data name="ThemeCombobox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="ThemeCombobox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>121, 23</value>
+    <value>180, 32</value>
   </data>
   <data name="ThemeCombobox.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -1397,16 +1745,19 @@
     <value>GeneralConfigTabPage</value>
   </data>
   <data name="&gt;&gt;ThemeCombobox.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>10</value>
   </data>
   <data name="DefaultMapSymbolStyleLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="DefaultMapSymbolStyleLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>327, 50</value>
+    <value>490, 75</value>
+  </data>
+  <data name="DefaultMapSymbolStyleLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="DefaultMapSymbolStyleLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>139, 15</value>
+    <value>230, 24</value>
   </data>
   <data name="DefaultMapSymbolStyleLabel.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -1424,16 +1775,19 @@
     <value>GeneralConfigTabPage</value>
   </data>
   <data name="&gt;&gt;DefaultMapSymbolStyleLabel.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>11</value>
   </data>
   <data name="TextStyleLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="TextStyleLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>327, 22</value>
+    <value>490, 33</value>
+  </data>
+  <data name="TextStyleLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="TextStyleLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>55, 15</value>
+    <value>91, 24</value>
   </data>
   <data name="TextStyleLabel.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -1451,16 +1805,19 @@
     <value>GeneralConfigTabPage</value>
   </data>
   <data name="&gt;&gt;TextStyleLabel.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>12</value>
   </data>
   <data name="ThemeLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="ThemeLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 22</value>
+    <value>18, 33</value>
+  </data>
+  <data name="ThemeLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="ThemeLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>42, 15</value>
+    <value>68, 24</value>
   </data>
   <data name="ThemeLabel.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -1478,16 +1835,19 @@
     <value>GeneralConfigTabPage</value>
   </data>
   <data name="&gt;&gt;ThemeLabel.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>13</value>
   </data>
   <data name="GeneralConfigTabPage.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 24</value>
+    <value>4, 33</value>
+  </data>
+  <data name="GeneralConfigTabPage.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="GeneralConfigTabPage.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 3, 3, 3</value>
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="GeneralConfigTabPage.Size" type="System.Drawing.Size, System.Drawing">
-    <value>866, 376</value>
+    <value>1426, 569</value>
   </data>
   <data name="GeneralConfigTabPage.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -1513,8 +1873,11 @@
   <data name="ConfigTab.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
+  <data name="ConfigTab.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
   <data name="ConfigTab.Size" type="System.Drawing.Size, System.Drawing">
-    <value>874, 404</value>
+    <value>1434, 606</value>
   </data>
   <data name="ConfigTab.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -1532,10 +1895,13 @@
     <value>1</value>
   </data>
   <data name="SubmitButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>795, 3</value>
+    <value>1298, 5</value>
+  </data>
+  <data name="SubmitButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="SubmitButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 23</value>
+    <value>112, 34</value>
   </data>
   <data name="SubmitButton.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -1556,10 +1922,13 @@
     <value>1</value>
   </data>
   <data name="FormCancelButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>714, 3</value>
+    <value>1178, 5</value>
+  </data>
+  <data name="FormCancelButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="FormCancelButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 23</value>
+    <value>112, 34</value>
   </data>
   <data name="FormCancelButton.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -1583,10 +1952,13 @@
     <value>Bottom</value>
   </data>
   <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 415</value>
+    <value>0, 623</value>
+  </data>
+  <data name="panel1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>874, 35</value>
+    <value>1434, 52</value>
   </data>
   <data name="panel1.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -1607,10 +1979,10 @@
     <value>True</value>
   </metadata>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>96, 96</value>
+    <value>144, 144</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>874, 450</value>
+    <value>1434, 675</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -3828,6 +4200,9 @@
         hFTvpQqQUtLd32M2/G2GL/tUKj/xNl9XTWczI5lNl8wmMbVGyHIeE8fB1gNNYEkzwWB6n8b9/5Faq4tS
         EISS5Tzj7OUFy0XM/w8H1qHKLxs/kQAAAABJRU5ErkJggg==
 </value>
+  </data>
+  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Settings</value>

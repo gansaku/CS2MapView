@@ -62,6 +62,25 @@ namespace CS2MapView.Form
             ContourIntervalCombobox.Items.AddRange(Context.ContourHeightsCandidate.Select(c => c.Name!).ToArray<object>());
             ContourIntervalCombobox.Text = Context.ContourHeights.Name;
 
+            // システムフォントリストを読み込む / Load system fonts
+            var availableFonts = Theme.StringTheme.GetAvailableFonts();
+            var fontItems = availableFonts.ToArray<object>();
+
+            BuildingFontCombobox.Items.Clear();
+            BuildingFontCombobox.Items.Add("(Use Default)"); // デフォルトを使用
+            BuildingFontCombobox.Items.AddRange(fontItems);
+            BuildingFontCombobox.Text = string.IsNullOrEmpty(us.CustomBuildingNameFont) ? "(Use Default)" : us.CustomBuildingNameFont;
+
+            DistrictFontCombobox.Items.Clear();
+            DistrictFontCombobox.Items.Add("(Use Default)");
+            DistrictFontCombobox.Items.AddRange(fontItems);
+            DistrictFontCombobox.Text = string.IsNullOrEmpty(us.CustomDistrictNameFont) ? "(Use Default)" : us.CustomDistrictNameFont;
+
+            StreetFontCombobox.Items.Clear();
+            StreetFontCombobox.Items.Add("(Use Default)");
+            StreetFontCombobox.Items.AddRange(fontItems);
+            StreetFontCombobox.Text = string.IsNullOrEmpty(us.CustomStreetNameFont) ? "(Use Default)" : us.CustomStreetNameFont;
+
             VectorizeLandCheckbox.Checked = us.VectorizeTerrainLand;
             VectorizeWaterCheckbox.Checked = us.VectorizeTerrainWater;
             TerrainMaxResolutionTextbox.Text = us.TerrainMaxResolution.ToString(CultureInfo.InvariantCulture);
@@ -106,6 +125,7 @@ namespace CS2MapView.Form
             RenderMonorailLinesCheckbox.Checked = us.TransportRouteMapConfig.RenderMonorailLine;
             RenderShipLinesCheckbox.Checked = us.TransportRouteMapConfig.RenderShipLine;
             RenderAirplaneLinesCheckbox.Checked = us.TransportRouteMapConfig.RenderAirplaneLine;
+            RenderFerryLinesCheckbox.Checked = us.TransportRouteMapConfig.RenderFerryLine;
             RenderBusStopsCheckbox.Checked = us.TransportRouteMapConfig.RenderBusStop;
             RenderTrainStopsCheckbox.Checked = us.TransportRouteMapConfig.RenderTrainStop;
             RenderTramStopsCheckbox.Checked = us.TransportRouteMapConfig.RenderTramStop;
@@ -113,6 +133,7 @@ namespace CS2MapView.Form
             RenderMonorailStopsCheckbox.Checked = us.TransportRouteMapConfig.RenderMonorailStop;
             RenderShipStopsCheckbox.Checked = us.TransportRouteMapConfig.RenderShipStop;
             RenderAirplaneStopsCheckbox.Checked = us.TransportRouteMapConfig.RenderAirplaneStop;
+            RenderFerryStopsCheckbox.Checked = us.TransportRouteMapConfig.RenderFerryStop;
 
             HideCargoLinesCheckbox.Checked = us.TransportRouteMapConfig.HideCargoLines;
 
@@ -157,6 +178,7 @@ namespace CS2MapView.Form
             var us = Context.UserSettings;
             bool layerOrderRequiresRedraw = false;
             bool themeChanged = false;
+            bool fontChanged = false;
             Dictionary<string, bool> layerChangedFlags = layers.ToDictionary(t => t, t => false);
 
             //テーマ変更
@@ -195,6 +217,31 @@ namespace CS2MapView.Form
                     }
                 }
             }
+
+            // カスタムフォント設定を処理 / Handle custom font settings
+            {
+                string GetFontValue(string comboValue) => comboValue == "(Use Default)" ? null! : comboValue;
+
+                string? newBuildingFont = GetFontValue(BuildingFontCombobox.Text);
+                string? newDistrictFont = GetFontValue(DistrictFontCombobox.Text);
+                string? newStreetFont = GetFontValue(StreetFontCombobox.Text);
+
+                if (us.CustomBuildingNameFont != newBuildingFont ||
+                    us.CustomDistrictNameFont != newDistrictFont ||
+                    us.CustomStreetNameFont != newStreetFont)
+                {
+                    us.CustomBuildingNameFont = newBuildingFont;
+                    us.CustomDistrictNameFont = newDistrictFont;
+                    us.CustomStreetNameFont = newStreetFont;
+
+                    // 現在のテーマにカスタムフォントを適用
+                    Context.StringTheme.ApplyCustomFonts(newBuildingFont, newDistrictFont, newStreetFont);
+
+                    fontChanged = true;
+                    layerChangedFlags[ILayer.LayerNameLabels] = true;
+                }
+            }
+
             var layerResult = SetLayerValues();
             layerOrderRequiresRedraw |= layerResult.requiresRedraw;
             void LayerFlagOr(string layerName, bool value)
@@ -268,7 +315,7 @@ namespace CS2MapView.Form
                 us.RenderMapSymbol = RenderMapSymbolCheckbox.Checked;
                 LayerFlagOr(ILayer.LayerNameLabels, true);
             }
-            if( us.UsePrefabBuildingName != UserPrefabNameCheckbox.Checked)
+            if (us.UsePrefabBuildingName != UserPrefabNameCheckbox.Checked)
             {
                 us.UsePrefabBuildingName = UserPrefabNameCheckbox.Checked;
                 LayerFlagOr(ILayer.LayerNameLabels, true);
@@ -284,7 +331,7 @@ namespace CS2MapView.Form
             void setTransportCheckbox(string propertyName, bool newValue)
             {
                 PropertyInfo? pi = typeof(TransportRouteMapConfig).GetProperty(propertyName);
-                if(pi is null)
+                if (pi is null)
                 {
                     Debug.Print($"property TransportRouteMapConfig.{newValue} not found.");
                     return;
@@ -303,6 +350,7 @@ namespace CS2MapView.Form
             setTransportCheckbox(nameof(tsold.RenderMonorailLine), RenderMonorailLinesCheckbox.Checked);
             setTransportCheckbox(nameof(tsold.RenderShipLine), RenderShipLinesCheckbox.Checked);
             setTransportCheckbox(nameof(tsold.RenderAirplaneLine), RenderAirplaneLinesCheckbox.Checked);
+            setTransportCheckbox(nameof(tsold.RenderFerryLine), RenderFerryLinesCheckbox.Checked);
 
             setTransportCheckbox(nameof(tsold.RenderBusStop), RenderBusStopsCheckbox.Checked);
             setTransportCheckbox(nameof(tsold.RenderTrainStop), RenderTrainStopsCheckbox.Checked);
@@ -311,13 +359,12 @@ namespace CS2MapView.Form
             setTransportCheckbox(nameof(tsold.RenderMonorailStop), RenderMonorailStopsCheckbox.Checked);
             setTransportCheckbox(nameof(tsold.RenderShipStop), RenderShipStopsCheckbox.Checked);
             setTransportCheckbox(nameof(tsold.RenderAirplaneStop), RenderAirplaneStopsCheckbox.Checked);
-
-            setTransportCheckbox(nameof(tsold.HideCargoLines), HideCargoLinesCheckbox.Checked);
+            setTransportCheckbox(nameof(tsold.RenderFerryStop), RenderFerryStopsCheckbox.Checked);
 
             //再描画判定
             if (AppRoot.MapData is not null && Context.SourceMapType is not null)
             {
-                if (themeChanged)
+                if (themeChanged || fontChanged)
                 {
                     AppRoot.MapData.Dispose();
                     string? oldfn = AppRoot.MapData.FileName;
@@ -327,13 +374,14 @@ namespace CS2MapView.Form
                 else
                 {
                     List<Task<ILayer>> tasks = [];
-                    void RebuildLayerIfChanged(string name, Func<Task<ILayer>> act) {
+                    void RebuildLayerIfChanged(string name, Func<Task<ILayer>> act)
+                    {
                         if (!layerChangedFlags[name])
                         {
                             return;
                         }
-                        var oldLayer =AppRoot.MapData!.Layers.FirstOrDefault(l => l.LayerName == name);
-                        if(oldLayer is not null)
+                        var oldLayer = AppRoot.MapData!.Layers.FirstOrDefault(l => l.LayerName == name);
+                        if (oldLayer is not null)
                         {
                             oldLayer.Dispose();
                             AppRoot.MapData.Layers.Remove(oldLayer);
@@ -347,7 +395,7 @@ namespace CS2MapView.Form
                     RebuildLayerIfChanged(ILayer.LayerNameBuildings, () => Context.SourceMapType.BuildBuildingsLayerAsync(AppRoot, null));
                     RebuildLayerIfChanged(ILayer.LayerNameDistricts, () => Context.SourceMapType.BuildDistrictLayerAsync(AppRoot, null));
                     RebuildLayerIfChanged(ILayer.LayerNameGrid, () => Context.SourceMapType.BuildGridLayerAsync(AppRoot, null));
-                    RebuildLayerIfChanged(ILayer.LayerNameRailways, ()=>Context.SourceMapType.BuildRailwaysLayerAsync(AppRoot, null));
+                    RebuildLayerIfChanged(ILayer.LayerNameRailways, () => Context.SourceMapType.BuildRailwaysLayerAsync(AppRoot, null));
                     RebuildLayerIfChanged(ILayer.LayerNameRoads, () => Context.SourceMapType.BuildRoadsLayerAsync(AppRoot, null));
                     RebuildLayerIfChanged(ILayer.LayerNameTransportLines, () => Context.SourceMapType.BuildTransportLinesLayerAsync(AppRoot, null));
 
@@ -361,17 +409,17 @@ namespace CS2MapView.Form
                         }
                     }
 
-                    foreach(var task in tasks)
+                    foreach (var task in tasks)
                     {
-                        AppRoot.MapData!.Layers.Add( await task );
+                        AppRoot.MapData!.Layers.Add(await task);
                     }
 
-                   
+
                 }
             }
 
 
-            if (themeChanged | layerOrderRequiresRedraw | layerChangedFlags.ContainsValue(true))
+            if (themeChanged | fontChanged | layerOrderRequiresRedraw | layerChangedFlags.ContainsValue(true))
             {
                 await AppRoot.Context.UserSettings.SaveAsync();
             }

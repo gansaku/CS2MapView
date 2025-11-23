@@ -101,6 +101,7 @@ namespace CS2MapView.Serialization
         Airplane,
         Subway,
         Rocket,
+        Ferry,
         Count
     }
 }

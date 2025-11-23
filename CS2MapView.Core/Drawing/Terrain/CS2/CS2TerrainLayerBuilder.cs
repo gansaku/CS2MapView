@@ -20,6 +20,20 @@ namespace CS2MapView.Drawing.Terrain.CS2
 
                 float terrainScale = Math.Min(1f,AppRoot.Context.UserSettings.TerrainMaxResolution / ExportData.MainData!.Terrain!.Resolution.Z);
                 float waterScale = Math.Min(1f, AppRoot.Context.UserSettings.WaterMaxResolution / ExportData.MainData!.Water!.Resolution.Z);
+                
+                // 実際のワールド座標範囲を取得（MapExt2 対応）
+                ReadonlyRect metricalRect;
+                if (ExportData.MainData.WorldBounds != null)
+                {
+                    var bounds = ExportData.MainData.WorldBounds;
+                    metricalRect = new ReadonlyRect(bounds.MinX, bounds.MinZ, bounds.MaxX, bounds.MaxZ);
+                }
+                else
+                {
+                    // フォールバック：デフォルトサイズ
+                    metricalRect = CS2MapType.CS2WorldRect;
+                }
+                
                 var procParam = new TerrainDrawingsBuilder.Parameters
                 {
                     TerrainInputArrayHeight = (int)ExportData.MainData!.Terrain!.Resolution.Z,
@@ -36,7 +50,7 @@ namespace CS2MapView.Drawing.Terrain.CS2
                     WaterHeights = AppRoot.Context.ContourHeights.WaterHeights?.Select(wh => wh.Height),
                     VectolizeLand = vectorizeLand,
                     VectolizeWater = vectorizeWater,
-                    MetricalRect = CS2MapType.CS2WorldRect
+                    MetricalRect = metricalRect
                 };
                 var terrainBuilder = new TerrainDrawingsBuilder(procParam);
                 return terrainBuilder.Execute(loadProgressInfo);

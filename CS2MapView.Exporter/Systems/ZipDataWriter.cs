@@ -1,10 +1,10 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.IO.Compression;
 using System.Text;
 using System.Xml.Serialization;
 
-namespace CS2MapView.Exporter.System
+namespace CS2MapView.Exporter.Systems
 {
     internal static class ZipDataWriter
     {

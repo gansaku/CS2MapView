@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using Unity.Entities;
@@ -6,7 +6,7 @@ using Colossal.Entities;
 using System.Linq;
 using Unity.Collections;
 
-namespace CS2MapView.Exporter.System
+namespace CS2MapView.Exporter.Systems
 {
     internal class SystemRefs
     {
@@ -48,10 +48,10 @@ namespace CS2MapView.Exporter.System
                 yield return t.GetManagedType().FullName;
             }
         }
-        internal IEnumerable<string> DebugGetComponentTypeGroup(ReadOnlySpan<Entity> span)
+        internal IEnumerable<string> DebugGetComponentTypeGroup(NativeArray<Entity> entities)
         {
             List<string> archtypes = new List<string>();
-            foreach (var entity in span)
+            foreach (var entity in entities)
             {
                 archtypes.AddRange(DebugGetComponentType(entity));
             }

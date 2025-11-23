@@ -94,6 +94,22 @@ namespace CS2MapView.Config
         /// 建物名の代わりにプレハブの名前を使用
         /// </summary>
         public bool UsePrefabBuildingName { get; set; } = false;
+
+        /// <summary>
+        /// 建物名のカスタムフォント / Custom font for building names
+        /// </summary>
+        public string? CustomBuildingNameFont { get; set; }
+
+        /// <summary>
+        /// 地区名のカスタムフォント / Custom font for district names
+        /// </summary>
+        public string? CustomDistrictNameFont { get; set; }
+
+        /// <summary>
+        /// 道路名のカスタムフォント / Custom font for street names
+        /// </summary>
+        public string? CustomStreetNameFont { get; set; }
+
         /// <summary>
         /// レイヤー表示順・非表示情報
         /// </summary>

@@ -13,7 +13,7 @@ using System.Security.Cryptography;
 
 namespace CS2MapView.Form;
 /// <summary>
-/// ���C���t�H�[��
+/// メインフォーム
 /// </summary>
 public partial class MainForm : System.Windows.Forms.Form, ICS2MapViewRoot
 {
@@ -21,19 +21,25 @@ public partial class MainForm : System.Windows.Forms.Form, ICS2MapViewRoot
     private FileCommands FileCommands { get; init; }
     private HelpCommands HelpCommands { get; init; }
     /// <summary>
-    /// �`��R���e�L�X�g
+    /// 描画コンテキスト
     /// </summary>
     public RenderContext Context { get; init; }
     /// <summary>
-    /// �}�b�v�f�[�^
+    /// マップデータ
     /// </summary>
     public MapData? MapData { get; set; }
 
     private static readonly float[] WheelScalesCandidate = [16f, 14f, 12f, 10f, 8f, 6f, 4f, 3f, 2f, 1.75f, 1.5f, 1.25f, 1.1f, 1.0f, 0.9f, 0.8f, 0.7f, 0.6f, 0.5f, 0.4f, 0.3f, 0.25f, 0.2f, 0.15f, 0.1f];
 
+    // デバウンス機構関連
+    private CancellationTokenSource? _rebuildCts;
+    private Task? _pendingRebuildTask;
+    private const int RebuildDebounceMilliseconds = 500; // 500msに増加
+    private bool _isRebuildingLabels = false; // 再構築中かどうかのフラグ
+
     #region form init & close
     /// <summary>
-    /// �R���X�g���N�^
+    /// コンストラクタ
     /// </summary>
     public MainForm()
     {
@@ -53,6 +59,10 @@ public partial class MainForm : System.Windows.Forms.Form, ICS2MapViewRoot
     }
     private void MainForm_FormClosed(object sender, FormClosedEventArgs e)
     {
+        // デバウンスリソースのクリーンアップ
+        _rebuildCts?.Cancel();
+        _rebuildCts?.Dispose();
+        
         SKPaintCache.Instance.DisposeAll();
         MapSymbolPictureManager.DisposeIfInitialized();
     }
@@ -60,7 +70,7 @@ public partial class MainForm : System.Windows.Forms.Form, ICS2MapViewRoot
 
 
     /// <summary>
-    /// �i���C�x���g�̎�M
+    /// 進捗イベントの受信
     /// </summary>
     /// <param name="sender"></param>
     /// <param name="args"></param>
@@ -79,6 +89,7 @@ public partial class MainForm : System.Windows.Forms.Form, ICS2MapViewRoot
         {
             StatusBarProgressBar.Value = 0;
             StatusBarMessageLabel.Text = MapData?.MapName;
+            _isRebuildingLabels = false; // 再構築完了
         }
         else
         {
@@ -103,7 +114,6 @@ public partial class MainForm : System.Windows.Forms.Form, ICS2MapViewRoot
 
     private void SkiaControl_PaintSurface(object sender, SkiaSharp.Views.Desktop.SKPaintGLSurfaceEventArgs e)
     {
-
         var canvas = e.Surface.Canvas;
         var rect = e.Info.Rect;
         if (MapData is null)
@@ -118,8 +128,6 @@ public partial class MainForm : System.Windows.Forms.Form, ICS2MapViewRoot
             canvas.Clear();
             Context?.DrawLayers(MapData!, canvas, rect);
         }
-
-
     }
     #endregion
     #region key event
@@ -153,7 +161,7 @@ public partial class MainForm : System.Windows.Forms.Form, ICS2MapViewRoot
         }
         else if (e.Delta != 0)
         {
-            await WheelZoom(mousePositionClient, e.Delta);
+            WheelZoom(mousePositionClient, e.Delta); // 改为同步调用
         }
     }
 
@@ -173,7 +181,7 @@ public partial class MainForm : System.Windows.Forms.Form, ICS2MapViewRoot
             Context.ViewContext.Angle += (float)(Math.PI / 24);
         }
 
-        //�}�E�X�ʒu�𒆐S�ɃY�[������悤����
+        //マウス位置を中心にズームするように調整
         if (mousePositionWorld.HasValue)
         {
             if (Context.ViewContext.ViewTransform.TryInvert(out var inverseAfter))
@@ -194,13 +202,28 @@ public partial class MainForm : System.Windows.Forms.Form, ICS2MapViewRoot
         InvalidateSkia();
     }
 
-    private async Task WheelZoom(SKPoint mousePositionClient, int delta)
+    private void WheelZoom(SKPoint mousePositionClient, int delta)
     {
+        // 再構築中の場合、新しいズームリクエストを無視
+        if (_isRebuildingLabels)
+        {
+            Logger.Debug("Ignoring zoom while rebuilding");
+            return;
+        }
+
         SKPoint? mousePositionWorld = null;
         if (Context.ViewContext.ViewTransform.TryInvert(out var inverse))
         {
             mousePositionWorld = inverse.MapPoint(mousePositionClient);
         }
+
+        // MapExt2かどうかを検出（マップサイズが標準サイズを超える場合）
+        bool isMapExt2 = MapData != null && 
+                         (MapData.WorldRect.Width > 14336f || MapData.WorldRect.Height > 14336f);
+        
+        // MapExt2の最大ズーム倍率は4.0f（400%）に制限
+        // 標準マップは16.0f（1600%）の制限を維持
+        float maxScaleFactor = isMapExt2 ? 4.0f : 16.0f;
 
         if (delta > 0)
         {
@@ -214,6 +237,13 @@ public partial class MainForm : System.Windows.Forms.Form, ICS2MapViewRoot
             {
                 next = WheelScalesCandidate.First();
             }
+            
+            // MapExt2のズーム制限を適用
+            if (next > maxScaleFactor)
+            {
+                next = maxScaleFactor;
+            }
+            
             Context.ViewContext.ScaleFactor = next;
         }
         else if (delta < 0)
@@ -232,7 +262,7 @@ public partial class MainForm : System.Windows.Forms.Form, ICS2MapViewRoot
         }
 
 
-        //�}�E�X�ʒu�𒆐S�ɃY�[������悤����
+        //マウス位置を中心にズームするように調整
         if (mousePositionWorld.HasValue)
         {
             if (Context.ViewContext.ViewTransform.TryInvert(out var inverseAfter))
@@ -246,12 +276,59 @@ public partial class MainForm : System.Windows.Forms.Form, ICS2MapViewRoot
         }
 
         OnZoomOrViewPositionChanged();
+        
+        // 即座に再描画（ラベル再構築を待たない）
+        InvalidateSkia();
+        
+        // 前の再構築タスクをキャンセル
+        _rebuildCts?.Cancel();
+        _rebuildCts = new CancellationTokenSource();
+        
+        // ラベル再構築を遅延実行 - より長い遅延500msを使用
         if (MapData is not null)
         {
-            await MapData.RebuildLayersOnResize(Context.ViewContext, ReceiveProgressChanged);
+            var currentVc = Context.ViewContext.Clone();
+            var currentCts = _rebuildCts;
+            
+            _pendingRebuildTask = Task.Run(async () =>
+            {
+                try
+                {
+                    // デバウンス遅延を待機
+                    await Task.Delay(RebuildDebounceMilliseconds, currentCts.Token);
+                    
+                    // キャンセルされていない場合、再構築を実行
+                    if (!currentCts.Token.IsCancellationRequested)
+                    {
+                        _isRebuildingLabels = true;
+                        
+                        await MapData.RebuildLayersOnResize(currentVc, ReceiveProgressChanged);
+                        
+                        _isRebuildingLabels = false;
+                        
+                        // 再構築完了後に表示を更新 - デッドロック回避のためBeginInvokeを使用
+                        if (InvokeRequired)
+                        {
+                            BeginInvoke(InvalidateSkia);
+                        }
+                        else
+                        {
+                            InvalidateSkia();
+                        }
+                    }
+                }
+                catch (OperationCanceledException)
+                {
+                    // キャンセルされた、正常な状態
+                    _isRebuildingLabels = false;
+                }
+                catch (Exception ex)
+                {
+                    Logger.Error("Error during debounced rebuild", ex);
+                    _isRebuildingLabels = false;
+                }
+            }, currentCts.Token);
         }
-
-        InvalidateSkia();
     }
 
     private void RefreshScrollBars(SKRect? worldBound)
@@ -276,7 +353,7 @@ public partial class MainForm : System.Windows.Forms.Form, ICS2MapViewRoot
         }
         else
         {
-            //�\���ł���T�C�Y
+            //表示できるサイズ
             var (displayableWidth, displayableHeight) = ViewSizeInWorldScale();
 
             if (displayableWidth >= worldBound.Value.Width)
@@ -305,8 +382,8 @@ public partial class MainForm : System.Windows.Forms.Form, ICS2MapViewRoot
         }
     }
     /// <summary>
-    /// �Y�[���A�t�H�[���T�C�Y���ύX���ꂽ�A�}�b�v���ǂݍ��܂ꂽ�A�ʒu���ړ����ꂽ���̍ۂ̏����B
-    /// �������A�X�N���[���o�[�ړ����ɂ͌Ă�ł͂����܂���B
+    /// ズーム、フォームサイズが変更された、マップが読み込まれた、位置が移動された際の処理。
+    /// ただし、スクロールバー移動時には呼ばれてはいけません。
     /// </summary>
     internal void OnZoomOrViewPositionChanged()
     {
@@ -316,7 +393,7 @@ public partial class MainForm : System.Windows.Forms.Form, ICS2MapViewRoot
         }
         else
         {
-            //�\���ł���T�C�Y
+            //表示できるサイズ
             var (width, height) = ViewSizeInWorldScale();
             var worldSize = RotatedBound(Context.ViewContext.WorldRect);
 
@@ -339,7 +416,8 @@ public partial class MainForm : System.Windows.Forms.Form, ICS2MapViewRoot
     }
     private void RefreshDisplayInfoLabel()
     {
-        StatusBarDisplayInfoLabel.Text = $"{Context.ViewContext.ScaleFactor * 100:0}%  {Context.ViewContext.Angle * 180 / Math.PI:0.0}��";
+        var rebuildingStatus = _isRebuildingLabels ? " (Rebuilding...)" : "";
+        StatusBarDisplayInfoLabel.Text = $"{Context.ViewContext.ScaleFactor * 100:0}%  {Context.ViewContext.Angle * 180 / Math.PI:0.0}°{rebuildingStatus}";
 
     }
 
@@ -445,7 +523,7 @@ public partial class MainForm : System.Windows.Forms.Form, ICS2MapViewRoot
 
     #region file menu
     /// <summary>
-    /// �t�@�C�����I�[�v�����܂��B�t�@�C���I����̏����͌��X���b�h���u���b�N���܂���B
+    /// ファイルをオープンします。ファイル選択の処理は別スレッドでブロックします。
     /// </summary>
     /// <param name="sender"></param>
     /// <param name="e"></param>

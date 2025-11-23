@@ -33,6 +33,7 @@
             LayerConfigTabPage = new TabPage();
             HideCargoLinesCheckbox = new CheckBox();
             groupBox6 = new GroupBox();
+            RenderFerryStopsCheckbox = new CheckBox();
             RenderBusStopsCheckbox = new CheckBox();
             RenderAirplaneStopsCheckbox = new CheckBox();
             RenderShipStopsCheckbox = new CheckBox();
@@ -41,6 +42,7 @@
             RenderTramStopsCheckbox = new CheckBox();
             RenderTrainStopsCheckbox = new CheckBox();
             groupBox5 = new GroupBox();
+            RenderFerryLinesCheckbox = new CheckBox();
             RenderBusLinesCheckbox = new CheckBox();
             RenderAirplaneLinesCheckbox = new CheckBox();
             RenderShipLinesCheckbox = new CheckBox();
@@ -65,6 +67,13 @@
             HideRICOCheckbox = new CheckBox();
             LayerConfigGridView = new Gfw.Ui.WindowsForms.SortableBindingGridView();
             GeneralConfigTabPage = new TabPage();
+            StreetFontCombobox = new ComboBox();
+            StreetFontLabel = new Label();
+            DistrictFontCombobox = new ComboBox();
+            DistrictFontLabel = new Label();
+            BuildingFontCombobox = new ComboBox();
+            BuildingFontLabel = new Label();
+            groupBox7 = new GroupBox();
             groupBox1 = new GroupBox();
             VectorizeLandCheckbox = new CheckBox();
             WaterMaxResolutionTextbox = new TextBox();
@@ -126,6 +135,7 @@
             // 
             // groupBox6
             // 
+            groupBox6.Controls.Add(RenderFerryStopsCheckbox);
             groupBox6.Controls.Add(RenderBusStopsCheckbox);
             groupBox6.Controls.Add(RenderAirplaneStopsCheckbox);
             groupBox6.Controls.Add(RenderShipStopsCheckbox);
@@ -136,6 +146,12 @@
             resources.ApplyResources(groupBox6, "groupBox6");
             groupBox6.Name = "groupBox6";
             groupBox6.TabStop = false;
+            // 
+            // RenderFerryStopsCheckbox
+            // 
+            resources.ApplyResources(RenderFerryStopsCheckbox, "RenderFerryStopsCheckbox");
+            RenderFerryStopsCheckbox.Name = "RenderFerryStopsCheckbox";
+            RenderFerryStopsCheckbox.UseVisualStyleBackColor = true;
             // 
             // RenderBusStopsCheckbox
             // 
@@ -181,6 +197,7 @@
             // 
             // groupBox5
             // 
+            groupBox5.Controls.Add(RenderFerryLinesCheckbox);
             groupBox5.Controls.Add(RenderBusLinesCheckbox);
             groupBox5.Controls.Add(RenderAirplaneLinesCheckbox);
             groupBox5.Controls.Add(RenderShipLinesCheckbox);
@@ -191,6 +208,12 @@
             resources.ApplyResources(groupBox5, "groupBox5");
             groupBox5.Name = "groupBox5";
             groupBox5.TabStop = false;
+            // 
+            // RenderFerryLinesCheckbox
+            // 
+            resources.ApplyResources(RenderFerryLinesCheckbox, "RenderFerryLinesCheckbox");
+            RenderFerryLinesCheckbox.Name = "RenderFerryLinesCheckbox";
+            RenderFerryLinesCheckbox.UseVisualStyleBackColor = true;
             // 
             // RenderBusLinesCheckbox
             // 
@@ -349,6 +372,13 @@
             // 
             // GeneralConfigTabPage
             // 
+            GeneralConfigTabPage.Controls.Add(StreetFontCombobox);
+            GeneralConfigTabPage.Controls.Add(StreetFontLabel);
+            GeneralConfigTabPage.Controls.Add(DistrictFontCombobox);
+            GeneralConfigTabPage.Controls.Add(DistrictFontLabel);
+            GeneralConfigTabPage.Controls.Add(BuildingFontCombobox);
+            GeneralConfigTabPage.Controls.Add(BuildingFontLabel);
+            GeneralConfigTabPage.Controls.Add(groupBox7);
             GeneralConfigTabPage.Controls.Add(groupBox1);
             GeneralConfigTabPage.Controls.Add(DefaultMapSymbolStyleCombobox);
             GeneralConfigTabPage.Controls.Add(StringThemeCombobox);
@@ -359,6 +389,48 @@
             resources.ApplyResources(GeneralConfigTabPage, "GeneralConfigTabPage");
             GeneralConfigTabPage.Name = "GeneralConfigTabPage";
             GeneralConfigTabPage.UseVisualStyleBackColor = true;
+            // 
+            // StreetFontCombobox
+            // 
+            StreetFontCombobox.DropDownStyle = ComboBoxStyle.DropDownList;
+            StreetFontCombobox.FormattingEnabled = true;
+            resources.ApplyResources(StreetFontCombobox, "StreetFontCombobox");
+            StreetFontCombobox.Name = "StreetFontCombobox";
+            // 
+            // StreetFontLabel
+            // 
+            resources.ApplyResources(StreetFontLabel, "StreetFontLabel");
+            StreetFontLabel.Name = "StreetFontLabel";
+            // 
+            // DistrictFontCombobox
+            // 
+            DistrictFontCombobox.DropDownStyle = ComboBoxStyle.DropDownList;
+            DistrictFontCombobox.FormattingEnabled = true;
+            resources.ApplyResources(DistrictFontCombobox, "DistrictFontCombobox");
+            DistrictFontCombobox.Name = "DistrictFontCombobox";
+            // 
+            // DistrictFontLabel
+            // 
+            resources.ApplyResources(DistrictFontLabel, "DistrictFontLabel");
+            DistrictFontLabel.Name = "DistrictFontLabel";
+            // 
+            // BuildingFontCombobox
+            // 
+            BuildingFontCombobox.DropDownStyle = ComboBoxStyle.DropDownList;
+            BuildingFontCombobox.FormattingEnabled = true;
+            resources.ApplyResources(BuildingFontCombobox, "BuildingFontCombobox");
+            BuildingFontCombobox.Name = "BuildingFontCombobox";
+            // 
+            // BuildingFontLabel
+            // 
+            resources.ApplyResources(BuildingFontLabel, "BuildingFontLabel");
+            BuildingFontLabel.Name = "BuildingFontLabel";
+            // 
+            // groupBox7
+            // 
+            resources.ApplyResources(groupBox7, "groupBox7");
+            groupBox7.Name = "groupBox7";
+            groupBox7.TabStop = false;
             // 
             // groupBox1
             // 
@@ -555,15 +627,24 @@
         private CheckBox RenderMonorailLinesCheckbox;
         private CheckBox RenderAirplaneLinesCheckbox;
         private CheckBox RenderShipLinesCheckbox;
+        private CheckBox RenderFerryLinesCheckbox;
         private CheckBox HideCargoLinesCheckbox;
         private GroupBox groupBox6;
         private CheckBox RenderBusStopsCheckbox;
         private CheckBox RenderAirplaneStopsCheckbox;
         private CheckBox RenderShipStopsCheckbox;
+        private CheckBox RenderFerryStopsCheckbox;
         private CheckBox RenderMonorailStopsCheckbox;
         private CheckBox RenderMetroStopsCheckbox;
         private CheckBox RenderTramStopsCheckbox;
         private CheckBox RenderTrainStopsCheckbox;
         private CheckBox UserPrefabNameCheckbox;
+        private GroupBox groupBox7;
+        private Label BuildingFontLabel;
+        private ComboBox BuildingFontCombobox;
+        private Label DistrictFontLabel;
+        private ComboBox DistrictFontCombobox;
+        private Label StreetFontLabel;
+        private ComboBox StreetFontCombobox;
     }
 }

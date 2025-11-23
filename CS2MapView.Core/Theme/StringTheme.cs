@@ -65,9 +65,9 @@ namespace CS2MapView.Theme
         public static StringTheme Default => new()
         {
             Name = "default",
-            BuildingName = new(GetBestFontFamily(FontMicrosoftYaHei, FontYuGothic), new Width(12.5f, 1f, 12.5f, 12.5f, 8f), new StrokeStyle(new(3f, 1f, 3f, 3f, 0f))),
-            DistrictName = new(GetBestFontFamily(FontMicrosoftYaHei, FontMeiryo), new Width(18f, 1f, 18f, 18f, 8f), new StrokeStyle(new(4f, 1f, 4f, 4f, 0f))),
-            StreetName = new(GetBestFontFamily(FontMicrosoftYaHei, FontYuGothic), new Width(12f, 1f, 12f, 12f, 8f), new StrokeStyle(new(2f, 1f, 2f, 2f, 0f)))
+            BuildingName = new(GetDefaultStringThemeFontFamily( FontYuGothic), new Width(12.5f, 1f, 12.5f, 12.5f, 8f), new StrokeStyle(new(3f, 1f, 3f, 3f, 0f))),
+            DistrictName = new(GetDefaultStringThemeFontFamily( FontMeiryo), new Width(18f, 1f, 18f, 18f, 8f), new StrokeStyle(new(4f, 1f, 4f, 4f, 0f))),
+            StreetName = new(GetDefaultStringThemeFontFamily( FontYuGothic), new Width(12f, 1f, 12f, 12f, 8f), new StrokeStyle(new(2f, 1f, 2f, 2f, 0f)))
         };
 
         /// <summary>
@@ -105,27 +105,35 @@ namespace CS2MapView.Theme
             }
         }
 
+        private static string[] SimplifiedChineseLocale = { "zh-Hans", "zh", "zh-CN", "zh-SG" };
+        private static bool? _PreferSimplifiedChineseFont;
+        private static bool PreferSimplifiedChineseFont => _PreferSimplifiedChineseFont ??= SimplifiedChineseLocale.Contains(System.Globalization.CultureInfo.CurrentCulture.Name);
+
         /// <summary>
         /// 最適なフォントを取得します。優先フォントがあればそれを使用し、
         /// なければ代替フォントを試します。
+        /// 簡体字中国語ロケールの場合はYaheiを優先して返します。
         /// </summary>
-        /// <param name="primaryFont">優先フォント</param>
-        /// <param name="fallbackFont">代替フォント</param>
+        /// <param name="fontfamily">フォント名</param>
         /// <returns>利用可能なフォント名</returns>
-        private static string GetBestFontFamily(string primaryFont, string fallbackFont)
+        private static string GetDefaultStringThemeFontFamily(string fontfamily)
         {
-            // 優先フォントを試す
-            var tf = SKFontManager.Default.MatchFamily(primaryFont);
-            if (tf is not null)
+
+            SKTypeface? tf = null;
+            if (PreferSimplifiedChineseFont)
             {
-                return primaryFont;
+                tf = SKFontManager.Default.MatchFamily(FontMicrosoftYaHei);
+                if (tf is not null)
+                {
+                    return FontMicrosoftYaHei;
+                }
             }
 
-            // 代替フォントを試す
-            tf = SKFontManager.Default.MatchFamily(fallbackFont);
+
+            tf = SKFontManager.Default.MatchFamily(fontfamily);
             if (tf is not null)
             {
-                return fallbackFont;
+                return fontfamily;
             }
 
             // どちらも利用できない場合は、システムのデフォルトフォントを返す
@@ -153,17 +161,17 @@ namespace CS2MapView.Theme
             }
 
             var result = fonts.OrderBy(f => f).ToList();
-            
-            var commonChineseFonts = new[] { 
-                FontMicrosoftYaHei, 
-                FontSimHei, 
-                "SimSun", 
+
+            var commonChineseFonts = new[] {
+                FontMicrosoftYaHei,
+                FontSimHei,
+                "SimSun",
                 "NSimSun",
                 "Microsoft JhengHei",
-                FontYuGothic, 
-                FontMeiryo 
+                FontYuGothic,
+                FontMeiryo
             };
-            
+
             foreach (var font in commonChineseFonts)
             {
                 if (SKFontManager.Default.MatchFamily(font) != null && !result.Contains(font))

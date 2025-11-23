@@ -73,7 +73,6 @@
             DistrictFontLabel = new Label();
             BuildingFontCombobox = new ComboBox();
             BuildingFontLabel = new Label();
-            groupBox7 = new GroupBox();
             groupBox1 = new GroupBox();
             VectorizeLandCheckbox = new CheckBox();
             WaterMaxResolutionTextbox = new TextBox();
@@ -378,7 +377,6 @@
             GeneralConfigTabPage.Controls.Add(DistrictFontLabel);
             GeneralConfigTabPage.Controls.Add(BuildingFontCombobox);
             GeneralConfigTabPage.Controls.Add(BuildingFontLabel);
-            GeneralConfigTabPage.Controls.Add(groupBox7);
             GeneralConfigTabPage.Controls.Add(groupBox1);
             GeneralConfigTabPage.Controls.Add(DefaultMapSymbolStyleCombobox);
             GeneralConfigTabPage.Controls.Add(StringThemeCombobox);
@@ -425,12 +423,6 @@
             // 
             resources.ApplyResources(BuildingFontLabel, "BuildingFontLabel");
             BuildingFontLabel.Name = "BuildingFontLabel";
-            // 
-            // groupBox7
-            // 
-            resources.ApplyResources(groupBox7, "groupBox7");
-            groupBox7.Name = "groupBox7";
-            groupBox7.TabStop = false;
             // 
             // groupBox1
             // 
@@ -639,7 +631,6 @@
         private CheckBox RenderTramStopsCheckbox;
         private CheckBox RenderTrainStopsCheckbox;
         private CheckBox UserPrefabNameCheckbox;
-        private GroupBox groupBox7;
         private Label BuildingFontLabel;
         private ComboBox BuildingFontCombobox;
         private Label DistrictFontLabel;
